@@ -1,0 +1,55 @@
+FAKTÚRA č. FA-123/2024
+
+Dátum vystavenia: 15.12.2024
+Dátum splatnosti: 29.12.2024
+Dátum dodania: 10.12.2024
+
+DODÁVATEĽ:
+XYZ s.r.o.
+IČO: 87654321
+DIČ: SK2020123456
+IČ DPH: SK2020123456
+Sídlo: Košice, Továrenská 5, 040 01
+Tel: +421 55 123 4567
+Email: info@xyz.sk
+
+ODBERATEĽ:
+ABC s.r.o.
+IČO: 12345678
+DIČ: SK2020654321
+Sídlo: Bratislava, Hlavná 1, 811 01
+
+──────────────────────────────────────────────────────────────
+
+Položka                         Množstvo    Cena/MJ    Celkom
+──────────────────────────────────────────────────────────────
+IT služby - vývoj aplikácie         20 h     50.00    1000.00 EUR
+Hosting - mesačný poplatok            1       100.00     100.00 EUR
+Údržba systému                        5 h     80.00     400.00 EUR
+──────────────────────────────────────────────────────────────
+
+Celkom bez DPH:                                        1500.00 EUR
+DPH 20%:                                                300.00 EUR
+──────────────────────────────────────────────────────────────
+CELKOM K ÚHRADE:                                       1800.00 EUR
+──────────────────────────────────────────────────────────────
+
+Suma slovom: jedentisícosemsto EUR
+
+Spôsob úhrady: bezhotovostný prevod
+Bankové spojenie: Tatra banka, a.s.
+IBAN: SK31 1100 0000 0029 4803 5416
+Variabilný symbol: 1232024
+Konštantný symbol: 0308
+
+POZNÁMKA:
+Faktúra vystavená na základe objednávky č. OBJ-2024-045 zo dňa 01.12.2024.
+Dodací list č. DL-456/2024.
+
+
+V Košiciach dňa 15.12.2024
+
+
+_____________________
+Ing. Mária Kováčová
+konateľka XYZ s.r.o.

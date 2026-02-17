@@ -1,0 +1,34 @@
+{
+    "marketplace": {
+        "lawyer": {
+            "registration": {
+                "success": "Rejestracja pomyślna. Twój wniosek zostanie zweryfikowany w ciągu 48 godzin.",
+                "error_exists": "Prawnik z tym numerem licencji już istnieje",
+                "error_invalid_json": "Nieprawidłowy format JSON dla specjalizacji, jurysdykcji lub języków",
+                "error_invalid_jurisdiction": "Nieprawidłowa jurysdykcja",
+                "error_registration": "Błąd podczas rejestracji"
+            },
+            "search": {
+                "error_invalid_jurisdiction": "Nieprawidłowa lub nieaktywna jurysdykcja",
+                "error_search": "Błąd podczas wyszukiwania"
+            },
+            "profile": {
+                "not_found": "Prawnik nie znaleziony",
+                "lawyer_profile_not_found": "Profil prawnika nie znaleziony",
+                "updated": "Profil pomyślnie zaktualizowany",
+                "error_update": "Błąd podczas aktualizacji"
+            },
+            "stats": {
+                "error_loading": "Błąd podczas ładowania statystyk"
+            },
+            "availability": {
+                "updated": "Dostępność pomyślnie zaktualizowana"
+            },
+            "admin": {
+                "access_denied": "Dostęp zabroniony",
+                "verified": "Prawnik pomyślnie zweryfikowany",
+                "rejected": "Wniosek odrzucony"
+            }
+        }
+    }
+}

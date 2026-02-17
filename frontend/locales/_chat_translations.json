@@ -1,0 +1,21 @@
+﻿{
+    "chat": {
+        "title": "Právny chat",
+        "newSession": "Nová konverzácia",
+        "placeholder": "Položte právnu otázku...",
+        "send": "Odoslať",
+        "sources": "Zdroje",
+        "similarity": "Relevantnosť",
+        "noSessions": "Zatiaľ žiadne konverzácie",
+        "thinking": "Premýšľam...",
+        "welcome": "Vitajte v CODEX Legal AI",
+        "welcomeDesc": "Opýtajte sa ma na čokoľvek o vašich právnych dokumentoch alebo slovenskom práve.",
+        "error": "Prepáčte, niečo sa pokazilo. Skúste to prosím znova.",
+        "messages": "správ",
+        "confirmDelete": "Naozaj chcete vymazať túto konverzáciu?",
+        "justNow": "Práve teraz",
+        "minsAgo": "m",
+        "hoursAgo": "h",
+        "daysAgo": "d"
+    }
+}

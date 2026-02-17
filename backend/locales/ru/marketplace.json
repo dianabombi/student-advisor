@@ -1,0 +1,34 @@
+{
+    "marketplace": {
+        "lawyer": {
+            "registration": {
+                "success": "Регистрация успешна. Ваша заявка будет проверена в течение 48 часов.",
+                "error_exists": "Юрист с этим номером лицензии уже существует",
+                "error_invalid_json": "Недействительный формат JSON для специализаций, юрисдикций или языков",
+                "error_invalid_jurisdiction": "Недействительная юрисдикция",
+                "error_registration": "Ошибка регистрации"
+            },
+            "search": {
+                "error_invalid_jurisdiction": "Недействительная или неактивная юрисдикция",
+                "error_search": "Ошибка поиска"
+            },
+            "profile": {
+                "not_found": "Юрист не найден",
+                "lawyer_profile_not_found": "Профиль юриста не найден",
+                "updated": "Профиль успешно обновлен",
+                "error_update": "Ошибка обновления"
+            },
+            "stats": {
+                "error_loading": "Ошибка загрузки статистики"
+            },
+            "availability": {
+                "updated": "Доступность успешно обновлена"
+            },
+            "admin": {
+                "access_denied": "Доступ запрещен",
+                "verified": "Юрист успешно верифицирован",
+                "rejected": "Заявка отклонена"
+            }
+        }
+    }
+}

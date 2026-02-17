@@ -1,0 +1,130 @@
+./usr/local/lib/python3.11/site-packages/passlib/utils/__init__.py:854: DeprecationWarning: 'crypt' is deprecated and slated for removal in Python 3.13
+  from crypt import crypt as _crypt
+
+Testing German City Extraction (country_code='DE'):
+  'Ich suche Arbeit in München' -> München (Expected: München)
+  'Job in Munich' -> München (Expected: München)
+  'Praca w Monachium' -> München (Expected: München)
+  'Lavoro a Monaco' -> München (Expected: München)
+  'Jobs in Cologne' -> Köln (Expected: Köln)
+  'Job Köln' -> Köln (Expected: Köln)
+  'Arbeit in Berlin' -> Berlin (Expected: Berlin)
+  'Job in Nuremberg' -> Nürnberg (Expected: Nürnberg)
+  'Praca w Norymberdze' -> Nürnberg (Expected: Nürnberg)
+  'Aix-la-Chapelle jobs' -> Aachen (Expected: Aachen)
+{"version": "1.0.0", "log_format": "json", "log_file": "/app/logs/codex.log", "event": "logging_configured", "timestamp": "2026-01-17T16:49:48.957849Z", "level": "info"}
+{"version": "1.0.0", "environment": "production", "event": "application_started", "timestamp": "2026-01-17T16:49:48.959502Z", "level": "info"}
+/app/main.py:56: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  Base = declarative_base()
+/app/api/case_assignments.py:27: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class AssignmentResponse(BaseModel):
+/app/api/case_comments.py:31: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CommentResponse(BaseModel):
+/app/api/case_deadlines.py:35: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class DeadlineResponse(BaseModel):
+/app/api/notifications.py:20: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class NotificationResponse(BaseModel):
+/app/api/cases_v2.py:124: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CaseResponse(BaseModel):
+/app/api/cases_v2.py:144: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CaseLogResponse(BaseModel):
+/app/api/cases_v2.py:158: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CaseDocumentResponse(BaseModel):
+/app/models/marketplace.py:78: PydanticDeprecatedSince20: `min_items` is deprecated and will be removed, use `min_length` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  jurisdictions: List[str] = Field(..., min_items=1, description="Jurisdikcie kde má advokát licenciu (napr. ['SK', 'CZ'])")
+/app/models/marketplace.py:80: PydanticDeprecatedSince20: `min_items` is deprecated and will be removed, use `min_length` instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  specializations: List[str] = Field(..., min_items=1, description="Špecializácie")
+/app/models/marketplace.py:69: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class LawyerRegistrationRequest(BaseModel):
+/app/models/marketplace.py:116: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class AvailabilityRequest(BaseModel):
+/app/models/marketplace.py:132: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class LawyerPublicProfile(BaseModel):
+/app/models/marketplace.py:152: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class LawyerPrivateProfile(BaseModel):
+/app/models/marketplace.py:202: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class OrderResponse(BaseModel):
+/app/models/marketplace.py:236: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class ReviewResponse(BaseModel):
+/app/models/client.py:47: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CreateCaseRequest(BaseModel):
+/app/models/client.py:66: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CreateOrderRequest(BaseModel):
+/app/models/client.py:131: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CaseResponse(BaseModel):
+/app/models/client.py:152: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class OrderResponse(BaseModel):
+/app/api/client.py:232: FastAPIDeprecationWarning: `regex` has been deprecated, please use `pattern` instead
+  service_type: str = Query(..., regex="^(document_review|consultation|full_service)$"),
+/app/api/client.py:283: FastAPIDeprecationWarning: `regex` has been deprecated, please use `pattern` instead
+  service_type: str = Query(..., regex="^(document_review|consultation|full_service)$"),
+/app/api/client.py:326: FastAPIDeprecationWarning: `regex` has been deprecated, please use `pattern` instead
+  service_type: str = Query(..., regex="^(document_review|consultation|full_service)$"),
+/app/api/client.py:327: FastAPIDeprecationWarning: `regex` has been deprecated, please use `pattern` instead
+  sort: str = Query("recommended", regex="^(recommended|rating|price|speed)$"),
+/app/models/message.py:36: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class SendMessageRequest(BaseModel):
+/app/models/message.py:59: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class MessageResponse(BaseModel):
+/app/models/message.py:87: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class NotificationResponse(BaseModel):
+/app/models/marketplace_payment.py:38: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class CreatePaymentRequest(BaseModel):
+/app/models/marketplace_payment.py:51: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class WithdrawRequest(BaseModel):
+/app/models/marketplace_payment.py:93: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class TransactionResponse(BaseModel):
+/app/models/marketplace_payment.py:128: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  class DisputeResponse(BaseModel):
+.
+----------------------------------------------------------------------
+Ran 2 tests in 4.713s
+
+OK
+✅ Redis cache initialized successfully
+✅ AI Cases router loaded successfully!
+✅ Payments router loaded successfully!
+✅ Subscription Status router loaded successfully!
+✅ AI Support router loaded successfully!
+✅ Price Monitoring router loaded successfully!
+✅ Health Check router loaded successfully!
+✅ Platform Owner Analytics router loaded successfully!
+✅ Marketplace Lawyers router loaded successfully!
+✅ Client router loaded successfully!
+✅ Messages router loaded successfully!
+✅ Marketplace Payments router loaded successfully!
+✅ Housing Search router loaded successfully!
+✅ University Chat router loaded successfully!
+✅ Metrics router loaded successfully!
+✅ Jobs router loaded successfully!
+
+Testing Context Generation for München:
+VERIFIED JOB AGENCIES IN MÜNCHEN:
+
+IMPORTANT: These are main portal pages. Users must search on the portal themselves.
+
+• Zenjob - München
+  Website: https://www.zenjob.com/de/jobs/muenchen/
+  Instructions: BEST FOR STUDENTS. Open website, download App or search for 'München'
+  Description: <MagicMock name='mock.description' id='140001131126544'>
+  Specialization: <MagicMock name='mock.specialization' id='140001131351824'>
+
+• StepStone - München
+  Website: https://www.stepstone.de/jobs/München?q=Werkstudent
+  Instructions: Open website, search for 'Werkstudent' in 'München'
+  Description: <MagicMock name='mock.description' id='140001134649104'>
+  Specialization: <MagicMock name='mock.specialization' id='140001128701584'>
+
+
+IMPORTANT FORMATTING RULES:
+- DO NOT use Markdown links like [text](URL)
+- ALWAYS write URLs as plain text: https://www.example.com
+- The frontend will automatically convert URLs to clickable links
+
+IF WEBSITE IS BLOCKED:
+- Some portals may block direct access
+- Tell users to search Google for: 'portal_name city' (e.g. 'jobs.cz Praha')
+- Click the first search result to bypass blocking
+
+REMINDER: Tell users they need to search on the portal themselves after opening the link.
+

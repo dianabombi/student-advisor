@@ -1,0 +1,34 @@
+{
+    "marketplace": {
+        "lawyer": {
+            "registration": {
+                "success": "Inscription réussie. Votre demande sera vérifiée dans les 48 heures.",
+                "error_exists": "Un avocat avec ce numéro de licence existe déjà",
+                "error_invalid_json": "Format JSON invalide pour les spécialisations, juridictions ou langues",
+                "error_invalid_jurisdiction": "Juridiction invalide",
+                "error_registration": "Erreur d'inscription"
+            },
+            "search": {
+                "error_invalid_jurisdiction": "Juridiction invalide ou inactive",
+                "error_search": "Erreur de recherche"
+            },
+            "profile": {
+                "not_found": "Avocat non trouvé",
+                "lawyer_profile_not_found": "Profil d'avocat non trouvé",
+                "updated": "Profil mis à jour avec succès",
+                "error_update": "Erreur de mise à jour"
+            },
+            "stats": {
+                "error_loading": "Erreur lors du chargement des statistiques"
+            },
+            "availability": {
+                "updated": "Disponibilité mise à jour avec succès"
+            },
+            "admin": {
+                "access_denied": "Accès refusé",
+                "verified": "Avocat vérifié avec succès",
+                "rejected": "Demande rejetée"
+            }
+        }
+    }
+}

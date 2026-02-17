@@ -1,0 +1,685 @@
+import os
+from datetime import datetime, timedelta
+from typing import List, Optional
+from fastapi import FastAPI, Depends, HTTPException, status, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
+from fastapi.security import OAuth2PasswordBearer, OAuth2PasswordRequestForm
+from sqlalchemy import create_engine, Column, Integer, String, DateTime, Text, ForeignKey, JSON, Float, Boolean
+from sqlalchemy.ext.declarative import declarative_base
+from sqlalchemy.orm import sessionmaker, Session, relationship
+try:
+    from pgvector.sqlalchemy import Vector
+except ImportError:
+    Vector = None
+from passlib.context import CryptContext
+from jose import JWTError, jwt
+from pydantic import BaseModel, EmailStr
+import openai
+from services.ocr_service import OCRService, OCRProvider, classify_document
+from services.vector_store import VectorStoreService
+from config.practice_areas import (
+    PRACTICE_AREAS, 
+    LEGAL_DOCUMENT_TYPES, 
+    JURISDICTIONS,
+    get_enabled_jurisdictions
+)
+
+# Database setup
+DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://user:password@db:5432/codex_db")
+engine = create_engine(DATABASE_URL)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+Base = declarative_base()
+
+# Security
+SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key-change-in-production")
+ALGORITHM = "HS256"
+ACCESS_TOKEN_EXPIRE_MINUTES = 30
+pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+oauth2_scheme = OAuth2PasswordBearer(tokenUrl="api/auth/login")
+
+# OpenAI setup
+openai.api_key = os.getenv("OPENAI_API_KEY")
+
+# OCR Service setup
+OCR_PROVIDER = os.getenv("OCR_PROVIDER", "mindee")  # mindee, tesseract, veryfi, klippa
+ocr_service = OCRService(provider=OCRProvider(OCR_PROVIDER))
+
+# Models
+class User(Base):
+    __tablename__ = "users"
+    id = Column(Integer, primary_key=True, index=True)
+    name = Column(String, nullable=False)
+    email = Column(String, unique=True, index=True, nullable=False)
+    hashed_password = Column(String, nullable=False)
+    
+    # Role and status
+    role = Column(String, default="user")  # user, admin, partner_lawyer
+    is_active = Column(Boolean, default=True)
+    is_verified = Column(Boolean, default=False)
+    
+    # Profile fields
+    phone = Column(String, nullable=True)
+    organization = Column(String, nullable=True)
+    bio = Column(Text, nullable=True)
+    avatar_url = Column(String, nullable=True)
+    
+    # Verification and reset tokens
+    verification_token = Column(String, nullable=True)
+    verification_token_expires = Column(DateTime, nullable=True)
+    reset_token = Column(String, nullable=True)
+    reset_token_expires = Column(DateTime, nullable=True)
+    
+    # Timestamps
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    
+    # Relationships
+    documents = relationship("Document", back_populates="owner")
+    messages = relationship("ChatMessage", back_populates="user")
+    chat_sessions = relationship("ChatSession", back_populates="user")
+    sessions = relationship("Session", back_populates="user", cascade="all, delete-orphan")
+    cases = relationship("Case", back_populates="user", cascade="all, delete-orphan")
+
+class Document(Base):
+    __tablename__ = "documents"
+    id = Column(Integer, primary_key=True, index=True)
+    filename = Column(String, nullable=False)
+    file_path = Column(String, nullable=False)
+    document_type = Column(String)  # contract, lawsuit, complaint, etc.
+    jurisdiction = Column(String, default="SK")  # SK, CZ, PL, etc.
+    practice_area = Column(String)  # civil, criminal, commercial, etc.
+    legal_category = Column(String)  # More specific categorization
+    extracted_data = Column(JSON)  # OCR extracted data
+    confidence = Column(Integer)  # OCR confidence score
+    uploaded_at = Column(DateTime, default=datetime.utcnow)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    owner = relationship("User", back_populates="documents")
+    chunks = relationship("DocumentChunk", back_populates="document", cascade="all, delete-orphan")
+
+class ChatSession(Base):
+    __tablename__ = "chat_sessions"
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    title = Column(String, default="New Conversation")
+    created_at = Column(DateTime, default=datetime.utcnow)
+    updated_at = Column(DateTime, default=datetime.utcnow, onupdate=datetime.utcnow)
+    user = relationship("User", back_populates="chat_sessions")
+    messages = relationship("ChatMessage", back_populates="session", cascade="all, delete-orphan")
+
+class ChatMessage(Base):
+    __tablename__ = "chat_messages"
+    id = Column(Integer, primary_key=True, index=True)
+    session_id = Column(Integer, ForeignKey("chat_sessions.id"), nullable=True)
+    user_id = Column(Integer, ForeignKey("users.id"))
+    role = Column(String, nullable=False)
+    content = Column(Text, nullable=False)
+    sources = Column(JSON)  # Referenced document chunks for RAG
+    created_at = Column(DateTime, default=datetime.utcnow)
+    user = relationship("User", back_populates="messages")
+    session = relationship("ChatSession", back_populates="messages")
+
+class DocumentChunk(Base):
+    __tablename__ = "document_chunks"
+    id = Column(Integer, primary_key=True, index=True)
+    document_id = Column(Integer, ForeignKey("documents.id"))
+    chunk_index = Column(Integer, nullable=False)
+    content = Column(Text, nullable=False)
+    embedding = Column(Vector(1536)) if Vector else Column(JSON)  # OpenAI embedding dimension
+    chunk_metadata = Column(JSON)  # Renamed from 'metadata' to avoid SQLAlchemy reserved word
+    created_at = Column(DateTime, default=datetime.utcnow)
+    document = relationship("Document", back_populates="chunks")
+
+class DocumentProcessingJob(Base):
+    __tablename__ = "document_processing_jobs"
+    id = Column(Integer, primary_key=True, index=True)
+    document_id = Column(String, unique=True, index=True, nullable=False)  # UUID
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    filename = Column(String, nullable=False)
+    status = Column(String, default="pending")  # pending, processing, completed, failed
+    progress = Column(Integer, default=0)  # 0-100
+    
+    # Processing results
+    document_type = Column(String)
+    confidence = Column(Float)
+    extracted_fields = Column(JSON)
+    summary = Column(Text)
+    error_message = Column(Text)
+    
+    # MinIO paths
+    raw_object_name = Column(String)
+    processed_object_name = Column(String)
+    filled_template_path = Column(String)
+# Pydantic models
+class UserCreate(BaseModel):
+    name: str
+    email: EmailStr
+    password: str
+
+class UserResponse(BaseModel):
+    id: int
+    name: str
+    email: str
+    created_at: datetime
+
+class Token(BaseModel):
+    access_token: str
+    token_type: str
+    user: UserResponse
+
+class ChatRequest(BaseModel):
+    message: str
+    session_id: Optional[int] = None  # Optional session for conversation continuity
+
+class ChatSource(BaseModel):
+    document_id: int
+    filename: str
+    chunk_index: int
+    content: str
+    similarity: float
+
+class ChatResponse(BaseModel):
+    response: str
+    sources: Optional[List[ChatSource]] = None
+    session_id: Optional[int] = None
+
+class ChatSessionCreate(BaseModel):
+    title: Optional[str] = "New Conversation"
+
+class ChatSessionResponse(BaseModel):
+    id: int
+    title: str
+    created_at: datetime
+    updated_at: datetime
+    message_count: Optional[int] = 0
+
+class DocumentResponse(BaseModel):
+    id: int
+    filename: str
+    document_type: Optional[str]
+    extracted_data: Optional[dict]
+    confidence: Optional[int]
+    uploaded_at: datetime
+
+# FastAPI app
+app = FastAPI(title="CODEX Legal API", version="0.1.0")
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+# Include RAG router
+from routers.rag_api import router as rag_router
+# Include Admin router
+from routers.admin_api import router as admin_router
+
+# Inject database dependency
+def get_db_for_router():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+app.include_router(rag_router)
+app.include_router(admin_router)
+
+# Import and include templates router
+from api.templates import router as templates_router
+app.include_router(templates_router)
+
+# Import and include documents router
+# TEMPORARILY DISABLED - circular import issues
+# from api.documents import router as documents_router
+# app.include_router(documents_router)
+
+# Import and include auth router
+from api.auth import router as auth_router
+app.include_router(auth_router)
+
+# Import and include cases router
+from api.cases import router as cases_router
+app.include_router(cases_router)
+
+# Import and include Case Management routers
+from api.case_assignments import router as assignments_router
+app.include_router(assignments_router)
+
+from api.case_comments import router as comments_router
+app.include_router(comments_router)
+
+from api.case_deadlines import router as deadlines_router
+app.include_router(deadlines_router)
+
+from api.notifications import router as notifications_router
+app.include_router(notifications_router)
+
+app.include_router(rag_router)
+
+# Dependency
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
+
+# Auth helpers
+def verify_password(plain_password, hashed_password):
+    return pwd_context.verify(plain_password, hashed_password)
+
+def get_password_hash(password):
+    return pwd_context.hash(password)
+
+def create_access_token(data: dict):
+    to_encode = data.copy()
+    expire = datetime.utcnow() + timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    to_encode.update({"exp": expire})
+    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    return encoded_jwt
+
+async def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
+    credentials_exception = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Could not validate credentials",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+    try:
+        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        email: str = payload.get("sub")
+        if email is None:
+            raise credentials_exception
+    except JWTError:
+        raise credentials_exception
+    
+    user = db.query(User).filter(User.email == email).first()
+    if user is None:
+        raise credentials_exception
+    return user
+
+# Routes
+@app.get("/")
+def read_root():
+    return {"message": "Welcome to CODEX Legal API", "version": "0.1.0", "service": "Legal Consultation Platform"}
+
+@app.get("/health")
+def health_check():
+    return {"status": "ok", "database": "connected", "ocr_provider": OCR_PROVIDER}
+
+# Configuration endpoints
+@app.get("/api/practice-areas")
+def get_practice_areas():
+    """Get all available legal practice areas"""
+    return {"practice_areas": PRACTICE_AREAS}
+
+@app.get("/api/jurisdictions")
+def get_jurisdictions():
+    """Get all supported jurisdictions"""
+    return {"jurisdictions": get_enabled_jurisdictions()}
+
+@app.get("/api/document-types")
+def get_document_types():
+    """Get all legal document types"""
+    return {"document_types": LEGAL_DOCUMENT_TYPES}
+
+# Auth endpoints
+@app.post("/api/auth/register", response_model=Token)
+def register(user_data: UserCreate, db: Session = Depends(get_db)):
+    db_user = db.query(User).filter(User.email == user_data.email).first()
+    if db_user:
+        raise HTTPException(status_code=400, detail="Email already registered")
+    
+    hashed_password = get_password_hash(user_data.password)
+    new_user = User(
+        name=user_data.name,
+        email=user_data.email,
+        hashed_password=hashed_password
+    )
+    db.add(new_user)
+    db.commit()
+    db.refresh(new_user)
+    
+    access_token = create_access_token(data={"sub": new_user.email})
+    user_response = UserResponse(
+        id=new_user.id,
+        name=new_user.name,
+        email=new_user.email,
+        created_at=new_user.created_at
+    )
+    
+    return {"access_token": access_token, "token_type": "bearer", "user": user_response}
+
+@app.post("/api/auth/login", response_model=Token)
+def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
+    user = db.query(User).filter(User.email == form_data.username).first()
+    if not user or not verify_password(form_data.password, user.hashed_password):
+        raise HTTPException(
+            status_code=status.HTTP_401_UNAUTHORIZED,
+            detail="Incorrect email or password",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    
+    access_token = create_access_token(data={"sub": user.email})
+    user_response = UserResponse(
+        id=user.id,
+        name=user.name,
+        email=user.email,
+        created_at=user.created_at
+    )
+    
+    return {"access_token": access_token, "token_type": "bearer", "user": user_response}
+
+# Documents endpoints
+@app.get("/api/documents", response_model=List[DocumentResponse])
+def get_documents(current_user: User = Depends(get_current_user), db: Session = Depends(get_db)):
+    documents = db.query(Document).filter(Document.user_id == current_user.id).all()
+    return documents
+
+@app.post("/api/documents/upload")
+async def upload_document(
+    files: List[UploadFile] = File(...),
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    uploaded_files = []
+    vector_store = VectorStoreService(db)
+    
+    for file in files:
+        # Save file temporarily
+        file_path = f"/tmp/{file.filename}"
+        with open(file_path, "wb") as f:
+            content = await file.read()
+            f.write(content)
+        
+        # Classify document type
+        doc_type = await classify_document(file_path)
+        
+        # Process with OCR
+        try:
+            extracted_data = await ocr_service.process_document(file_path, doc_type)
+            confidence = int(extracted_data.get('confidence', 0) * 100)
+            extracted_text = extracted_data.get('text', '')
+        except Exception as e:
+            print(f"OCR processing failed: {e}")
+            extracted_data = {}
+            confidence = 0
+            extracted_text = ""
+        
+        # Save to database
+        new_doc = Document(
+            filename=file.filename,
+            file_path=file_path,
+            document_type=doc_type,
+            extracted_data=extracted_data,
+            confidence=confidence,
+            user_id=current_user.id
+        )
+        db.add(new_doc)
+        db.flush()  # Get document ID without committing
+        
+        # Generate embeddings for RAG
+        chunks_created = 0
+        if extracted_text:
+            try:
+                metadata = {
+                    'document_type': doc_type,
+                    'filename': file.filename,
+                    'practice_area': new_doc.practice_area,
+                    'jurisdiction': new_doc.jurisdiction
+                }
+                chunks_created = await vector_store.embed_document(
+                    document_id=new_doc.id,
+                    text=extracted_text,
+                    metadata=metadata
+                )
+                print(f"Created {chunks_created} embeddings for document {file.filename}")
+            except Exception as e:
+                print(f"Embedding generation failed: {e}")
+        
+        uploaded_files.append({
+            "filename": file.filename,
+            "type": doc_type,
+            "confidence": confidence,
+            "data": extracted_data,
+            "chunks_created": chunks_created
+        })
+    
+    db.commit()
+    return {"message": "Files uploaded and processed", "files": uploaded_files}
+
+@app.get("/api/documents/{document_id}")
+def get_document(
+    document_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    document = db.query(Document).filter(
+        Document.id == document_id,
+        Document.user_id == current_user.id
+    ).first()
+    
+    if not document:
+        raise HTTPException(status_code=404, detail="Document not found")
+    
+    return document
+
+
+# Chat Sessions endpoints
+@app.get("/api/chat/sessions", response_model=List[ChatSessionResponse])
+def get_chat_sessions(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Get all chat sessions for current user"""
+    sessions = db.query(ChatSession).filter(
+        ChatSession.user_id == current_user.id
+    ).order_by(ChatSession.updated_at.desc()).all()
+    
+    result = []
+    for session in sessions:
+        message_count = db.query(ChatMessage).filter(
+            ChatMessage.session_id == session.id
+        ).count()
+        
+        result.append(ChatSessionResponse(
+            id=session.id,
+            title=session.title,
+            created_at=session.created_at,
+            updated_at=session.updated_at,
+            message_count=message_count
+        ))
+    
+    return result
+
+@app.post("/api/chat/sessions", response_model=ChatSessionResponse)
+def create_chat_session(
+    session_data: ChatSessionCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Create a new chat session"""
+    new_session = ChatSession(
+        user_id=current_user.id,
+        title=session_data.title or "New Conversation"
+    )
+    db.add(new_session)
+    db.commit()
+    db.refresh(new_session)
+    
+    return ChatSessionResponse(
+        id=new_session.id,
+        title=new_session.title,
+        created_at=new_session.created_at,
+        updated_at=new_session.updated_at,
+        message_count=0
+    )
+
+@app.get("/api/chat/sessions/{session_id}/messages")
+def get_session_messages(
+    session_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Get all messages in a chat session"""
+    session = db.query(ChatSession).filter(
+        ChatSession.id == session_id,
+        ChatSession.user_id == current_user.id
+    ).first()
+    
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    messages = db.query(ChatMessage).filter(
+        ChatMessage.session_id == session_id
+    ).order_by(ChatMessage.created_at).all()
+    
+    return {"messages": messages}
+
+@app.delete("/api/chat/sessions/{session_id}")
+def delete_chat_session(
+    session_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """Delete a chat session"""
+    session = db.query(ChatSession).filter(
+        ChatSession.id == session_id,
+        ChatSession.user_id == current_user.id
+    ).first()
+    
+    if not session:
+        raise HTTPException(status_code=404, detail="Session not found")
+    
+    db.delete(session)
+    db.commit()
+    
+    return {"message": "Session deleted successfully"}
+
+# Enhanced Chat endpoint with RAG
+@app.post("/api/chat", response_model=ChatResponse)
+async def chat(
+    request: ChatRequest,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    """
+    Chat endpoint with Retrieval-Augmented Generation (RAG).
+    Uses vector similarity search to find relevant document chunks.
+    """
+    # Get or create session
+    session_id = request.session_id
+    if session_id:
+        session = db.query(ChatSession).filter(
+            ChatSession.id == session_id,
+            ChatSession.user_id == current_user.id
+        ).first()
+        if not session:
+            raise HTTPException(status_code=404, detail="Session not found")
+    else:
+        # Create new session
+        session = ChatSession(
+            user_id=current_user.id,
+            title=request.message[:50] + "..." if len(request.message) > 50 else request.message
+        )
+        db.add(session)
+        db.commit()
+        db.refresh(session)
+        session_id = session.id
+    
+    # Initialize vector store
+    vector_store = VectorStoreService(db)
+    
+    # Perform RAG search for relevant document chunks
+    try:
+        similar_chunks = await vector_store.search_similar(
+            query=request.message,
+            top_k=5
+        )
+    except Exception as e:
+        print(f"RAG search failed: {e}")
+        similar_chunks = []
+    
+    # Build context from retrieved chunks
+    context = ""
+    sources = []
+    
+    if similar_chunks:
+        context = "Relevantné časti z vašich dokumentov:\n\n"
+        for chunk in similar_chunks:
+            context += f"[{chunk['filename']}]\n{chunk['content']}\n\n"
+            sources.append(ChatSource(
+                document_id=chunk['document_id'],
+                filename=chunk['filename'],
+                chunk_index=chunk['chunk_index'],
+                content=chunk['content'][:200] + "..." if len(chunk['content']) > 200 else chunk['content'],
+                similarity=chunk['similarity']
+            ))
+    
+    # Save user message
+    user_message = ChatMessage(
+        session_id=session_id,
+        user_id=current_user.id,
+        role="user",
+        content=request.message
+    )
+    db.add(user_message)
+    
+    # Get AI response
+    try:
+        system_prompt = """Ste odborný právny konzultant špecializujúci sa na slovenské právo, predovšetkým civilné právo.
+
+Vaše úlohy:
+- Poskytovať presné a profesionálne právne poradenstvo založené na slovenských zákonoch a právnych predpisoch
+- Odpovedať na otázky týkajúce sa Občianskeho zákonníka SR, Obchodného zákonníka SR a ďalších relevantných právnych predpisov
+- Pomáhať s výkladom právnych dokumentov a zmlúv
+- Poskytovať všeobecné právne informácie (nie konkrétne právne zastupovanie)
+- Odkazovať na konkrétne časti dokumentov používateľa, ak sú relevantné
+
+Dôležité upozornenie: Vaše odpovede sú všeobecného informatívneho charakteru a nepredstavujú právne zastupovanie. Pre konkrétne právne prípady odporúčajte konzultáciu s advokátom.
+
+Odpovedajte v slovenčine, jasne, zrozumiteľne a profesionálne."""
+
+        messages = [
+            {"role": "system", "content": system_prompt}
+        ]
+        
+        # Add context if available
+        if context:
+            messages.append({"role": "system", "content": context})
+        
+        # Add user message
+        messages.append({"role": "user", "content": request.message})
+        
+        response = openai.ChatCompletion.create(
+            model="gpt-4",
+            messages=messages
+        )
+        ai_response = response.choices[0].message.content
+    except Exception as e:
+        print(f"OpenAI API error: {e}")
+        ai_response = "Prepáčte, momentálne nemôžem spracovať vašu otázku. Skúste to prosím neskôr."
+        sources = []
+    
+    # Save AI response
+    assistant_message = ChatMessage(
+        session_id=session_id,
+        user_id=current_user.id,
+        role="assistant",
+        content=ai_response,
+        sources=[s.dict() for s in sources] if sources else None
+    )
+    db.add(assistant_message)
+    
+    # Update session timestamp
+    session.updated_at = datetime.utcnow()
+    
+    db.commit()
+    
+    return ChatResponse(
+        response=ai_response,
+        sources=sources if sources else None,
+        session_id=session_id
+    )

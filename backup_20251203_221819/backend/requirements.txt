@@ -1,0 +1,23 @@
+fastapi
+uvicorn
+sqlalchemy
+alembic
+psycopg2-binary
+pgvector
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+pydantic-settings
+email-validator
+openai
+langchain
+langchain-openai
+langchain-community
+python-dotenv
+minio
+# OCR/IDP dependencies
+pytesseract
+Pillow
+requests
+mindee

@@ -1,0 +1,104 @@
+{
+    "student": {
+        "hero": {
+            "title": "Ihr Tor zu Bildungsmöglichkeiten",
+            "subtitle": "Entdecken Sie Universitäten, erhalten Sie KI-gestützte Beratung und planen Sie Ihre akademische Zukunft",
+            "getStarted": "Loslegen",
+            "findHousing": "Unterkunft Finden",
+            "exploreUniversities": "Universitäten Erkunden"
+        },
+        "features": {
+            "title": "Warum Student Platform Wählen?",
+            "feature1": {
+                "title": "Universitätssuche",
+                "description": "Finden und vergleichen Sie Universitäten in mehreren Ländern"
+            },
+            "feature2": {
+                "title": "KI-Beratung",
+                "description": "Erhalten Sie personalisierte Empfehlungen und Bewerbungsunterstützung"
+            },
+            "feature3": {
+                "title": "Globale Reichweite",
+                "description": "Zugriff auf Informationen über Universitäten weltweit"
+            }
+        },
+        "universities": {
+            "title": "Slowakische Universitäten",
+            "viewAll": "Alle Universitäten Anzeigen"
+        },
+        "cta": {
+            "title": "Bereit, Ihre Reise zu Beginnen?",
+            "subtitle": "Schließen Sie sich Tausenden von Studenten an, die ihre perfekte Universität finden",
+            "button": "Kostenloses Konto Erstellen"
+        },
+        "authPrompt": {
+            "title": "Registrierung erforderlich",
+            "message": "Bitte registrieren Sie sich oder melden Sie sich an, um auf diese Funktion zuzugreifen",
+            "register": "Registrieren",
+            "login": "Anmelden"
+        },
+        "pricing": {
+            "title": "Wählen Sie Ihren Plan",
+            "subtitle": "Beginnen Sie mit einem kostenlosen Plan oder wählen Sie Premium-Funktionen",
+            "guarantee": "💳 Sichere Zahlung • 🔒 Jederzeit kündbar • ✅ Keine versteckten Gebühren",
+            "free": {
+                "name": "FREE",
+                "price": "€0",
+                "period": "/Monat",
+                "description": "Grundzugang",
+                "features": {
+                    "browse": "Universitäten durchsuchen",
+                    "links": "Links zu offiziellen Websites",
+                    "info": "Grundlegende Informationen",
+                    "noAI": "Kein KI-Berater"
+                },
+                "button": "Kostenlos starten",
+                "currentPlan": "Aktueller Plan"
+            },
+            "basic": {
+                "name": "BASIC",
+                "price": "€10",
+                "period": "/Monat",
+                "description": "Für aktive Studenten",
+                "badge": "Beliebt",
+                "features": {
+                    "allFree": "Alles von FREE +",
+                    "aiConsultations": "25 KI-Beratungen",
+                    "detailed": "Detaillierte Antworten",
+                    "housing": "Wohnungssuche",
+                    "jobs": "Studentenjobs"
+                },
+                "button": "BASIC wählen"
+            },
+            "standard": {
+                "name": "STANDARD",
+                "price": "€20",
+                "period": "/Monat",
+                "description": "Für Anspruchsvolle",
+                "features": {
+                    "allBasic": "Alles von BASIC +",
+                    "aiConsultations": "50 KI-Beratungen",
+                    "plans": "Erweiterte Zulassungspläne",
+                    "advice": "Personalisierte Beratung",
+                    "templates": "Dokumentvorlagen"
+                },
+                "button": "STANDARD wählen"
+            },
+            "premium": {
+                "name": "PREMIUM",
+                "price": "€30",
+                "period": "/Monat",
+                "description": "Vollständige Unterstützung",
+                "badge": "⭐ Beste",
+                "features": {
+                    "allStandard": "Alles von STANDARD +",
+                    "aiConsultations": "100 KI-Beratungen",
+                    "expert": "Expertenberatungen",
+                    "support": "Prioritäts-Support 24/7",
+                    "personalPlan": "Persönlicher Zulassungsplan"
+                },
+                "button": "PREMIUM wählen"
+            }
+        }
+    }
+}

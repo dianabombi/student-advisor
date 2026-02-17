@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CODEX Analytics Dashboard</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            color: #666;
+            font-size: 1.1em;
+        }
+
+        .login-section {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .login-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+
+        .dashboard {
+            display: none;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .stat-card h3 {
+            color: #666;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stat-card .value {
+            color: #667eea;
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .stat-card .label {
+            color: #999;
+            font-size: 0.9em;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .chart-container h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5em;
+        }
+
+        .chart-wrapper {
+            position: relative;
+            height: 400px;
+        }
+
+        table {
+            width: 100%;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        table td {
+            padding: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        table tr:hover {
+            background: #f8f9ff;
+        }
+
+        .positive {
+            color: #10b981;
+            font-weight: 600;
+        }
+
+        .negative {
+            color: #ef4444;
+            font-weight: 600;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: white;
+            font-size: 1.2em;
+        }
+
+        .error {
+            background: #fee;
+            color: #c00;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab {
+            padding: 12px 24px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        .tab:hover {
+            border-color: #667eea;
+            color: #667eea;
+        }
+
+        .tab.active {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-color: transparent;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .logout-btn {
+            background: #ef4444;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .logout-btn:hover {
+            background: #dc2626;
+        }
+
+        .period-selector {
+            margin-bottom: 20px;
+        }
+
+        .period-selector select {
+            padding: 10px 20px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.85em;
+            font-weight: 600;
+        }
+
+        .badge-success {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .badge-warning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .badge-danger {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📊 CODEX Analytics Dashboard</h1>
+            <p>Аналітика платформи в реальному часі</p>
+        </div>
+
+        <!-- Login Section -->
+        <div id="loginSection" class="login-section">
+            <h2>🔐 Вхід</h2>
+            <div id="errorMessage" class="error" style="display: none;"></div>
+            <div class="form-group">
+                <label for="apiUrl">API URL:</label>
+                <input type="text" id="apiUrl" value="http://localhost:8001" placeholder="http://localhost:8001">
+            </div>
+            <div class="form-group">
+                <label for="token">Токен авторизації:</label>
+                <input type="password" id="token" placeholder="Введіть ваш токен">
+            </div>
+            <button class="btn" onclick="login()">Увійти</button>
+        </div>
+
+        <!-- Dashboard Section -->
+        <div id="dashboardSection" class="dashboard">
+            <div class="period-selector">
+                <label>Період: </label>
+                <select id="periodSelect" onchange="loadAllData()">
+                    <option value="7">Останні 7 днів</option>
+                    <option value="30" selected>Останні 30 днів</option>
+                    <option value="90">Останні 90 днів</option>
+                </select>
+                <button class="logout-btn" onclick="logout()">Вийти</button>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <div class="tab active" onclick="switchTab('overview')">📊 Огляд</div>
+                <div class="tab" onclick="switchTab('visitors')">👥 Відвідувачі</div>
+                <div class="tab" onclick="switchTab('revenue')">💰 Виторг</div>
+                <div class="tab" onclick="switchTab('marketing')">📈 Маркетинг</div>
+            </div>
+
+            <!-- Overview Tab -->
+            <div id="overviewTab" class="tab-content active">
+                <div class="stats-grid" id="statsGrid"></div>
+                <div class="chart-container">
+                    <h2>📈 Графік відвідувачів та реєстрацій</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="overviewChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h2>🎯 Воронка конверсії</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="funnelChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Visitors Tab -->
+            <div id="visitorsTab" class="tab-content">
+                <div class="chart-container">
+                    <h2>🔍 Джерела трафіку</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="trafficSourcesChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h2>📱 Пристрої</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="devicesChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Revenue Tab -->
+            <div id="revenueTab" class="tab-content">
+                <div class="chart-container">
+                    <h2>💰 Виторг по днях</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="revenueChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h2>💳 Підписки по тарифах</h2>
+                    <div class="chart-wrapper">
+                        <canvas id="subscriptionsChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Marketing Tab -->
+            <div id="marketingTab" class="tab-content">
+                <div class="stats-grid" id="marketingStats"></div>
+                <div class="chart-container">
+                    <h2>📊 ROI по каналах</h2>
+                    <table id="roiTable">
+                        <thead>
+                            <tr>
+                                <th>Канал</th>
+                                <th>Витрати</th>
+                                <th>Виторг</th>
+                                <th>Прибуток</th>
+                                <th>ROI</th>
+                                <th>Конверсія</th>
+                            </tr>
+                        </thead>
+                        <tbody id="roiTableBody"></tbody>
+                    </table>
+                </div>
+                <div class="chart-container">
+                    <h2>🎯 Ефективність кампаній</h2>
+                    <table id="campaignsTable">
+                        <thead>
+                            <tr>
+                                <th>Кампанія</th>
+                                <th>Канал</th>
+                                <th>Відвідувачі</th>
+                                <th>Конверсії</th>
+                                <th>ROI</th>
+                                <th>Статус</th>
+                            </tr>
+                        </thead>
+                        <tbody id="campaignsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let apiUrl = '';
+        let authToken = '';
+        let charts = {};
+
+        function login() {
+            apiUrl = document.getElementById('apiUrl').value;
+            authToken = document.getElementById('token').value;
+
+            if (!authToken) {
+                showError('Будь ласка, введіть токен');
+                return;
+            }
+
+            // Test connection
+            fetch(`${apiUrl}/api/owner/analytics/dashboard?days=30`, {
+                headers: {
+                    'Authorization': `Bearer ${authToken}`
+                }
+            })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Невірний токен або немає доступу');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    document.getElementById('loginSection').style.display = 'none';
+                    document.getElementById('dashboardSection').style.display = 'block';
+                    loadAllData();
+                })
+                .catch(error => {
+                    showError(error.message);
+                });
+        }
+
+        function logout() {
+            document.getElementById('loginSection').style.display = 'block';
+            document.getElementById('dashboardSection').style.display = 'none';
+            document.getElementById('token').value = '';
+        }
+
+        function showError(message) {
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.style.display = 'block';
+            setTimeout(() => {
+                errorDiv.style.display = 'none';
+            }, 5000);
+        }
+
+        function switchTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.tab').forEach(tab => {
+                tab.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById(tabName + 'Tab').classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        async function loadAllData() {
+            const days = document.getElementById('periodSelect').value;
+
+            try {
+                // Load overview data
+                const dashboard = await fetchAPI(`/api/owner/analytics/dashboard?days=${days}`);
+                displayStats(dashboard.summary);
+                displayOverviewChart(dashboard);
+                displayFunnelChart(dashboard.conversion_funnel);
+                displayTrafficSources(dashboard.traffic_sources);
+                displayDevices(dashboard.device_statistics);
+
+                // Load revenue data
+                const revenue = await fetchAPI(`/api/owner/analytics/revenue?days=${days}`);
+                displayRevenueChart(revenue);
+                displaySubscriptionsChart(dashboard.subscription_statistics);
+
+                // Load marketing data
+                try {
+                    const roi = await fetchAPI(`/api/owner/analytics/marketing/roi?days=${days}`);
+                    const cac = await fetchAPI(`/api/owner/analytics/marketing/cac?days=${days}`);
+                    const campaigns = await fetchAPI(`/api/owner/analytics/marketing/campaigns?days=${days}`);
+
+                    displayMarketingStats(cac);
+                    displayROITable(roi.channels);
+                    displayCampaignsTable(campaigns.campaigns);
+                } catch (e) {
+                    console.log('Marketing data not available:', e);
+                }
+            } catch (error) {
+                showError('Помилка завантаження даних: ' + error.message);
+            }
+        }
+
+        async function fetchAPI(endpoint) {
+            const response = await fetch(`${apiUrl}${endpoint}`, {
+                headers: {
+                    'Authorization': `Bearer ${authToken}`
+                }
+            });
+            if (!response.ok) {
+                throw new Error(`HTTP ${response.status}`);
+            }
+            return response.json();
+        }
+
+        function displayStats(summary) {
+            const statsGrid = document.getElementById('statsGrid');
+            statsGrid.innerHTML = `
+                <div class="stat-card">
+                    <h3>Унікальні відвідувачі</h3>
+                    <div class="value">${summary.unique_visitors.toLocaleString()}</div>
+                    <div class="label">відвідувачів</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Перегляди сторінок</h3>
+                    <div class="value">${summary.total_page_views.toLocaleString()}</div>
+                    <div class="label">переглядів</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Реєстрації</h3>
+                    <div class="value">${summary.registrations.toLocaleString()}</div>
+                    <div class="label">користувачів</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Активні підписки</h3>
+                    <div class="value">${summary.active_subscriptions.toLocaleString()}</div>
+                    <div class="label">підписок</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Виторг</h3>
+                    <div class="value">${(summary.total_revenue / 100).toFixed(2)} €</div>
+                    <div class="label">євро</div>
+                </div>
+            `;
+        }
+
+        function displayMarketingStats(cac) {
+            const statsGrid = document.getElementById('marketingStats');
+            const isHealthy = cac.is_healthy;
+            statsGrid.innerHTML = `
+                <div class="stat-card">
+                    <h3>CAC (Платні клієнти)</h3>
+                    <div class="value">${(cac.cac_paid_customers / 100).toFixed(2)} €</div>
+                    <div class="label">за клієнта</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Середній LTV</h3>
+                    <div class="value">${(cac.average_ltv / 100).toFixed(2)} €</div>
+                    <div class="label">на клієнта</div>
+                </div>
+                <div class="stat-card">
+                    <h3>LTV:CAC Ratio</h3>
+                    <div class="value ${isHealthy ? 'positive' : 'negative'}">${cac.ltv_cac_ratio.toFixed(2)}</div>
+                    <div class="label">${isHealthy ? '✅ Здоровий' : '⚠️ Потрібно покращити'}</div>
+                </div>
+                <div class="stat-card">
+                    <h3>Витрати на маркетинг</h3>
+                    <div class="value">${(cac.total_marketing_cost / 100).toFixed(2)} €</div>
+                    <div class="label">євро</div>
+                </div>
+            `;
+        }
+
+        function displayOverviewChart(data) {
+            const ctx = document.getElementById('overviewChart');
+            if (charts.overview) charts.overview.destroy();
+
+            // Get chart data
+            fetchAPI(`/api/owner/analytics/charts/visitors?days=${document.getElementById('periodSelect').value}`)
+                .then(visitorsData => {
+                    return fetchAPI(`/api/owner/analytics/charts/registrations?days=${document.getElementById('periodSelect').value}`)
+                        .then(registrationsData => {
+                            charts.overview = new Chart(ctx, {
+                                type: 'line',
+                                data: {
+                                    labels: visitorsData.chart_data.map(d => d.date),
+                                    datasets: [{
+                                        label: 'Відвідувачі',
+                                        data: visitorsData.chart_data.map(d => d.value),
+                                        borderColor: '#667eea',
+                                        backgroundColor: 'rgba(102, 126, 234, 0.1)',
+                                        tension: 0.4
+                                    }, {
+                                        label: 'Реєстрації',
+                                        data: registrationsData.chart_data.map(d => d.value),
+                                        borderColor: '#10b981',
+                                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                                        tension: 0.4
+                                    }]
+                                },
+                                options: {
+                                    responsive: true,
+                                    maintainAspectRatio: false,
+                                    plugins: {
+                                        legend: {
+                                            position: 'top',
+                                        }
+                                    }
+                                }
+                            });
+                        });
+                });
+        }
+
+        function displayFunnelChart(funnel) {
+            const ctx = document.getElementById('funnelChart');
+            if (charts.funnel) charts.funnel.destroy();
+
+            charts.funnel = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: funnel.funnel.map(f => f.step),
+                    datasets: [{
+                        label: 'Кількість',
+                        data: funnel.funnel.map(f => f.count),
+                        backgroundColor: [
+                            'rgba(102, 126, 234, 0.8)',
+                            'rgba(118, 75, 162, 0.8)',
+                            'rgba(16, 185, 129, 0.8)',
+                            'rgba(245, 158, 11, 0.8)'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+        }
+
+        function displayTrafficSources(sources) {
+            const ctx = document.getElementById('trafficSourcesChart');
+            if (charts.traffic) charts.traffic.destroy();
+
+            charts.traffic = new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: sources.map(s => s.source),
+                    datasets: [{
+                        data: sources.map(s => s.count),
+                        backgroundColor: [
+                            '#667eea', '#764ba2', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        function displayDevices(devices) {
+            const ctx = document.getElementById('devicesChart');
+            if (charts.devices) charts.devices.destroy();
+
+            charts.devices = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: devices.devices.map(d => d.type),
+                    datasets: [{
+                        data: devices.devices.map(d => d.count),
+                        backgroundColor: ['#667eea', '#10b981', '#f59e0b']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        function displayRevenueChart(revenue) {
+            const ctx = document.getElementById('revenueChart');
+            if (charts.revenue) charts.revenue.destroy();
+
+            charts.revenue = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: revenue.revenue_chart.map(r => r.date),
+                    datasets: [{
+                        label: 'Виторг (€)',
+                        data: revenue.revenue_chart.map(r => r.value / 100),
+                        backgroundColor: 'rgba(16, 185, 129, 0.8)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        function displaySubscriptionsChart(subscriptions) {
+            const ctx = document.getElementById('subscriptionsChart');
+            if (charts.subscriptions) charts.subscriptions.destroy();
+
+            charts.subscriptions = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: subscriptions.plans.map(p => p.plan_type),
+                    datasets: [{
+                        label: 'Кількість',
+                        data: subscriptions.plans.map(p => p.count),
+                        backgroundColor: 'rgba(102, 126, 234, 0.8)'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false
+                }
+            });
+        }
+
+        function displayROITable(channels) {
+            const tbody = document.getElementById('roiTableBody');
+            tbody.innerHTML = channels.map(ch => `
+                <tr>
+                    <td><strong>${ch.channel}</strong></td>
+                    <td>${(ch.cost / 100).toFixed(2)} €</td>
+                    <td>${(ch.revenue / 100).toFixed(2)} €</td>
+                    <td class="${ch.profit >= 0 ? 'positive' : 'negative'}">${(ch.profit / 100).toFixed(2)} €</td>
+                    <td class="${ch.roi >= 0 ? 'positive' : 'negative'}">${ch.roi.toFixed(2)}%</td>
+                    <td>${ch.conversion_rate.toFixed(2)}%</td>
+                </tr>
+            `).join('');
+        }
+
+        function displayCampaignsTable(campaigns) {
+            const tbody = document.getElementById('campaignsTableBody');
+            tbody.innerHTML = campaigns.map(c => `
+                <tr>
+                    <td><strong>${c.campaign_name}</strong></td>
+                    <td>${c.channel}</td>
+                    <td>${c.visitors}</td>
+                    <td>${c.paid_subscriptions}</td>
+                    <td class="${c.roi >= 0 ? 'positive' : 'negative'}">${c.roi.toFixed(2)}%</td>
+                    <td><span class="badge ${c.is_active ? 'badge-success' : 'badge-warning'}">${c.is_active ? 'Активна' : 'Неактивна'}</span></td>
+                </tr>
+            `).join('');
+        }
+    </script>
+</body>
+
+</html>

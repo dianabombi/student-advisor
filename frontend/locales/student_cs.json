@@ -1,0 +1,104 @@
+{
+    "student": {
+        "hero": {
+            "title": "Vaše brána k vzdělávacím příležitostem",
+            "subtitle": "Objevte univerzity, získejte AI poradenství a naplánujte svou akademickou budoucnost",
+            "getStarted": "Začít",
+            "findHousing": "Najít Ubytování",
+            "exploreUniversities": "Prozkoumat Univerzity"
+        },
+        "features": {
+            "title": "Proč si vybrat Student Platform?",
+            "feature1": {
+                "title": "Vyhledávání Univerzit",
+                "description": "Najděte a porovnejte univerzity v mnoha zemích"
+            },
+            "feature2": {
+                "title": "AI Poradenství",
+                "description": "Získejte personalizovaná doporučení a podporu při přihlašování"
+            },
+            "feature3": {
+                "title": "Globální Dosah",
+                "description": "Přístup k informacím o univerzitách po celém světě"
+            }
+        },
+        "universities": {
+            "title": "Slovenské Univerzity",
+            "viewAll": "Zobrazit Všechny Univerzity"
+        },
+        "cta": {
+            "title": "Připraveni Začít Svou Cestu?",
+            "subtitle": "Připojte se k tisícům studentů hledajících svou ideální univerzitu",
+            "button": "Vytvořit Bezplatný Účet"
+        },
+        "authPrompt": {
+            "title": "Vyžaduje se registrace",
+            "message": "Pro přístup k této funkci se prosím zaregistrujte nebo přihlaste",
+            "register": "Zaregistrovat se",
+            "login": "Přihlásit se"
+        },
+        "pricing": {
+            "title": "Vyberte si svůj plán",
+            "subtitle": "Začněte s bezplatným plánem nebo si vyberte prémiové funkce",
+            "guarantee": "💳 Bezpečná platba • 🔒 Zrušitelné kdykoli • ✅ Bez skrytých poplatků",
+            "free": {
+                "name": "FREE",
+                "price": "€0",
+                "period": "/měsíc",
+                "description": "Základní přístup",
+                "features": {
+                    "browse": "Prohlížení univerzit",
+                    "links": "Odkazy na oficiální stránky",
+                    "info": "Základní informace",
+                    "noAI": "Bez AI konzultanta"
+                },
+                "button": "Začít zdarma",
+                "currentPlan": "Aktuální plán"
+            },
+            "basic": {
+                "name": "BASIC",
+                "price": "€10",
+                "period": "/měsíc",
+                "description": "Pro aktivní studenty",
+                "badge": "Populární",
+                "features": {
+                    "allFree": "Vše z FREE +",
+                    "aiConsultations": "25 AI konzultací",
+                    "detailed": "Podrobné odpovědi",
+                    "housing": "Hledání ubytování",
+                    "jobs": "Brigády pro studenty"
+                },
+                "button": "Vybrat BASIC"
+            },
+            "standard": {
+                "name": "STANDARD",
+                "price": "€20",
+                "period": "/měsíc",
+                "description": "Pro náročné",
+                "features": {
+                    "allBasic": "Vše z BASIC +",
+                    "aiConsultations": "50 AI konzultací",
+                    "plans": "Pokročilé plány přijetí",
+                    "advice": "Personalizované rady",
+                    "templates": "Šablony dokumentů"
+                },
+                "button": "Vybrat STANDARD"
+            },
+            "premium": {
+                "name": "PREMIUM",
+                "price": "€30",
+                "period": "/měsíc",
+                "description": "Kompletní podpora",
+                "badge": "⭐ Nejlepší",
+                "features": {
+                    "allStandard": "Vše ze STANDARD +",
+                    "aiConsultations": "100 AI konzultací",
+                    "expert": "Expertní konzultace",
+                    "support": "Prioritní podpora 24/7",
+                    "personalPlan": "Osobní plán přijetí"
+                },
+                "button": "Vybrat PREMIUM"
+            }
+        }
+    }
+}

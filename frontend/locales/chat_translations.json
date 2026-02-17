@@ -1,0 +1,86 @@
+{
+    "sk": {
+        "chat": {
+            "title": "Právny Chat",
+            "welcome": "Vitajte v CODEX Legal AI",
+            "welcomeDesc": "Opýtajte sa ma na čokoľvek o slovenskom práve alebo vašich právnych dokumentoch.",
+            "placeholder": "Položte právnu otázku...",
+            "send": "Odoslať",
+            "thinking": "Premýšľam...",
+            "error": "Prepáčte, vyskytla sa chyba. Skúste to prosím znova.",
+            "sources": "Zdroje",
+            "similarity": "Relevancia",
+            "newSession": "Nová konverzácia",
+            "noSessions": "Zatiaľ žiadne konverzácie",
+            "messages": "správ",
+            "confirmDelete": "Naozaj chcete vymazať túto konverzáciu?",
+            "justNow": "Práve teraz",
+            "minsAgo": "m",
+            "hoursAgo": "h",
+            "daysAgo": "d"
+        }
+    },
+    "en": {
+        "chat": {
+            "title": "Legal Chat",
+            "welcome": "Welcome to CODEX Legal AI",
+            "welcomeDesc": "Ask me anything about Slovak law or your legal documents.",
+            "placeholder": "Ask a legal question...",
+            "send": "Send",
+            "thinking": "Thinking...",
+            "error": "Sorry, something went wrong. Please try again.",
+            "sources": "Sources",
+            "similarity": "Relevance",
+            "newSession": "New Conversation",
+            "noSessions": "No conversations yet",
+            "messages": "messages",
+            "confirmDelete": "Are you sure you want to delete this conversation?",
+            "justNow": "Just now",
+            "minsAgo": "m ago",
+            "hoursAgo": "h ago",
+            "daysAgo": "d ago"
+        }
+    },
+    "uk": {
+        "chat": {
+            "title": "Юридичний Чат",
+            "welcome": "Ласкаво просимо до CODEX Legal AI",
+            "welcomeDesc": "Запитайте мене про що завгодно щодо словацького права або ваших юридичних документів.",
+            "placeholder": "Поставте юридичне питання...",
+            "send": "Надіслати",
+            "thinking": "Думаю...",
+            "error": "Вибачте, сталася помилка. Спробуйте ще раз.",
+            "sources": "Джерела",
+            "similarity": "Релевантність",
+            "newSession": "Нова розмова",
+            "noSessions": "Поки немає розмов",
+            "messages": "повідомлень",
+            "confirmDelete": "Ви впевнені, що хочете видалити цю розмову?",
+            "justNow": "Щойно",
+            "minsAgo": "хв тому",
+            "hoursAgo": "год тому",
+            "daysAgo": "дн тому"
+        }
+    },
+    "ru": {
+        "chat": {
+            "title": "Юридический Чат",
+            "welcome": "Добро пожаловать в CODEX Legal AI",
+            "welcomeDesc": "Спросите меня о чем угодно касательно словацкого права или ваших юридических документов.",
+            "placeholder": "Задайте юридический вопрос...",
+            "send": "Отправить",
+            "thinking": "Думаю...",
+            "error": "Извините, произошла ошибка. Попробуйте еще раз.",
+            "sources": "Источники",
+            "similarity": "Релевантность",
+            "newSession": "Новый разговор",
+            "noSessions": "Пока нет разговоров",
+            "messages": "сообщений",
+            "confirmDelete": "Вы уверены, что хотите удалить этот разговор?",
+            "justNow": "Только что",
+            "minsAgo": "мин назад",
+            "hoursAgo": "ч назад",
+            "daysAgo": "дн назад"
+        }
+    }
+}

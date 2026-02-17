@@ -1,0 +1,34 @@
+{
+    "marketplace": {
+        "lawyer": {
+            "registration": {
+                "success": "Registration successful. Your application will be verified within 48 hours.",
+                "error_exists": "Lawyer with this license number already exists",
+                "error_invalid_json": "Invalid JSON format for specializations, jurisdictions or languages",
+                "error_invalid_jurisdiction": "Invalid jurisdiction",
+                "error_registration": "Registration error"
+            },
+            "search": {
+                "error_invalid_jurisdiction": "Invalid or inactive jurisdiction",
+                "error_search": "Search error"
+            },
+            "profile": {
+                "not_found": "Lawyer not found",
+                "lawyer_profile_not_found": "Lawyer profile not found",
+                "updated": "Profile updated successfully",
+                "error_update": "Update error"
+            },
+            "stats": {
+                "error_loading": "Error loading statistics"
+            },
+            "availability": {
+                "updated": "Availability updated successfully"
+            },
+            "admin": {
+                "access_denied": "Access denied",
+                "verified": "Lawyer verified successfully",
+                "rejected": "Application rejected"
+            }
+        }
+    }
+}

@@ -1,0 +1,540 @@
+{
+    "menu": {
+        "dashboard": "Prehľad",
+        "documents": "Dokumenty",
+        "ai_consultant": "AI Konzultant",
+        "settings": "Nastavenia",
+        "logout": "Odhlásiť sa"
+    },
+    "auth": {
+        "login": {
+            "title": "Prihlásenie",
+            "welcome": "Vitajte späť!",
+            "subtitle": "Prihláste sa do svojho účtu",
+            "email": "E-mail",
+            "password": "Heslo",
+            "button": "Prihlásiť sa",
+            "button_loading": "Prihlasovanie...",
+            "no_account": "Nemáte účet?",
+            "register_here": "Zaregistrujte sa tu",
+            "register_link": "Zaregistrovať sa",
+            "success_registered": "Registrácia úspešná! Teraz sa môžete prihlásiť.",
+            "error_invalid": "Nesprávny email alebo heslo",
+            "error_connection": "Chyba pripojenia k serveru",
+            "placeholder_email": "your@email.com",
+            "placeholder_password": "••••••••",
+            "required": "Prosím, prihláste sa na nákup predplatného"
+        },
+        "register": {
+            "title": "Registrácia",
+            "create_account": "Vytvoriť účet",
+            "subtitle": "Začnite používať CODEX zadarmo",
+            "name": "Meno a priezvisko",
+            "email": "E-mail",
+            "password": "Heslo",
+            "confirm_password": "Potvrďte heslo",
+            "button": "Vytvoriť účet",
+            "button_loading": "Registrácia...",
+            "have_account": "Už máte účet?",
+            "login_link": "Prihlásiť sa",
+            "error_password_mismatch": "Heslá sa nezhodujú",
+            "error_registration": "Chyba registrácie",
+            "error_connection": "Chyba pripojenia k serveru",
+            "placeholder_name": "Vaše meno",
+            "placeholder_email": "your@email.com",
+            "placeholder_password": "••••••••",
+            "consent": {
+                "title": "⚠️ Povinné potvrdenie",
+                "ai_tool": "Rozumiem, že CODEX je AI nástroj, NIE právnik",
+                "no_advice": "Rozumiem, že CODEX NEPOSKYTUJE právne poradenstvo",
+                "no_attorney": "Rozumiem, že používanie CODEX NEVYTVÁRA vzťah klient-advokát",
+                "error": "Musíte potvrdiť všetky potvrdenia pre registráciu",
+                "required": "Všetky potvrdenia sú povinné"
+            },
+            "terms_agreement": "Prečítal som a súhlasím s",
+            "terms_link": "Podmienkami používania",
+            "and": "a",
+            "privacy_link": "Zásadami ochrany osobných údajov",
+            "error_terms": "Musíte súhlasiť s Podmienkami používania"
+        }
+    },
+    "dashboard": {
+        "welcome": "Vitajte späť, {{name}}!",
+        "subtitle": "Čo by ste chceli dnes urobiť?",
+        "no_documents": "Zatiaľ ste nenahrali žiadne dokumenty.",
+        "upload_now": "Nahrať teraz",
+        "upload_card": {
+            "title": "Nahrať dokument",
+            "description": "Nahrajte zmluvy, žaloby alebo iné právne dokumenty na automatické spracovanie"
+        },
+        "declaration_card": {
+            "title": "Vytvoriť právny dokument",
+            "description": "Automaticky vygenerujte právne dokumenty na základe vašich podkladov"
+        },
+        "chat_card": {
+            "title": "AI Konzultant",
+            "description": "Opýtajte sa AI asistenta na právne otázky a získajte okamžité odpovede"
+        },
+        "documents_card": {
+            "title": "Moje dokumenty",
+            "count": "{{count}} nahraných dokumentov",
+            "no_documents": "Zatiaľ žiadne dokumenty"
+        },
+        "stats": {
+            "documents_month": "Dokumenty tento mesiac",
+            "ai_consultations": "AI konzultácie",
+            "legal_documents": "Právne dokumenty"
+        },
+        "back_to_dashboard": "Späť na dashboard"
+    },
+    "app_info": {
+        "appName": "CODEX",
+        "tagline": "Právne poradenstvo s umelou inteligenciou",
+        "welcome": "Vitajte v CODEX",
+        "description": "Vaša inteligentná platforma pre právne poradenstvo"
+    },
+    "upload": {
+        "title": "Nahrať dokumenty",
+        "description": "Nahrajte zmluvy, žaloby alebo iné právne dokumenty",
+        "drag_drop": "Presuňte súbory sem",
+        "or": "alebo",
+        "button": "Vybrať súbory",
+        "uploading": "Nahrávanie...",
+        "upload_button": "Nahrať dokumenty",
+        "success": "Súbor úspešne nahraný!",
+        "selected_files": "Vybrané súbory ({{count}})",
+        "file_types": "PDF, DOC, DOCX, JPG, PNG (max 10MB)"
+    },
+    "ai": {
+        "title": "AI Právny konzultant",
+        "placeholder": "Napíšte svoju otázku...",
+        "send": "Odoslať",
+        "thinking": "Premýšľam...",
+        "error": "Nastala chyba pri komunikácii s AI.",
+        "welcome": "Dobrý deň! Som váš AI právny konzultant. Ako vám môžem pomôcť?",
+        "error_retry": "Prepáčte, vyskytla sa chyba. Skúste to prosím znova.",
+        "error_connection": "Prepáčte, nemôžem sa pripojiť k serveru.",
+        "suggestions": {
+            "1": "Ako vytvoriť zmluvu?",
+            "2": "Aké sú moje práva?",
+            "3": "Právne poradenstvo"
+        }
+    },
+    "footer": {
+        "rights": "© 2025 CODEX Platform. Všetky práva vyhradené."
+    },
+    "landing": {
+        "title": "AI-asistent pre právne informácie",
+        "subtitle": "",
+        "description": "⚠️ CODEX nie je právnická firma a neposkytuje právne konzultácie. Informácie sú určené len na všeobecné vzdelávacie účely. Pre konkrétnu právnu situáciu sa obráťte na licencovaného advokáta.",
+        "cta": {
+            "start": "Začať zadarmo na 1 týždeň",
+            "login": "Už máte účet?"
+        },
+        "feature1": {
+            "title": "AI Konzultant",
+            "desc": "Získajte okamžité odpovede na právne otázky od AI asistenta vyškoleného na slovenskom práve"
+        },
+        "feature2": {
+            "title": "Spracovanie dokumentov",
+            "desc": "Nahrajte dokumenty a automaticky získajte analýzu, extrakciu dát a odporúčania k právnej evidencii"
+        },
+        "feature3": {
+            "title": "Právne dokumenty",
+            "desc": "Vytvárajte právne dokumenty automaticky na základe vašich podkladov so zárukou súladu so zákonom"
+        },
+        "subscription": {
+            "title": "Vyberte si predplatné",
+            "monthly": "1 mesiac",
+            "sixMonths": "6 mesiacov",
+            "yearly": "1 rok",
+            "perMonth": "za mesiac",
+            "save40": "Ušetrite 40€",
+            "save240": "Ušetrite 240€",
+            "popular": "NAJPOPULÁRNEJŠIE",
+            "included": "Zahrnuté:",
+            "requests": "AI požiadaviek",
+            "requestsPerMonth": "za mesiac",
+            "requestsMonthly": "mesačne",
+            "requestsPerDay": "požiadaviek denne",
+            "totalRequests6": "Celkom 3000 požiadaviek za 6 mes",
+            "totalRequests12": "Celkom 6000 požiadaviek za rok",
+            "documents": "Nahratie až 100 dokumentov",
+            "savings": "Úspora",
+            "perMonthPrice": "€25/mesiac",
+            "perMonthPrice12": "€22.50/mesiac",
+            "infoTitle": "Dôležité informácie:",
+            "infoReset": "Limit požiadaviek sa obnovuje 1. dňa každého mesiaca",
+            "infoBonus": "Pri predplatnom získate plný limit okamžite (bonus!)",
+            "infoLimit": "Po vyčerpaní všetkých požiadaviek je prístup pozastavený do nasledujúceho mesiaca",
+            "infoUpgrade": "Vždy môžete upgradovať plán alebo kúpiť dodatočné požiadavky"
+        },
+        "trial": {
+            "active": "Aktívne skúšobné obdobie",
+            "expired": "Skúšobné obdobie skončilo",
+            "days_remaining": "Zostáva {{days}} dní",
+            "day_remaining": "Zostáva {{days}} deň",
+            "subscribe_now": "Vybrať predplatné",
+            "expires_soon": "Vaše skúšobné obdobie čoskoro skončí",
+            "free_trial": "7-dňové bezplatné skúšobné obdobie"
+        }
+    }
+},
+"student": {
+    "hero": {
+        "title": "Učte sa od najlepších univerzít sveta",
+        "subtitle": "Pripojte sa k miliónom študentov, ktorí objavujú nové zručnosti, rozvíjajú kariéru a sledujú svoje vášne s flexibilnými online kurzami.",
+        "joinFree": "Zaregistrovať sa zadarmo",
+        "exploreUniversities": "Preskúmať univerzity"
+    },
+    "whyChoose": {
+        "title": "Prečo si vybrať Student?",
+        "feature1": {
+            "title": "Popredné univerzity",
+            "desc": "Prístup ku kurzom od popredných univerzít v celej Európe. Učte sa od najlepších profesorov a inštitúcií."
+        },
+        "feature2": {
+            "title": "Flexibilné vzdelávanie",
+            "desc": "Študujte vlastným tempom s prístupom k študijným materiálom 24/7. Učte sa kedykoľvek a kdekoľvek chcete."
+        },
+        "feature3": {
+            "title": "Globálna komunita",
+            "desc": "Pripojte sa k celosvetovej komunite študentov. Spojte sa so študentmi z viac ako 190 krajín."
+        }
+    },
+    "courses": {
+        "title": "Populárne kurzy",
+        "viewAll": "Zobraziť všetky",
+        "course1": {
+            "university": "University of Oxford",
+            "title": "Úvod do informatiky",
+            "type": "Profesionálny certifikát"
+        },
+        "course2": {
+            "university": "Stanford University",
+            "title": "Špecializácia v strojovom učení",
+            "type": "Špecializácia"
+        },
+        "course3": {
+            "university": "Harvard University",
+            "title": "Základy podnikového manažmentu",
+            "type": "Kurz"
+        },
+        "course4": {
+            "university": "MIT",
+            "title": "Dátová veda a analytika",
+            "type": "Zadarmo"
+        }
+    },
+    "cta": {
+        "title": "Začnite sa učiť ešte dnes",
+        "subtitle": "Pripojte sa k miliónom študentov na celom svete a zmeňte svoju budúcnosť kvalitným vzdelávaním.",
+        "button": "Začať zadarmo"
+    },
+    "footer": {
+        "tagline": "Vaša brána k vzdelaniu svetového štandardu od popredných univerzít.",
+        "learn": "Vzdelávanie",
+        "courses": "Kurzy",
+        "universities": "Univerzity",
+        "degreePrograms": "Študijné programy",
+        "support": "Podpora",
+        "helpCenter": "Centrum pomoci",
+        "contactUs": "Kontaktujte nás",
+        "faq": "Často kladené otázky",
+        "legal": "Právne",
+        "terms": "Podmienky používania",
+        "privacy": "Ochrana osobných údajov",
+        "copyright": "© 2026 Student. Všetky práva vyhradené."
+    },
+    "nav": {
+        "login": "Prihlásiť sa",
+        "signup": "Registrovať sa"
+    }
+}
+},
+"common": {
+"back": "Späť",
+"loading": "Načítavam...",
+"error": "Chyba",
+"success": "Úspech",
+"cancel": "Zrušiť",
+"save": "Uložiť",
+"delete": "Vymazať",
+"edit": "Upraviť",
+"close": "Zavrieť",
+"backToDashboard": "Späť na prehľad",
+"all": "Všetky",
+"welcome": "Vitajte"
+},
+"payment": {
+"success": "Platba úspešná",
+"error": "Chyba platby. Prosím, skúste znova",
+"processing": "Spracovanie platby..."
+},
+"chat": {
+"title": "Právny Chat",
+"welcome": "Vitajte v CODEX Legal AI",
+"welcomeDesc": "Opýtajte sa ma na čokoľvek o slovenskom práve alebo vašich právnych dokumentoch.",
+"placeholder": "Položte právnu otázku...",
+"send": "Odoslať",
+"thinking": "Premýšľam...",
+"error": "Prepáčte, vyskytla sa chyba. Skúste to prosím znova.",
+"sources": "Zdroje",
+"similarity": "Relevancia",
+"newSession": "Nová konverzácia",
+"noSessions": "Zatiaľ žiadne konverzácie",
+"messages": "správ",
+"confirmDelete": "Naozaj chcete vymazať túto konverzáciu?",
+"justNow": "Práve teraz",
+"minsAgo": "m",
+"hoursAgo": "h",
+"daysAgo": "d"
+},
+"aiSupport": {
+"title": "AI Podpora",
+"description": "Popíšte svoj problém a AI analyzuje vaše záznamy a pomôže vám ho vyriešiť.",
+"placeholder": "Napríklad: 'Nemôžem nahrať dokument' alebo 'AI pomaly odpovedá'",
+"analyzing": "Analyzujem záznamy...",
+"analyze": "Analyzovať problém",
+"analyzed": "Analyzovaných {count} záznamov",
+"errorsFound": "Nájdených {count} chýb",
+"needsHuman": "Potrebná pomoc operátora",
+"needsHumanDesc": "AI zistil zložitý problém. Pošleme váš dopyt technickej podpore.",
+"anotherIssue": "Iný problém",
+"helped": "Pomohlo!"
+},
+"sidebar": {
+"about": "O nás",
+"howItWorks": "Ako to funguje",
+"feedback": "Spätná väzba"
+},
+"howItWorks": {
+"title": "Ako to funguje",
+"subtitle": "Jednoduchý sprievodca používaním platformy CODEX",
+"step1": {
+    "title": "Registrácia a prihlásenie",
+    "description": "Vytvorte si účet zadaním mena, emailu a hesla. Získate 7-dňový bezplatný prístup k všetkým funkciám platformy."
+},
+"step2": {
+    "title": "Nahratie dokumentov",
+    "description": "Nahrajte svoje právne dokumenty (zmluvy, žaloby, rozhodnutia súdov) vo formáte PDF, DOCX alebo obrázky. Systém ich automaticky spracuje pomocou OCR."
+},
+"step3": {
+    "title": "Automatická klasifikácia",
+    "description": "AI automaticky rozpozná typ dokumentu a kategorizuje ho (zmluva, žaloba, rozhodnutie súdu atď.) pre lepšiu organizáciu."
+},
+"step4": {
+    "title": "AI právny konzultant",
+    "description": "Položte otázku o vašom dokumente alebo právnom probléme. AI analyzuje kontext a poskytne odborné právne poradenstvo podľa slovenského práva."
+},
+"step5": {
+    "title": "Okamžité odpovede",
+    "description": "Získajte odpovede na právne otázky za sekundy namiesto hodín čakania na advokáta. AI pracuje 24/7."
+},
+"step6": {
+    "title": "Bezpečné uloženie",
+    "description": "Všetky vaše dokumenty sú šifrované a bezpečne uložené v cloude. Máte k nim prístup kedykoľvek a odkiaľkoľvek."
+},
+"step7": {
+    "title": "História konzultácií",
+    "description": "Všetky rozhovory s AI sú uložené. Môžete sa kedykoľvek vrátiť k predchádzajúcim konzultáciám a odpovediam."
+},
+"step8": {
+    "title": "Viacjazyčná podpora",
+    "description": "Platforma podporuje slovenčinu, češtinu, poľštinu, angličtinu, ukrajinčinu, ruštinu, nemčinu, francúzštinu, španielčinu a taliančinu."
+},
+"step9": {
+    "title": "Hromadné spracovanie",
+    "description": "Nahrajte viacero dokumentov naraz. Systém ich všetky spracuje paralelne a pripraví na analýzu."
+},
+"step10": {
+    "title": "Technická podpora AI",
+    "description": "Ak máte technický problém, kliknite na modrú ikonu 🔧 v pravom dolnom rohu. AI analyzuje vaše logy a pomôže vyriešiť problém."
+},
+"step11": {
+    "title": "Výber predplatného",
+    "description": "Po skončení 7-dňovej skúšobnej doby si vyberte mesačné (30€), polročné (80€) alebo ročné (120€) predplatné podľa vašich potrieb."
+},
+"step12": {
+    "title": "Ochrana súkromia",
+    "description": "Vaše dáta sú chránené podľa GDPR. Nikdy nezdieľame vaše dokumenty s tretími stranami. Máte plnú kontrolu nad svojimi údajmi."
+},
+"cta": {
+    "title": "Pripravení začať?",
+    "description": "Zaregistrujte sa teraz a získajte 7 dní bezplatného prístupu k všetkým funkciám!",
+    "button": "Začať zadarmo"
+}
+},
+"marketplace": {
+"title": "Marketplace právnikov",
+"searchLawyers": "Hľadať právnikov",
+"registerAsLawyer": "Registrovať sa ako právnik",
+"findLawyer": "Nájsť právnika",
+"noLawyers": "Neboli nájdení žiadni právnici",
+"lawyersFound": "{{count}} právnikov nájdených",
+"lawyerFound": "{{count}} právnik nájdený",
+"lawyersFew": "{{count}} právnici nájdení",
+"filters": {
+    "title": "Filtre",
+    "jurisdiction": "Jurisdikcia",
+    "specialization": "Špecializácia",
+    "rating": "Minimálne hodnotenie",
+    "language": "Jazyk",
+    "available": "Iba dostupní",
+    "clear": "Vymazať filtre",
+    "apply": "Použiť"
+},
+"specializations": {
+    "civil_law": "Občianske právo",
+    "criminal_law": "Trestné právo",
+    "labor_law": "Pracovné právo",
+    "family_law": "Rodinné právo",
+    "commercial_law": "Obchodné právo",
+    "real_estate_law": "Nehnuteľnosti",
+    "tax_law": "Daňové právo",
+    "intellectual_property": "Duševné vlastníctvo",
+    "administrative_law": "Správne právo",
+    "corporate_law": "Korporátne právo",
+    "consumer_protection": "Ochrana spotrebiteľa"
+},
+"lawyerCard": {
+    "experience": "{{years}} rokov skúseností",
+    "rating": "Hodnotenie",
+    "reviews": "{{count}} recenzií",
+    "hourlyRate": "{{rate}}€/hod",
+    "consultationFee": "Konzultácia: {{fee}}€",
+    "viewProfile": "Zobraziť profil",
+    "verified": "Overený",
+    "available": "Dostupný",
+    "unavailable": "Nedostupný"
+},
+"lawyerProfile": {
+    "title": "Profil právnika",
+    "about": "O právnikovi",
+    "experience": "Skúsenosti",
+    "education": "Vzdelanie",
+    "specializations": "Špecializácie",
+    "jurisdictions": "Jurisdikcie",
+    "languages": "Jazyky",
+    "hourlyRate": "Hodinová sadzba",
+    "consultationFee": "Cena konzultácie",
+    "orderConsultation": "Objednať konzultáciu",
+    "reviews": "Recenzie",
+    "noReviews": "Zatiaľ žiadne recenzie",
+    "licenseNumber": "Číslo licencie",
+    "barAssociation": "Advokátska komora",
+    "yearsExperience": "{{years}} rokov skúseností",
+    "totalCases": "{{count}} prípadov"
+},
+"registration": {
+    "title": "Registrácia právnika",
+    "subtitle": "Pripojte sa k našej platforme právnych služieb",
+    "step0": "Jurisdikcia",
+    "step1": "Osobné informácie",
+    "step2": "Dokumenty",
+    "step3": "Špecializácie",
+    "step4": "Prehľad",
+    "selectYourJurisdiction": "Vyberte svoju jurisdikciu",
+    "jurisdictionLanguageInfo": "Registračný formulár sa automaticky prepne na jazyk vybranej jurisdikcie",
+    "fullName": "Celé meno",
+    "lawyerTitle": "Titul",
+    "licenseNumber": "Číslo licencie",
+    "barAssociation": "Advokátska komora",
+    "experienceYears": "Roky skúseností",
+    "bio": "O mne",
+    "education": "Vzdelanie",
+    "hourlyRate": "Hodinová sadzba (€)",
+    "consultationFee": "Cena konzultácie (€)",
+    "uploadDiploma": "Nahrať diplom",
+    "uploadLicense": "Nahrať licenciu",
+    "uploadId": "Nahrať ID dokument",
+    "selectJurisdictions": "Vyberte jurisdikcie",
+    "selectSpecializations": "Vyberte špecializácie",
+    "selectLanguages": "Vyberte jazyky",
+    "next": "Ďalej",
+    "previous": "Späť",
+    "submit": "Odoslať žiadosť",
+    "submitting": "Odosielanie...",
+    "success": "Registrácia úspešná! Vaša žiadosť bude preskúmaná do 48 hodín.",
+    "error": "Chyba registrácie. Prosím, skúste znova.",
+    "required": "Toto pole je povinné",
+    "invalidLicense": "Neplatný formát čísla licencie",
+    "fileTooBig": "Súbor je príliš veľký (max 10MB)",
+    "invalidFileType": "Neplatný typ súboru (povolené: PDF, JPG, PNG)"
+},
+"dashboard": {
+    "dashboardTitle": "Dashboard právnika",
+    "welcome": "Vitajte, {{name}}!",
+    "stats": {
+        "rating": "Hodnotenie",
+        "reviews": "Recenzií",
+        "cases": "Prípadov",
+        "activeOrders": "Aktívne objednávky",
+        "completedOrders": "Dokončené objednávky"
+    },
+    "availability": {
+        "title": "Dostupnosť",
+        "available": "Dostupný pre objednávky",
+        "unavailable": "Nedostupný",
+        "toggle": "Zmeniť stav"
+    },
+    "profile": {
+        "title": "Môj profil",
+        "edit": "Upraviť profil",
+        "update": "Aktualizovať",
+        "updating": "Aktualizácia...",
+        "success": "Profil úspešne aktualizovaný",
+        "error": "Chyba aktualizácie profilu"
+    },
+    "orders": {
+        "title": "Objednávky",
+        "active": "Aktívne",
+        "completed": "Dokončené",
+        "noOrders": "Žiadne objednávky",
+        "viewAll": "Zobraziť všetky"
+    }
+},
+"admin": {
+    "title": "Overovanie právnikov",
+    "pending": "Na posúdenie",
+    "verified": "Overení",
+    "rejected": "Zamietnutí",
+    "noPending": "Žiadne žiadosti na posúdenie",
+    "verify": "Overiť",
+    "reject": "Zamietnuť",
+    "verifying": "Overovanie...",
+    "rejecting": "Zamietanie...",
+    "rejectReason": "Dôvod zamietnutia",
+    "rejectReasonPlaceholder": "Uveďte dôvod zamietnutia (minimálne 10 znakov)",
+    "verifySuccess": "Právnik úspešne overený",
+    "rejectSuccess": "Žiadosť zamietnutá",
+    "error": "Chyba operácie",
+    "viewDocuments": "Zobraziť dokumenty",
+    "diploma": "Diplom",
+    "license": "Licencia",
+    "idDocument": "ID dokument",
+    "registeredAt": "Registrovaný",
+    "confirmVerify": "Naozaj chcete overiť tohto právnika?",
+    "confirmReject": "Naozaj chcete zamietnuť túto žiadosť?"
+},
+"order": {
+    "title": "Objednať konzultáciu",
+    "selectService": "Vyberte službu",
+    "consultation": "Konzultácia",
+    "documentReview": "Preskúmanie dokumentu",
+    "representation": "Zastupovanie",
+    "description": "Popis problému",
+    "descriptionPlaceholder": "Popíšte váš právny problém podrobne...",
+    "preferredDate": "Preferovaný dátum",
+    "preferredTime": "Preferovaný čas",
+    "submit": "Odoslať objednávku",
+    "submitting": "Odosielanie...",
+    "success": "Objednávka úspešne vytvorená",
+    "error": "Chyba vytvorenia objednávky",
+    "totalCost": "Celková cena",
+    "platformFee": "Poplatok platformy (15%)",
+    "lawyerFee": "Platba právnikovi",
+    "payNow": "Zaplatiť teraz"
+}
+}
+}

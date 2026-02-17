@@ -1,0 +1,58 @@
+# AI Support Knowledge Base
+
+## Common Problems and Solutions
+
+### File Too Large
+**Problem**: "File size exceeds limit" or "document_upload_failed"
+**Solution**:
+1. Compress PDF at smallpdf.com or ilovepdf.com
+2. Split into smaller files
+3. Upgrade to Professional plan (50 MB limit vs 10 MB)
+
+### OpenAI Timeout
+**Problem**: "openai_timeout" or "openai_rate_limit"
+**Solution**:
+1. Wait 1-2 minutes
+2. Try again
+3. If persists - OpenAI is overloaded, try later
+
+### Monthly Limit Reached
+**Problem**: "monthly_limit_exceeded"
+**Solution**:
+1. Wait until next month (auto-reset on 1st)
+2. Upgrade to higher plan
+3. Purchase additional requests
+
+### OCR Failed
+**Problem**: "ocr_failed" or "text_extraction_error"
+**Solution**:
+1. Check file is not corrupted
+2. Try different format (PDF instead of image)
+3. Ensure text is readable (not blurry)
+
+### Slow Processing
+**Problem**: "processing_duration_ms > 60000"
+**Solution**:
+1. Large file - this is normal, please wait
+2. Check internet connection
+3. If repeats - contact support
+
+### Authentication Issues
+**Problem**: "login_failed" or "token_expired"
+**Solution**:
+1. Check email and password
+2. Clear browser cache
+3. Reset password if needed
+
+### Chat Not Responding
+**Problem**: "openai_api_error" or timeout in chat
+**Solution**:
+1. Check internet connection
+2. OpenAI may be down - try in 5 minutes
+3. If urgent - contact support
+
+## Upgrade Benefits
+
+**Basic Plan**: 500 requests/month, 10 MB files
+**Professional Plan**: 2000 requests/month, 50 MB files, priority support
+**Enterprise Plan**: Unlimited requests, 100 MB files, dedicated support

@@ -1,0 +1,104 @@
+{
+    "student": {
+        "hero": {
+            "title": "La Tua Porta verso Opportunità Educative",
+            "subtitle": "Scopri università, ottieni orientamento basato sull'IA e pianifica il tuo futuro accademico",
+            "getStarted": "Inizia",
+            "findHousing": "Trova Alloggio",
+            "exploreUniversities": "Esplora Università"
+        },
+        "features": {
+            "title": "Perché Scegliere Student Platform?",
+            "feature1": {
+                "title": "Ricerca Università",
+                "description": "Trova e confronta università in più paesi"
+            },
+            "feature2": {
+                "title": "Orientamento IA",
+                "description": "Ottieni raccomandazioni personalizzate e supporto alle candidature"
+            },
+            "feature3": {
+                "title": "Portata Globale",
+                "description": "Accedi a informazioni sulle università in tutto il mondo"
+            }
+        },
+        "universities": {
+            "title": "Università Slovacche",
+            "viewAll": "Visualizza Tutte le Università"
+        },
+        "cta": {
+            "title": "Pronto a Iniziare il Tuo Viaggio?",
+            "subtitle": "Unisciti a migliaia di studenti che trovano la loro università perfetta",
+            "button": "Crea Account Gratuito"
+        },
+        "authPrompt": {
+            "title": "Registrazione richiesta",
+            "message": "Si prega di registrarsi o accedere per accedere a questa funzione",
+            "register": "Registrati",
+            "login": "Accedi"
+        },
+        "pricing": {
+            "title": "Scegli il tuo piano",
+            "subtitle": "Inizia con un piano gratuito o scegli funzionalità premium",
+            "guarantee": "💳 Pagamento sicuro • 🔒 Annulla in qualsiasi momento • ✅ Nessun costo nascosto",
+            "free": {
+                "name": "FREE",
+                "price": "€0",
+                "period": "/mese",
+                "description": "Accesso base",
+                "features": {
+                    "browse": "Sfoglia università",
+                    "links": "Link ai siti ufficiali",
+                    "info": "Informazioni di base",
+                    "noAI": "Nessun consulente IA"
+                },
+                "button": "Inizia gratis",
+                "currentPlan": "Piano attuale"
+            },
+            "basic": {
+                "name": "BASIC",
+                "price": "€10",
+                "period": "/mese",
+                "description": "Per studenti attivi",
+                "badge": "Popolare",
+                "features": {
+                    "allFree": "Tutto da FREE +",
+                    "aiConsultations": "25 consulenze IA",
+                    "detailed": "Risposte dettagliate",
+                    "housing": "Ricerca alloggio",
+                    "jobs": "Lavori per studenti"
+                },
+                "button": "Scegli BASIC"
+            },
+            "standard": {
+                "name": "STANDARD",
+                "price": "€20",
+                "period": "/mese",
+                "description": "Per esigenti",
+                "features": {
+                    "allBasic": "Tutto da BASIC +",
+                    "aiConsultations": "50 consulenze IA",
+                    "plans": "Piani di ammissione avanzati",
+                    "advice": "Consigli personalizzati",
+                    "templates": "Modelli di documenti"
+                },
+                "button": "Scegli STANDARD"
+            },
+            "premium": {
+                "name": "PREMIUM",
+                "price": "€30",
+                "period": "/mese",
+                "description": "Supporto completo",
+                "badge": "⭐ Migliore",
+                "features": {
+                    "allStandard": "Tutto da STANDARD +",
+                    "aiConsultations": "100 consulenze IA",
+                    "expert": "Consulenze esperte",
+                    "support": "Supporto prioritario 24/7",
+                    "personalPlan": "Piano di ammissione personale"
+                },
+                "button": "Scegli PREMIUM"
+            }
+        }
+    }
+}

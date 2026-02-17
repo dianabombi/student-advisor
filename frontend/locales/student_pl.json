@@ -1,0 +1,104 @@
+{
+    "student": {
+        "hero": {
+            "title": "Twoja Brama do Możliwości Edukacyjnych",
+            "subtitle": "Odkryj uniwersytety, uzyskaj wsparcie AI i zaplanuj swoją akademicką przyszłość",
+            "getStarted": "Rozpocznij",
+            "findHousing": "Znajdź Zakwaterowanie",
+            "exploreUniversities": "Przeglądaj Uniwersytety"
+        },
+        "features": {
+            "title": "Dlaczego Wybrać Student Platform?",
+            "feature1": {
+                "title": "Wyszukiwanie Uniwersytetów",
+                "description": "Znajdź i porównaj uniwersytety w wielu krajach"
+            },
+            "feature2": {
+                "title": "Wsparcie AI",
+                "description": "Otrzymaj spersonalizowane rekomendacje i wsparcie aplikacyjne"
+            },
+            "feature3": {
+                "title": "Globalny Zasięg",
+                "description": "Dostęp do informacji o uniwersytetach na całym świecie"
+            }
+        },
+        "universities": {
+            "title": "Słowackie Uniwersytety",
+            "viewAll": "Zobacz Wszystkie Uniwersytety"
+        },
+        "cta": {
+            "title": "Gotowy Rozpocząć Swoją Podróż?",
+            "subtitle": "Dołącz do tysięcy studentów szukających swojego idealnego uniwersytetu",
+            "button": "Utwórz Darmowe Konto"
+        },
+        "authPrompt": {
+            "title": "Wymagana rejestracja",
+            "message": "Aby uzyskać dostęp do tej funkcji, zarejestruj się lub zaloguj",
+            "register": "Zarejestruj się",
+            "login": "Zaloguj się"
+        },
+        "pricing": {
+            "title": "Wybierz swój plan",
+            "subtitle": "Zacznij od darmowego planu lub wybierz funkcje premium",
+            "guarantee": "💳 Bezpieczna płatność • 🔒 Anuluj w dowolnym momencie • ✅ Bez ukrytych opłat",
+            "free": {
+                "name": "FREE",
+                "price": "€0",
+                "period": "/miesiąc",
+                "description": "Podstawowy dostęp",
+                "features": {
+                    "browse": "Przeglądanie uniwersytetów",
+                    "links": "Linki do oficjalnych stron",
+                    "info": "Podstawowe informacje",
+                    "noAI": "Bez konsultanta AI"
+                },
+                "button": "Rozpocznij za darmo",
+                "currentPlan": "Aktualny plan"
+            },
+            "basic": {
+                "name": "BASIC",
+                "price": "€10",
+                "period": "/miesiąc",
+                "description": "Dla aktywnych studentów",
+                "badge": "Popularne",
+                "features": {
+                    "allFree": "Wszystko z FREE +",
+                    "aiConsultations": "25 konsultacji AI",
+                    "detailed": "Szczegółowe odpowiedzi",
+                    "housing": "Wyszukiwanie zakwaterowania",
+                    "jobs": "Praca dla studentów"
+                },
+                "button": "Wybierz BASIC"
+            },
+            "standard": {
+                "name": "STANDARD",
+                "price": "€20",
+                "period": "/miesiąc",
+                "description": "Dla wymagających",
+                "features": {
+                    "allBasic": "Wszystko z BASIC +",
+                    "aiConsultations": "50 konsultacji AI",
+                    "plans": "Zaawansowane plany przyjęcia",
+                    "advice": "Spersonalizowane porady",
+                    "templates": "Szablony dokumentów"
+                },
+                "button": "Wybierz STANDARD"
+            },
+            "premium": {
+                "name": "PREMIUM",
+                "price": "€30",
+                "period": "/miesiąc",
+                "description": "Pełne wsparcie",
+                "badge": "⭐ Najlepsze",
+                "features": {
+                    "allStandard": "Wszystko ze STANDARD +",
+                    "aiConsultations": "100 konsultacji AI",
+                    "expert": "Konsultacje eksperckie",
+                    "support": "Priorytetowe wsparcie 24/7",
+                    "personalPlan": "Osobisty plan przyjęcia"
+                },
+                "button": "Wybierz PREMIUM"
+            }
+        }
+    }
+}

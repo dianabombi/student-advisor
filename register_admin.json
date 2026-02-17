@@ -1,0 +1,8 @@
+{
+    "name": "SuperAdmin",
+    "email": "superadmin@platform.com",
+    "password": "admin123",
+    "consent_ai_tool": true,
+    "consent_no_advice": true,
+    "consent_no_attorney": true
+}

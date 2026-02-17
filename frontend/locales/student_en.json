@@ -1,0 +1,104 @@
+{
+    "student": {
+        "hero": {
+            "title": "Your Gateway to Educational Opportunities",
+            "subtitle": "Discover universities, get AI-powered guidance, and plan your academic future",
+            "getStarted": "Get Started",
+            "findHousing": "Find Housing",
+            "exploreUniversities": "Explore Universities"
+        },
+        "features": {
+            "title": "Why Choose Student Platform?",
+            "feature1": {
+                "title": "University Search",
+                "description": "Find and compare universities across multiple countries"
+            },
+            "feature2": {
+                "title": "AI Guidance",
+                "description": "Get personalized recommendations and application support"
+            },
+            "feature3": {
+                "title": "Global Reach",
+                "description": "Access information about universities worldwide"
+            }
+        },
+        "universities": {
+            "title": "Slovak Universities",
+            "viewAll": "View All Universities"
+        },
+        "cta": {
+            "title": "Ready to Start Your Journey?",
+            "subtitle": "Join thousands of students finding their perfect university",
+            "button": "Create Free Account"
+        },
+        "authPrompt": {
+            "title": "Registration Required",
+            "message": "Please register or log in to access this feature",
+            "register": "Register",
+            "login": "Log In"
+        },
+        "pricing": {
+            "title": "Choose Your Plan",
+            "subtitle": "Start with a free plan or choose premium features",
+            "guarantee": "💳 Secure payment • 🔒 Cancel anytime • ✅ No hidden fees",
+            "free": {
+                "name": "FREE",
+                "price": "€0",
+                "period": "/month",
+                "description": "Basic access",
+                "features": {
+                    "browse": "Browse universities",
+                    "links": "Links to official websites",
+                    "info": "Basic information",
+                    "noAI": "No AI consultant"
+                },
+                "button": "Start for free",
+                "currentPlan": "Current plan"
+            },
+            "basic": {
+                "name": "BASIC",
+                "price": "€10",
+                "period": "/month",
+                "description": "For active students",
+                "badge": "Popular",
+                "features": {
+                    "allFree": "Everything from FREE +",
+                    "aiConsultations": "25 AI consultations",
+                    "detailed": "Detailed answers",
+                    "housing": "Housing search",
+                    "jobs": "Student jobs"
+                },
+                "button": "Choose BASIC"
+            },
+            "standard": {
+                "name": "STANDARD",
+                "price": "€20",
+                "period": "/month",
+                "description": "For demanding users",
+                "features": {
+                    "allBasic": "Everything from BASIC +",
+                    "aiConsultations": "50 AI consultations",
+                    "plans": "Advanced admission plans",
+                    "advice": "Personalized advice",
+                    "templates": "Document templates"
+                },
+                "button": "Choose STANDARD"
+            },
+            "premium": {
+                "name": "PREMIUM",
+                "price": "€30",
+                "period": "/month",
+                "description": "Complete support",
+                "badge": "⭐ Best",
+                "features": {
+                    "allStandard": "Everything from STANDARD +",
+                    "aiConsultations": "100 AI consultations",
+                    "expert": "Expert consultations",
+                    "support": "Priority support 24/7",
+                    "personalPlan": "Personal admission plan"
+                },
+                "button": "Choose PREMIUM"
+            }
+        }
+    }
+}

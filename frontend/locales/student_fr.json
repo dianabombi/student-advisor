@@ -1,0 +1,104 @@
+{
+    "student": {
+        "hero": {
+            "title": "Votre Porte d'Entrée aux Opportunités Éducatives",
+            "subtitle": "Découvrez des universités, obtenez des conseils alimentés par l'IA et planifiez votre avenir académique",
+            "getStarted": "Commencer",
+            "findHousing": "Trouver un Logement",
+            "exploreUniversities": "Explorer les Universités"
+        },
+        "features": {
+            "title": "Pourquoi Choisir Student Platform?",
+            "feature1": {
+                "title": "Recherche d'Universités",
+                "description": "Trouvez et comparez des universités dans plusieurs pays"
+            },
+            "feature2": {
+                "title": "Conseils IA",
+                "description": "Obtenez des recommandations personnalisées et un soutien aux candidatures"
+            },
+            "feature3": {
+                "title": "Portée Mondiale",
+                "description": "Accédez aux informations sur les universités du monde entier"
+            }
+        },
+        "universities": {
+            "title": "Universités Slovaques",
+            "viewAll": "Voir Toutes les Universités"
+        },
+        "cta": {
+            "title": "Prêt à Commencer Votre Voyage?",
+            "subtitle": "Rejoignez des milliers d'étudiants qui trouvent leur université parfaite",
+            "button": "Créer un Compte Gratuit"
+        },
+        "authPrompt": {
+            "title": "Inscription requise",
+            "message": "Veuillez vous inscrire ou vous connecter pour accéder à cette fonctionnalité",
+            "register": "S'inscrire",
+            "login": "Se connecter"
+        },
+        "pricing": {
+            "title": "Choisissez votre plan",
+            "subtitle": "Commencez avec un plan gratuit ou choisissez des fonctionnalités premium",
+            "guarantee": "💳 Paiement sécurisé • 🔒 Annulez à tout moment • ✅ Pas de frais cachés",
+            "free": {
+                "name": "FREE",
+                "price": "€0",
+                "period": "/mois",
+                "description": "Accès de base",
+                "features": {
+                    "browse": "Parcourir les universités",
+                    "links": "Liens vers les sites officiels",
+                    "info": "Informations de base",
+                    "noAI": "Pas de consultant IA"
+                },
+                "button": "Commencer gratuitement",
+                "currentPlan": "Plan actuel"
+            },
+            "basic": {
+                "name": "BASIC",
+                "price": "€10",
+                "period": "/mois",
+                "description": "Pour les étudiants actifs",
+                "badge": "Populaire",
+                "features": {
+                    "allFree": "Tout de FREE +",
+                    "aiConsultations": "25 consultations IA",
+                    "detailed": "Réponses détaillées",
+                    "housing": "Recherche de logement",
+                    "jobs": "Jobs étudiants"
+                },
+                "button": "Choisir BASIC"
+            },
+            "standard": {
+                "name": "STANDARD",
+                "price": "€20",
+                "period": "/mois",
+                "description": "Pour les exigeants",
+                "features": {
+                    "allBasic": "Tout de BASIC +",
+                    "aiConsultations": "50 consultations IA",
+                    "plans": "Plans d'admission avancés",
+                    "advice": "Conseils personnalisés",
+                    "templates": "Modèles de documents"
+                },
+                "button": "Choisir STANDARD"
+            },
+            "premium": {
+                "name": "PREMIUM",
+                "price": "€30",
+                "period": "/mois",
+                "description": "Support complet",
+                "badge": "⭐ Meilleur",
+                "features": {
+                    "allStandard": "Tout de STANDARD +",
+                    "aiConsultations": "100 consultations IA",
+                    "expert": "Consultations d'experts",
+                    "support": "Support prioritaire 24/7",
+                    "personalPlan": "Plan d'admission personnel"
+                },
+                "button": "Choisir PREMIUM"
+            }
+        }
+    }
+}

@@ -1,0 +1,210 @@
+{
+    "roadmap": {
+        "title": "План Розвитку Адмін-Панелі",
+        "subtitle": "Стратегічний план покращень та нових функцій для платформи",
+        "weeks": "тижнів",
+        "benefits": "Переваги",
+        "stats": {
+            "total": "Всього Функцій",
+            "completed": "Завершено",
+            "inProgress": "В Роботі",
+            "planned": "Заплановано"
+        },
+        "filters": {
+            "all": "Всі",
+            "planned": "Заплановано",
+            "in-progress": "В Роботі",
+            "completed": "Завершено"
+        },
+        "priority": {
+            "high": "Високий",
+            "medium": "Середній",
+            "low": "Низький"
+        },
+        "categories": {
+            "analytics": "Аналітика та Insights",
+            "marketing": "Маркетинг та Залучення",
+            "ai": "AI та Автоматизація",
+            "monetization": "Монетизація та Фінанси",
+            "content": "Контент та Якість",
+            "userExperience": "User Experience",
+            "competitive": "Конкурентна Розвідка",
+            "growth": "Експерименти Зростання",
+            "multiChannel": "Мультиканальна Аналітика",
+            "security": "Безпека та Відповідність"
+        },
+        "items": {
+            "conversionFunnel": {
+                "title": "Воронка Конверсії",
+                "description": "Відстеження шляху користувача від реєстрації до подачі заявки з визначенням точок відпадання",
+                "benefits": {
+                    "0": "Виявлення слабких місць в user journey",
+                    "1": "Оптимізація конверсії на кожному етапі",
+                    "2": "A/B тестування різних UI елементів"
+                }
+            },
+            "cohortAnalysis": {
+                "title": "Когортний Аналіз",
+                "description": "Аналіз retention rate та поведінки користувачів по когортах",
+                "benefits": {
+                    "0": "Розуміння retention patterns",
+                    "1": "Сегментація користувачів за поведінкою",
+                    "2": "Прогнозування Lifetime Value"
+                }
+            },
+            "heatmaps": {
+                "title": "Heatmaps та Session Recordings",
+                "description": "Візуалізація кліків, скролу та поведінки користувачів на сторінках",
+                "benefits": {
+                    "0": "Виявлення UX проблем",
+                    "1": "Оптимізація розміщення елементів",
+                    "2": "Покращення user engagement"
+                }
+            },
+            "utmTracking": {
+                "title": "UTM Tracking Dashboard",
+                "description": "Відстеження джерел трафіку та ROI по маркетингових каналах",
+                "benefits": {
+                    "0": "Оптимізація маркетингового бюджету",
+                    "1": "Визначення найефективніших каналів",
+                    "2": "Розрахунок CAC по джерелах"
+                }
+            },
+            "emailCampaigns": {
+                "title": "Email Campaign Manager",
+                "description": "Створення, відправка та аналіз email кампаній з автоматизацією",
+                "benefits": {
+                    "0": "Автоматизовані welcome та re-engagement flows",
+                    "1": "Детальна статистика відкриттів та кліків",
+                    "2": "Сегментація аудиторії для таргетування"
+                }
+            },
+            "referralProgram": {
+                "title": "Referral Program Dashboard",
+                "description": "Система відстеження реферальних посилань та винагород",
+                "benefits": {
+                    "0": "Органічне зростання через word-of-mouth",
+                    "1": "Tracking топ амбасадорів",
+                    "2": "Автоматизація винагород"
+                }
+            },
+            "aiPerformance": {
+                "title": "AI Consultant Performance",
+                "description": "Моніторинг якості відповідей AI консультанта та user satisfaction",
+                "benefits": {
+                    "0": "Покращення якості AI відповідей",
+                    "1": "Виявлення gaps в знаннях",
+                    "2": "Оптимізація response time"
+                }
+            },
+            "automatedAlerts": {
+                "title": "Automated Alerts & Notifications",
+                "description": "Автоматичні сповіщення про аномалії та важливі події",
+                "benefits": {
+                    "0": "Швидка реакція на проблеми",
+                    "1": "Моніторинг критичних метрик",
+                    "2": "Превентивне виявлення issues"
+                }
+            },
+            "revenueDashboard": {
+                "title": "Revenue Dashboard",
+                "description": "Моніторинг MRR, churn rate та subscription analytics",
+                "benefits": {
+                    "0": "Прогнозування revenue",
+                    "1": "Аналіз churn причин",
+                    "2": "Оптимізація pricing strategy"
+                }
+            },
+            "universityPortal": {
+                "title": "University Partnership Portal",
+                "description": "Портал для університетів-партнерів з lead generation та статистикою",
+                "benefits": {
+                    "0": "Нові джерела revenue",
+                    "1": "Покращення партнерських відносин",
+                    "2": "Автоматизація комісійних виплат"
+                }
+            },
+            "cms": {
+                "title": "Content Management System",
+                "description": "Система управління контентом з bulk edit та approval workflow",
+                "benefits": {
+                    "0": "Швидке оновлення інформації",
+                    "1": "Контроль якості контенту",
+                    "2": "SEO оптимізація"
+                }
+            },
+            "qualityAssurance": {
+                "title": "Quality Assurance Dashboard",
+                "description": "Автоматична перевірка broken links, outdated info та data completeness",
+                "benefits": {
+                    "0": "Підтримка актуальності даних",
+                    "1": "Автоматичне виявлення проблем",
+                    "2": "Покращення user experience"
+                }
+            },
+            "feedbackHub": {
+                "title": "User Feedback Hub",
+                "description": "Централізований збір та аналіз user feedback з NPS tracking",
+                "benefits": {
+                    "0": "Розуміння потреб користувачів",
+                    "1": "Пріоритизація feature requests",
+                    "2": "Покращення product-market fit"
+                }
+            },
+            "supportTickets": {
+                "title": "Support Ticket System",
+                "description": "Інтегрована система підтримки з metrics та knowledge base",
+                "benefits": {
+                    "0": "Швидша обробка запитів",
+                    "1": "Tracking response time",
+                    "2": "Self-service через knowledge base"
+                }
+            },
+            "marketResearch": {
+                "title": "Market Research Tools",
+                "description": "Інструменти для competitor tracking та market trends analysis",
+                "benefits": {
+                    "0": "Конкурентні переваги",
+                    "1": "Виявлення ринкових трендів",
+                    "2": "Pricing intelligence"
+                }
+            },
+            "abTesting": {
+                "title": "A/B Testing Platform",
+                "description": "Платформа для тестування різних версій та feature flags",
+                "benefits": {
+                    "0": "Data-driven рішення",
+                    "1": "Мінімізація ризиків нових features",
+                    "2": "Continuous optimization"
+                }
+            },
+            "personalization": {
+                "title": "Personalization Engine",
+                "description": "Персоналізовані рекомендації університетів та контенту",
+                "benefits": {
+                    "0": "Підвищення engagement",
+                    "1": "Кращі conversion rates",
+                    "2": "Покращений user experience"
+                }
+            },
+            "mobileAnalytics": {
+                "title": "Mobile App Analytics",
+                "description": "Аналітика мобільного додатку з push notifications performance",
+                "benefits": {
+                    "0": "Розуміння mobile user behavior",
+                    "1": "Оптимізація push campaigns",
+                    "2": "In-app events tracking"
+                }
+            },
+            "securityDashboard": {
+                "title": "Security Dashboard",
+                "description": "Моніторинг безпеки, GDPR compliance та suspicious activity",
+                "benefits": {
+                    "0": "Захист користувацьких даних",
+                    "1": "GDPR/CCPA compliance",
+                    "2": "Превентивне виявлення загроз"
+                }
+            }
+        }
+    }
+}

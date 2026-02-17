@@ -1,0 +1,105 @@
+{
+    "student": {
+        "hero": {
+            "title": "Vaša brána k vzdelávacím príležitostiam",
+            "subtitle": "Objavte univerzity, získajte AI poradenstvo a naplánujte svoju akademickú budúcnosť",
+            "getStarted": "Začať",
+            "findHousing": "Nájsť Ubytovanie",
+            "exploreUniversities": "Preskúmať Univerzity"
+        },
+        "features": {
+            "title": "Prečo si vybrať Student Platform?",
+            "feature1": {
+                "title": "Vyhľadávanie Univerzít",
+                "description": "Nájdite a porovnajte univerzity v mnohých krajinách"
+            },
+            "feature2": {
+                "title": "AI Poradenstvo",
+                "description": "Získajte personalizované odporúčania a podporu pri prihlasovaní"
+            },
+            "feature3": {
+                "title": "Globálny Dosah",
+                "description": "Prístup k informáciám o univerzitách po celom svete"
+            }
+        },
+        "universities": {
+            "title": "Slovenské Univerzity",
+            "viewAll": "Zobraziť Všetky Univerzity"
+        },
+        "cta": {
+            "title": "Pripravení Začať Svoju Cestu?",
+            "subtitle": "Pripojte sa k tisíckam študentov hľadajúcich svoju ideálnu univerzitu",
+            "button": "Vytvoriť Bezplatný Účet"
+        },
+        "authPrompt": {
+            "title": "Vyžaduje sa registrácia",
+            "message": "Pre prístup k tejto funkcii sa prosím zaregistrujte alebo prihláste",
+            "register": "Zaregistrovať sa",
+            "login": "Prihlásiť sa",
+            "close": "Zavrieť"
+        },
+        "pricing": {
+            "title": "Vyberte si svoj plán",
+            "subtitle": "Začnite s bezplatným plánom alebo si vyberte prémiové funkcie",
+            "guarantee": "💳 Bezpečná platba • 🔒 Zrušiteľné kedykoľvek • ✅ Bez skrytých poplatkov",
+            "free": {
+                "name": "FREE",
+                "price": "€0",
+                "period": "/mesiac",
+                "description": "Základný prístup",
+                "features": {
+                    "browse": "Prehliadanie univerzít",
+                    "links": "Odkazy na oficiálne stránky",
+                    "info": "Základné informácie",
+                    "noAI": "Bez AI konzultanta"
+                },
+                "button": "Začať zadarmo",
+                "currentPlan": "Aktuálny plán"
+            },
+            "basic": {
+                "name": "BASIC",
+                "price": "€10",
+                "period": "/mesiac",
+                "description": "Pre aktívnych študentov",
+                "badge": "Populárne",
+                "features": {
+                    "allFree": "Všetko z FREE +",
+                    "aiConsultations": "25 AI konzultácií",
+                    "detailed": "Detailné odpovede",
+                    "housing": "Hľadanie ubytovania",
+                    "jobs": "Brigády pre študentov"
+                },
+                "button": "Vybrať BASIC"
+            },
+            "standard": {
+                "name": "STANDARD",
+                "price": "€20",
+                "period": "/mesiac",
+                "description": "Pre náročných",
+                "features": {
+                    "allBasic": "Všetko z BASIC +",
+                    "aiConsultations": "50 AI konzultácií",
+                    "plans": "Pokrokové plány vstupu",
+                    "advice": "Personalizované rady",
+                    "templates": "Šablóny dokumentov"
+                },
+                "button": "Vybrať STANDARD"
+            },
+            "premium": {
+                "name": "PREMIUM",
+                "price": "€30",
+                "period": "/mesiac",
+                "description": "Kompletná podpora",
+                "badge": "⭐ Najlepšie",
+                "features": {
+                    "allStandard": "Všetko zo STANDARD +",
+                    "aiConsultations": "100 AI konzultácií",
+                    "expert": "Expertné konzultácie",
+                    "support": "Prioritná podpora 24/7",
+                    "personalPlan": "Osobný vstupný plán"
+                },
+                "button": "Vybrať PREMIUM"
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+{
+    "authPrompt": {
+        "title": "Registration Required",
+        "message": "Please register or login to access this feature",
+        "register": "Register",
+        "login": "Login",
+        "close": "Close"
+    }
+}

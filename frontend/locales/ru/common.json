@@ -1,0 +1,851 @@
+{
+  "student": {
+    "hero": {
+      "title": "Ваши Ворота к Образовательным Возможностям",
+      "subtitle": "Откройте университеты, получите AI-консультации и спланируйте свое академическое будущее",
+      "getStarted": "Начать",
+      "findHousing": "Найти Жилье",
+      "exploreUniversities": "Исследовать Университеты"
+    },
+    "features": {
+      "title": "Почему Выбрать Student Platform?",
+      "feature1": {
+        "title": "Поиск Университетов",
+        "description": "Найдите и сравните университеты в многих странах"
+      },
+      "feature2": {
+        "title": "AI Консультации",
+        "description": "Получите персонализированные рекомендации и поддержку при поступлении"
+      },
+      "feature3": {
+        "title": "Глобальный Охват",
+        "description": "Доступ к информации об университетах по всему миру"
+      }
+    },
+    "universities": {
+      "title": "Словацкие Университеты",
+      "viewAll": "Просмотреть Все Университеты"
+    },
+    "cta": {
+      "title": "Готовы Начать Свой Путь?",
+      "subtitle": "Присоединяйтесь к тысячам студентов, находящих свой идеальный университет",
+      "button": "Создать Бесплатный Аккаунт"
+    },
+    "authPrompt": {
+      "title": "Требуется регистрация",
+      "message": "Пожалуйста, зарегистрируйтесь или войдите, чтобы получить доступ к этой функции",
+      "register": "Зарегистрироваться",
+      "login": "Войти"
+    },
+    "pricing": {
+      "title": "Выберите свой план",
+      "subtitle": "Начните с бесплатного плана или выберите премиум функции",
+      "guarantee": "💳 Безопасная оплата • 🔒 Отмена в любое время • ✅ Без скрытых платежей",
+      "free": {
+        "name": "FREE",
+        "price": "€0",
+        "period": "/месяц",
+        "description": "Базовый доступ",
+        "features": {
+          "browse": "Просмотр университетов",
+          "links": "Ссылки на официальные сайты",
+          "info": "Базовая информация",
+          "noAI": "Без AI консультанта"
+        },
+        "button": "Начать бесплатно",
+        "currentPlan": "Текущий план"
+      },
+      "basic": {
+        "name": "BASIC",
+        "price": "€10",
+        "period": "/месяц",
+        "description": "Для активных студентов",
+        "badge": "Популярное",
+        "features": {
+          "allFree": "Все из FREE +",
+          "aiConsultations": "25 AI консультаций",
+          "detailed": "Подробные ответы",
+          "housing": "Поиск жилья",
+          "jobs": "Работа для студентов"
+        },
+        "button": "Выбрать BASIC"
+      },
+      "standard": {
+        "name": "STANDARD",
+        "price": "€20",
+        "period": "/месяц",
+        "description": "Для требовательных",
+        "features": {
+          "allBasic": "Все из BASIC +",
+          "aiConsultations": "50 AI консультаций",
+          "plans": "Продвинутые планы поступления",
+          "advice": "Персонализированные советы",
+          "templates": "Шаблоны документов"
+        },
+        "button": "Выбрать STANDARD"
+      },
+      "premium": {
+        "name": "PREMIUM",
+        "price": "€30",
+        "period": "/месяц",
+        "description": "Полная поддержка",
+        "badge": "⭐ Лучшее",
+        "features": {
+          "allStandard": "Все из STANDARD +",
+          "aiConsultations": "100 AI консультаций",
+          "expert": "Экспертные консультации",
+          "support": "Приоритетная поддержка 24/7",
+          "personalPlan": "Личный план поступления"
+        },
+        "button": "Выбрать PREMIUM"
+      }
+    }
+  },
+  "university": {
+    "chat": {
+      "title": "AI Консультант Университета",
+      "welcome": "Добро пожаловать! Я AI ассистент для {university}. Как я могу помочь?",
+      "error": "Извините, произошла ошибка. Пожалуйста, попробуйте снова.",
+      "placeholder": "Введите ваш вопрос...",
+      "send": "Отправить"
+    }
+  },
+  "languageSchools": {
+    "6": {
+      "name": "State Language School Bratislava",
+      "description": "The largest and oldest state language school in Bratislava, offering Slovak language courses for foreigners"
+    },
+    "7": {
+      "name": "VEVE Language School",
+      "description": "Private language school offering Slovak language courses for foreigners with flexible schedules"
+    },
+    "8": {
+      "name": "International House Bratislava",
+      "description": "International language school offering Slovak language courses from beginner to advanced levels"
+    },
+    "26": {
+      "name": "Prague Language Institute",
+      "description": "Language school specializing in Czech language courses for foreigners, including preparatory courses for university admission."
+    },
+    "27": {
+      "name": "Institute of Language and Preparatory Studies, Charles University",
+      "description": "Official preparatory institute of Charles University offering Czech language courses and university preparation programs."
+    },
+    "28": {
+      "name": "Language School Akcent",
+      "description": "Popular language school offering Czech courses for foreigners at all levels."
+    },
+    "49": {
+      "name": "Glossa Polish Language School",
+      "description": "Private language school specializing in Polish courses for foreigners, including exam preparation."
+    },
+    "62": {
+      "name": "ActiLingua Academy",
+      "description": "Premium German language school in Vienna, offering courses for all levels and exam preparation."
+    },
+    "63": {
+      "name": "Deutsch-Akademie Vienna",
+      "description": "German language school with small groups and flexible schedules, located in the heart of Vienna."
+    },
+    "64": {
+      "name": "Inlingua Salzburg",
+      "description": "International language school offering German courses in Salzburg for foreigners."
+    },
+    "78": {
+      "name": "Goethe-Institut Munich",
+      "description": "World-renowned German language and culture institute offering courses for all levels."
+    },
+    "79": {
+      "name": "DID Deutsch-Institut Berlin",
+      "description": "Premium German language school in Berlin with intensive courses and exam preparation."
+    },
+    "80": {
+      "name": "Tandem Munich",
+      "description": "International language school offering German courses and cultural activities in Munich."
+    },
+    "99": {
+      "name": "University of Helsinki Language Centre",
+      "description": "Finnish language courses at University of Helsinki for international students and staff."
+    },
+    "101": {
+      "name": "Aalto University Language Centre",
+      "description": "Finnish language courses at Aalto University for international students and staff."
+    },
+    "111": {
+      "name": "Debrecen Summer School",
+      "description": "Hungarian language and culture courses for international students at University of Debrecen."
+    },
+    "112": {
+      "name": "Budapest International School",
+      "description": "International school offering Hungarian language courses for foreigners."
+    },
+    "125": {
+      "name": "Alliance Française Paris",
+      "description": "World-renowned French language and culture school in Paris."
+    },
+    "126": {
+      "name": "Sorbonne French Language Courses",
+      "description": "French language courses at Sorbonne University for international students."
+    },
+    "139": {
+      "name": "British Council London",
+      "description": "World-renowned English language courses from the British Council in London."
+    },
+    "140": {
+      "name": "International House London",
+      "description": "Leading English language school in London offering courses for all levels."
+    },
+    "153": {
+      "name": "Cervantes Institute Madrid",
+      "description": "Official Spanish language and culture institute offering courses in Madrid."
+    },
+    "154": {
+      "name": "Don Quijote Barcelona",
+      "description": "Leading Spanish language school in Barcelona for international students."
+    },
+    "167": {
+      "name": "Amsterdam Language Centre",
+      "description": "Dutch language courses at University of Amsterdam for international students."
+    },
+    "168": {
+      "name": "Direct Dutch Institute",
+      "description": "Leading Dutch language school in Amsterdam offering intensive courses."
+    },
+    "181": {
+      "name": "CLL Language Centres",
+      "description": "Leading language school in Belgium offering French, Dutch, and English courses."
+    },
+    "188": {
+      "name": "Call International",
+      "description": "International language school in Brussels offering French, Dutch, and English courses."
+    },
+    "199": {
+      "name": "Scuola Leonardo da Vinci",
+      "description": "Italian language school with locations in Florence, Milan, Rome, and Siena."
+    },
+    "205": {
+      "name": "Istituto Venezia",
+      "description": "Italian language school in Venice offering intensive courses and cultural programs."
+    },
+    "214": {
+      "name": "CIAL Centro de Línguas",
+      "description": "Leading Portuguese language school in Lisbon offering intensive courses."
+    },
+    "221": {
+      "name": "Lusa Language School",
+      "description": "Portuguese language school in Lisbon offering intensive courses and cultural immersion."
+    },
+    "229": {
+      "name": "Folkuniversitetet",
+      "description": "Leading adult education institution in Sweden offering Swedish language courses."
+    },
+    "230": {
+      "name": "Swedish Institute",
+      "description": "Public agency promoting Swedish language and culture internationally."
+    },
+    "243": {
+      "name": "Eurocentres Zurich",
+      "description": "International language school offering German, French, and English courses."
+    },
+    "244": {
+      "name": "LSI Zurich",
+      "description": "Language Studies International offering German and other language courses."
+    },
+    "251": {
+      "name": "Inlingua Luxembourg",
+      "description": "Language school offering courses in French, German, English, and Luxembourgish."
+    },
+    "252": {
+      "name": "Berlitz Luxembourg",
+      "description": "International language school with a center in Luxembourg."
+    },
+    "266": {
+      "name": "Copenhagen Language Center",
+      "description": "Language school offering Danish and other language courses in Copenhagen."
+    },
+    "267": {
+      "name": "Studieskolen",
+      "description": "Established language school offering Danish courses for internationals."
+    },
+    "280": {
+      "name": "Alfaskolen",
+      "description": "Language school offering Norwegian courses for internationals in Oslo."
+    },
+    "281": {
+      "name": "Folkeuniversitetet",
+      "description": "Adult education center offering Norwegian and other language courses."
+    },
+    "294": {
+      "name": "Emerald Cultural Institute",
+      "description": "Language school offering English courses in Dublin."
+    },
+    "295": {
+      "name": "Atlas Language School",
+      "description": "International language school offering English courses in Dublin."
+    },
+    "308": {
+      "name": "Athens Centre",
+      "description": "Language school offering Greek and English courses in Athens."
+    },
+    "309": {
+      "name": "Hellenic American Union",
+      "description": "Educational institution offering English and Greek language courses."
+    },
+    "337": {
+      "name": "Slovenian Language Centre",
+      "description": "Centre for Slovenian as a second language."
+    },
+    "347": {
+      "name": "Croatian Language School",
+      "description": "Centre for Croatian as a foreign language at University of Zagreb."
+    }
+  },
+  "vocationalSchools": {
+    "9": {
+      "name": "Business Academy Bratislava",
+      "description": "One of the most active vocational schools in Slovakia specializing in economics and business"
+    },
+    "33": {
+      "name": "Secondary Technical School of Electrical Engineering Prague",
+      "description": "Technical vocational school focusing on electrical engineering, electronics, and IT."
+    },
+    "50": {
+      "name": "Warsaw School of Economics",
+      "description": "Prestigious business and economics school offering undergraduate and graduate programs."
+    },
+    "69": {
+      "name": "Vienna Business School",
+      "description": "Leading business school in Vienna offering vocational education in business, tourism, and IT."
+    },
+    "70": {
+      "name": "WIFI Vienna",
+      "description": "Vocational training institute offering courses in various professional fields for adults and career changers."
+    },
+    "87": {
+      "name": "DAA German Employees Academy",
+      "description": "Leading vocational training provider in Germany offering courses in business, IT, and healthcare."
+    },
+    "88": {
+      "name": "BFW Vocational Training Center",
+      "description": "Vocational rehabilitation and training center offering professional courses and certifications."
+    },
+    "102": {
+      "name": "Omnia Vocational College",
+      "description": "Large vocational college in Helsinki region offering programs in business, technology, and social services."
+    },
+    "103": {
+      "name": "Stadin ammattiopisto",
+      "description": "Helsinki vocational college offering diverse vocational education and training programs."
+    },
+    "114": {
+      "name": "Budapest Business School",
+      "description": "Leading business and economics vocational university in Hungary."
+    },
+    "115": {
+      "name": "Óbuda University",
+      "description": "Technical vocational university offering programs in engineering, IT, and applied sciences."
+    },
+    "128": {
+      "name": "ESSEC Business School",
+      "description": "Top French business school offering programs in management and business administration."
+    },
+    "129": {
+      "name": "HEC Paris",
+      "description": "Leading European business school, consistently ranked among the best in the world."
+    },
+    "142": {
+      "name": "London Business School",
+      "description": "World-leading business school offering MBA and executive education programs."
+    },
+    "143": {
+      "name": "London School of Economics",
+      "description": "Specialist university in social sciences, consistently ranked among the world's best."
+    },
+    "156": {
+      "name": "IE Business School",
+      "description": "Top international business school in Madrid, offering MBA and executive programs."
+    },
+    "157": {
+      "name": "ESADE Business School",
+      "description": "Leading business school in Barcelona, consistently ranked among Europe's best."
+    },
+    "170": {
+      "name": "Rotterdam School of Management",
+      "description": "Top business school at Erasmus University, offering MBA and executive programs."
+    },
+    "171": {
+      "name": "Amsterdam Business School",
+      "description": "Business school at University of Amsterdam, offering programs in business and economics."
+    },
+    "184": {
+      "name": "Solvay Brussels School",
+      "description": "Top business school at ULB, offering MBA and executive programs."
+    },
+    "185": {
+      "name": "Vlerick Business School",
+      "description": "Leading European business school with campuses in Belgium and abroad."
+    },
+    "201": {
+      "name": "SDA Bocconi School of Management",
+      "description": "Top business school in Italy, offering MBA and executive programs."
+    },
+    "206": {
+      "name": "Bologna Business School",
+      "description": "Business school at University of Bologna, offering MBA and executive programs."
+    },
+    "217": {
+      "name": "NOVA School of Business and Economics",
+      "description": "Top business school in Portugal, offering MBA and executive programs."
+    },
+    "218": {
+      "name": "Porto Business School",
+      "description": "Business school at University of Porto, offering programs in business and management."
+    },
+    "232": {
+      "name": "Stockholm School of Economics",
+      "description": "Top business school in Sweden, offering MBA and executive programs."
+    },
+    "233": {
+      "name": "Lund University School of Economics",
+      "description": "Business school at Lund University, offering programs in business and economics."
+    },
+    "246": {
+      "name": "IMD Business School",
+      "description": "Top international business school in Switzerland, offering MBA and executive programs."
+    },
+    "247": {
+      "name": "University of St. Gallen",
+      "description": "Leading business university in Switzerland, specializing in economics and management."
+    },
+    "254": {
+      "name": "Luxembourg School of Business",
+      "description": "Business school offering MBA and executive programs in Luxembourg."
+    },
+    "258": {
+      "name": "Liechtenstein Institute",
+      "description": "Research institute offering specialized programs in law, economics, and political science."
+    },
+    "269": {
+      "name": "KEA Copenhagen School of Design and Technology",
+      "description": "Vocational school offering programs in design, technology, and business."
+    },
+    "270": {
+      "name": "IBA Erhvervsakademi Kolding",
+      "description": "Business academy offering professional programs in business and management."
+    },
+    "283": {
+      "name": "Oslo Metropolitan University",
+      "description": "Metropolitan university offering professional programs in various fields."
+    },
+    "284": {
+      "name": "Kristiania University College",
+      "description": "Private university college offering programs in business, media, and design."
+    },
+    "297": {
+      "name": "Technological University Dublin",
+      "description": "Technological university offering professional programs in engineering and business."
+    },
+    "298": {
+      "name": "Griffith College Dublin",
+      "description": "Private college offering programs in business, law, and media."
+    },
+    "312": {
+      "name": "American College of Greece",
+      "description": "Private college offering programs in business and liberal arts."
+    },
+    "321": {
+      "name": "Apostoliki Diakonia",
+      "description": "Educational institution of the Church of Greece, offering theological programs."
+    },
+    "326": {
+      "name": "Pontifical Biblical Institute",
+      "description": "Jesuit institute specializing in biblical studies and ancient Near Eastern languages."
+    },
+    "339": {
+      "name": "DOBA Business School",
+      "description": "Business school offering professional programs."
+    },
+    "340": {
+      "name": "GEA College",
+      "description": "College offering professional programs in business and tourism."
+    },
+    "350": {
+      "name": "RIT Croatia",
+      "description": "American university campus in Croatia offering professional programs."
+    },
+    "351": {
+      "name": "Zagreb School of Economics and Management",
+      "description": "Private business school offering professional programs."
+    }
+  },
+  "conservatories": {
+    "12": {
+      "name": "Conservatory Bratislava",
+      "description": "Secondary art school providing education in singing, musical instruments, and musical-dramatic art"
+    },
+    "37": {
+      "name": "Jaroslav Ježek Conservatory",
+      "description": "Modern conservatory specializing in jazz, popular music, and musical production."
+    },
+    "39": {
+      "name": "Duncan Centre Conservatory",
+      "description": "Private conservatory specializing in contemporary dance, ballet, and choreography."
+    },
+    "51": {
+      "name": "Fryderyk Chopin University of Music",
+      "description": "Prestigious music university named after Fryderyk Chopin, offering programs in classical music, jazz, and composition."
+    },
+    "52": {
+      "name": "Academy of Music in Kraków",
+      "description": "Music academy offering programs in classical music, jazz, composition, and music education."
+    },
+    "65": {
+      "name": "University of Music and Performing Arts Vienna",
+      "description": "One of the world's leading music universities, offering programs in classical music, jazz, and performing arts."
+    },
+    "66": {
+      "name": "Mozarteum University Salzburg",
+      "description": "Prestigious music university in Mozart's birthplace, specializing in classical music, composition, and music education."
+    },
+    "83": {
+      "name": "University of Music and Performing Arts Munich",
+      "description": "Leading music university in Munich, offering programs in classical music, jazz, and performing arts."
+    },
+    "84": {
+      "name": "Berlin University of the Arts",
+      "description": "Largest art university in Europe, specializing in music, fine arts, design, and performing arts."
+    },
+    "100": {
+      "name": "Sibelius Academy",
+      "description": "Finland's leading music academy, part of University of the Arts Helsinki."
+    },
+    "113": {
+      "name": "Liszt Ferenc Academy of Music",
+      "description": "Leading music academy in Hungary, one of the oldest music institutions in Europe."
+    },
+    "127": {
+      "name": "Paris Conservatory",
+      "description": "Leading music and dance conservatory in France, one of the most prestigious in the world."
+    },
+    "141": {
+      "name": "Royal College of Music",
+      "description": "Leading conservatoire in London, training musicians for international careers."
+    },
+    "155": {
+      "name": "Royal Conservatory of Music of Madrid",
+      "description": "Leading music conservatory in Spain, offering programs in classical music and composition."
+    },
+    "169": {
+      "name": "Royal Conservatoire The Hague",
+      "description": "Leading music conservatory in the Netherlands, offering programs in classical and jazz music."
+    },
+    "183": {
+      "name": "Royal Conservatory of Brussels",
+      "description": "Leading music conservatory in Belgium, offering programs in classical music and jazz."
+    },
+    "200": {
+      "name": "Santa Cecilia Conservatory",
+      "description": "Leading music conservatory in Rome, one of the oldest in Italy."
+    },
+    "216": {
+      "name": "National Conservatory of Lisbon",
+      "description": "Leading music conservatory in Portugal, offering programs in classical music."
+    },
+    "231": {
+      "name": "Royal College of Music Stockholm",
+      "description": "Leading music conservatory in Sweden, offering programs in classical and contemporary music."
+    },
+    "245": {
+      "name": "Zurich University of the Arts",
+      "description": "Leading arts university in Switzerland, offering programs in music, theater, and design."
+    },
+    "253": {
+      "name": "Luxembourg Conservatory",
+      "description": "National conservatory of Luxembourg, offering music and performing arts programs."
+    },
+    "268": {
+      "name": "Royal Danish Academy of Music",
+      "description": "Leading music conservatory in Denmark, offering programs in classical and contemporary music."
+    },
+    "282": {
+      "name": "Norwegian Academy of Music",
+      "description": "Leading music conservatory in Norway, offering programs in classical and contemporary music."
+    },
+    "296": {
+      "name": "Royal Irish Academy of Music",
+      "description": "Leading music conservatory in Ireland, offering programs in classical and contemporary music."
+    },
+    "310": {
+      "name": "Athens Conservatoire",
+      "description": "Leading music conservatory in Greece, offering programs in classical music."
+    },
+    "327": {
+      "name": "Pontifical Institute of Sacred Music",
+      "description": "Institute specializing in sacred music and Gregorian chant."
+    },
+    "338": {
+      "name": "Academy of Music Ljubljana",
+      "description": "Music academy offering programs in classical music."
+    },
+    "349": {
+      "name": "Zagreb Academy of Music",
+      "description": "Music academy offering programs in classical music."
+    }
+  },
+  "foundationPrograms": {
+    "14": {
+      "name": "STU Foundation Program for Foreigners",
+      "description": "Intensive Slovak language foundation program preparing foreigners for university studies in Slovakia"
+    },
+    "15": {
+      "name": "EUBA Foundation Program",
+      "description": "One-year Slovak language foundation program for international students planning to study at Slovak universities"
+    },
+    "16": {
+      "name": "GoStudy Slovakia Foundation Program",
+      "description": "Comprehensive foundation program including Slovak language (B2 level) and general subjects preparation"
+    },
+    "29": {
+      "name": "Charles University Foundation Year",
+      "description": "One-year preparatory program for international students planning to study at Czech universities."
+    },
+    "30": {
+      "name": "Czech Technical University Preparatory Course",
+      "description": "Preparatory course for international students focusing on Czech language and technical subjects."
+    },
+    "31": {
+      "name": "GoStudy Czech Republic",
+      "description": "Comprehensive foundation program preparing international students for Czech universities with Czech language training."
+    },
+    "53": {
+      "name": "University of Warsaw Preparatory Course",
+      "description": "One-year preparatory program for international students planning to study at Polish universities."
+    },
+    "54": {
+      "name": "Jagiellonian University Foundation Year",
+      "description": "Foundation year program preparing international students for studies at Polish universities."
+    },
+    "67": {
+      "name": "University of Vienna Preparatory Course",
+      "description": "One-year preparatory program for international students planning to study at Austrian universities."
+    },
+    "68": {
+      "name": "Graz University Foundation Year",
+      "description": "Foundation year program preparing international students for studies at Austrian universities."
+    },
+    "89": {
+      "name": "Heidelberg Studienkolleg",
+      "description": "Preparatory course at Heidelberg University for international students planning to study in Germany."
+    },
+    "90": {
+      "name": "Frankfurt International Preparatory School",
+      "description": "Foundation year program preparing international students for German university admission."
+    },
+    "116": {
+      "name": "University of Debrecen Preparatory Program",
+      "description": "Foundation year program at University of Debrecen preparing international students for Hungarian university studies."
+    },
+    "117": {
+      "name": "Budapest Preparatory Course",
+      "description": "Preparatory program at ELTE University for international students planning to study in Hungary."
+    },
+    "130": {
+      "name": "Paris-Sorbonne Preparatory Program",
+      "description": "Foundation year program at Sorbonne University for international students."
+    },
+    "131": {
+      "name": "Sciences Po Preparatory Year",
+      "description": "Preparatory program at Sciences Po for international students planning to study in France."
+    },
+    "144": {
+      "name": "UCL Foundation Programme",
+      "description": "Foundation year program at UCL for international students."
+    },
+    "145": {
+      "name": "King's College Foundation Year",
+      "description": "Preparatory program at King's College London for international students."
+    },
+    "158": {
+      "name": "University of Barcelona Preparatory Program",
+      "description": "Foundation year program at University of Barcelona for international students."
+    },
+    "159": {
+      "name": "Complutense Foundation Year",
+      "description": "Preparatory program at Complutense University for international students."
+    },
+    "172": {
+      "name": "Amsterdam University College Foundation",
+      "description": "Foundation year program at University of Amsterdam for international students."
+    },
+    "173": {
+      "name": "Utrecht University Preparatory Programme",
+      "description": "Preparatory program at Utrecht University for international students."
+    },
+    "186": {
+      "name": "KU Leuven Foundation Programme",
+      "description": "Foundation year program at KU Leuven for international students."
+    },
+    "187": {
+      "name": "UCLouvain Preparatory Year",
+      "description": "Preparatory program at UCLouvain for international students."
+    },
+    "203": {
+      "name": "Sapienza Foundation Programme",
+      "description": "Foundation year program at Sapienza University for international students."
+    },
+    "204": {
+      "name": "Bologna Preparatory Year",
+      "description": "Preparatory program at University of Bologna for international students."
+    },
+    "219": {
+      "name": "University of Lisbon Foundation Year",
+      "description": "Foundation year program at University of Lisbon for international students."
+    },
+    "220": {
+      "name": "University of Porto Preparatory Programme",
+      "description": "Preparatory program at University of Porto for international students."
+    },
+    "234": {
+      "name": "Lund University Foundation Year",
+      "description": "Foundation year program at Lund University for international students."
+    },
+    "235": {
+      "name": "Uppsala University Preparatory Programme",
+      "description": "Preparatory program at Uppsala University for international students."
+    },
+    "248": {
+      "name": "ETH Zurich Foundation Year",
+      "description": "Foundation year program at ETH Zurich for international students."
+    },
+    "249": {
+      "name": "University of Zurich Preparatory Programme",
+      "description": "Preparatory program at University of Zurich for international students."
+    },
+    "255": {
+      "name": "University of Luxembourg Foundation Year",
+      "description": "Foundation year program at University of Luxembourg for international students."
+    },
+    "271": {
+      "name": "University of Copenhagen Foundation Year",
+      "description": "Foundation year program at University of Copenhagen for international students."
+    },
+    "272": {
+      "name": "DTU Preparatory Programme",
+      "description": "Preparatory program at Technical University of Denmark for international students."
+    },
+    "285": {
+      "name": "University of Oslo Foundation Year",
+      "description": "Foundation year program at University of Oslo for international students."
+    },
+    "286": {
+      "name": "NTNU Preparatory Programme",
+      "description": "Preparatory program at NTNU for international students."
+    },
+    "299": {
+      "name": "Trinity College Dublin Foundation Year",
+      "description": "Foundation year program at Trinity College Dublin for international students."
+    },
+    "300": {
+      "name": "UCD International Foundation Programme",
+      "description": "Foundation program at University College Dublin for international students."
+    },
+    "313": {
+      "name": "University of Athens Foundation Year",
+      "description": "Foundation year program at University of Athens for international students."
+    },
+    "314": {
+      "name": "Aristotle University Preparatory Programme",
+      "description": "Preparatory program at Aristotle University for international students."
+    },
+    "341": {
+      "name": "University of Ljubljana Preparatory Course",
+      "description": "Preparatory program for international students."
+    },
+    "342": {
+      "name": "University of Maribor Foundation Year",
+      "description": "Foundation year program for international students."
+    },
+    "352": {
+      "name": "University of Zagreb Preparatory Course",
+      "description": "Preparatory program for international students."
+    },
+    "353": {
+      "name": "University of Split Foundation Year",
+      "description": "Foundation year program for international students."
+    }
+  },
+  "admin": {
+    "panel": "Админ Панель",
+    "subtitle": "Системное управление",
+    "logout": "Выйти",
+    "nav": {
+      "dashboard": "Панель управления",
+      "users": "Пользователи",
+      "administrators": "Администраторы",
+      "universities": "Университеты",
+      "analytics": "Аналитика",
+      "marketing": "Маркетинг",
+      "roadmap": "Дорожная карта",
+      "settings": "Настройки"
+    },
+    "dashboard": {
+      "title": "Админ Панель",
+      "welcome": "Добро пожаловать",
+      "quickStats": "Быстрая статистика",
+      "management": "Управление",
+      "recentActivity": "Недавняя активность",
+      "stats": {
+        "totalUsers": "Всего пользователей",
+        "activeUsers": "Активные пользователи (30д)",
+        "usersToday": "сегодня",
+        "universities": "Университеты",
+        "consultations": "AI Консультации",
+        "consultationsToday": "сегодня",
+        "documents": "Документы",
+        "jobAgencies": "Агентства по трудоустройству",
+        "housingAgencies": "Агентства недвижимости"
+      },
+      "cards": {
+        "userManagement": {
+          "title": "Управление пользователями",
+          "description": "Управляйте учетными записями пользователей, просматривайте активность, блокируйте/разблокируйте пользователей"
+        },
+        "universities": {
+          "title": "Университеты",
+          "description": "Просмотреть статистику образовательных учреждений по стране и типу"
+        },
+        "templates": {
+          "title": "Управление шаблонами",
+          "description": "Управляйте шаблонами документов (файлы DOCX)"
+        },
+        "documents": {
+          "title": "Обработка документов",
+          "description": "Просмотреть все обработанные документы"
+        },
+        "settings": {
+          "title": "Системные настройки",
+          "description": "Настройка системных параметров"
+        }
+      }
+    }
+  },
+  "auth": {
+    "login": {
+      "welcome": "Добро пожаловать",
+      "subtitle": "Войдите в свой аккаунт",
+      "success_registered": "Регистрация успешна! Теперь вы можете войти.",
+      "error_invalid": "Неверный email или пароль",
+      "error_connection": "Ошибка соединения. Проверьте, работает ли сервер.",
+      "email": "Email",
+      "placeholder_email": "your@email.com",
+      "password": "Пароль",
+      "placeholder_password": "Введите пароль",
+      "button": "Войти",
+      "button_loading": "Вход...",
+      "no_account": "Нет аккаунта?",
+      "register_link": "Зарегистрироваться",
+      "title": "Вход",
+      "submit": "Войти"
+    }
+  }
+}

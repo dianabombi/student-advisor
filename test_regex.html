@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Regex Test</h2>
+<p id="output"></p>
+<script>
+    const text = "1. Adecco Luxembourg: www.adecco.lu\n2. Randstad Luxembourg: www.randstad.lu";
+    const urlRegex = /(https?:\/\/[^\s]+|www\.[^\s]+)/g;
+    
+    function renderContentWithLinks(text) {
+        const parts = text.split(urlRegex);
+        console.log("Parts:", parts);
+        return parts.map(part => {
+            if (part.match(urlRegex)) {
+                return `LINK: ${part}`;
+            }
+            return part;
+        }).join('');
+    }
+
+    const result = renderContentWithLinks(text);
+    document.getElementById("output").innerText = result;
+</script>
+</body>
+</html>

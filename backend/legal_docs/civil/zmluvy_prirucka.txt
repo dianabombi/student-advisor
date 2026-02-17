@@ -1,0 +1,167 @@
+ZMLUVY V SLOVENSKOM PRÁVE
+Praktický sprievodca
+
+1. ZÁKLADNÉ POJMY
+
+Zmluva je právny úkon, ktorým sa zakladajú, menia alebo rušia práva a povinnosti medzi zmluvnými stranami.
+
+Zmluvné strany:
+- Navrhovateľ (oferent) - strana, ktorá predloží návrh zmluvy
+- Prijímateľ (akceptant) - strana, ktorá návrh prijme
+
+2. VZNIK ZMLUVY
+
+Zmluva vzniká:
+a) Návrhom - jasné a určité vyhlásenie vôle uzavrieť zmluvu
+b) Akceptáciou - bezvýhradný súhlas s návrhom
+
+Príklad:
+Predávajúci ponúkne auto za 10 000 € (návrh).
+Kupujúci súhlasí s kúpou za túto cenu (akceptácia).
+Zmluva je uzavretá.
+
+3. PODSTATNÉ NÁLEŽITOSTI ZMLUVY
+
+Každá zmluva musí obsahovať:
+
+a) Označenie zmluvných strán
+   - Meno, priezvisko, rodné číslo (fyzická osoba)
+   - Obchodné meno, IČO, sídlo (právnická osoba)
+
+b) Predmet zmluvy
+   - Presný popis toho, čo sa kupuje, prenajíma, atď.
+   - Množstvo, kvalita, špecifikácia
+
+c) Cena (pri odplatných zmluvách)
+   - Výška ceny
+   - Spôsob platby
+   - Termín platby
+
+d) Čas a miesto plnenia
+   - Kedy má byť plnené
+   - Kde má byť plnené
+
+4. FORMA ZMLUVY
+
+Ústna forma:
+- Platná pre väčšinu zmlúv
+- Ťažko preukázateľná v spore
+- Neodporúča sa pre významné transakcie
+
+Písomná forma:
+- Vyžadovaná zákonom pre:
+  * Kúpnu zmluvu na nehnuteľnosť
+  * Darovaciu zmluvu nad 331,94 €
+  * Zmluvu o budúcej zmluve
+  * Spotrebiteľské úvery
+- Odporúčaná pre všetky významné zmluvy
+
+Notárska forma:
+- Povinná pre:
+  * Zmluvy o prevode nehnuteľností
+  * Záložné zmluvy k nehnuteľnostiam
+  * Niektoré darovacie zmluvy
+
+5. PLATNOSŤ A NEPLATNOSŤ ZMLUVY
+
+Zmluva je platná, ak:
+✓ Spĺňa všetky zákonné podmienky
+✓ Má požadovanú formu
+✓ Obsahuje podstatné náležitosti
+✓ Nie je v rozpore so zákonom
+✓ Nie je v rozpore s dobrými mravmi
+
+Zmluva je neplatná, ak:
+✗ Chýbajú podstatné náležitosti
+✗ Nedodržaná požadovaná forma
+✗ V rozpore so zákonom
+✗ Uzavretá pod nátlakom, hrozbou
+✗ Jedna strana bola v omyle
+✗ Obchádza zákon
+
+6. DRUHY ZMLÚV
+
+Kúpna zmluva:
+- Predávajúci sa zaväzuje odovzdať vec
+- Kupujúci sa zaväzuje zaplatiť kúpnu cenu
+- Prechod vlastníckeho práva
+
+Nájomná zmluva:
+- Prenajímateľ dáva vec do dočasného užívania
+- Nájomca platí nájomné
+- Vlastníctvo zostáva prenajímateľovi
+
+Darovacia zmluva:
+- Bezodplatný prevod majetku
+- Darujúci sa vzdáva majetku
+- Obdarovaný majetok prijíma
+
+Zmluva o dielo:
+- Zhotoviteľ sa zaväzuje vykonať dielo
+- Objednávateľ sa zaväzuje zaplatiť cenu
+- Výsledok musí byť bez vád
+
+Mandátna zmluva:
+- Mandatár vykonáva činnosť pre mandanta
+- Môže byť odplatná alebo bezodplatná
+- Mandatár koná v mene mandanta
+
+7. PRÁVA A POVINNOSTI ZO ZMLUVY
+
+Dlžník je povinný:
+- Splniť záväzok riadne a včas
+- Konať s odbornou starostlivosťou
+- Informovať veriteľa o prekážkach
+
+Veriteľ je oprávnený:
+- Požadovať riadne plnenie
+- Požadovať náhradu škody
+- Odstúpiť od zmluvy pri podstatnom porušení
+
+8. PORUŠENIE ZMLUVY
+
+Omeškanie s plnením:
+- Dlžník nesplnil včas
+- Veriteľ má právo na úrok z omeškania
+- Možnosť odstúpenia od zmluvy
+
+Vadné plnenie:
+- Plnenie nezodpovedá zmluve
+- Právo na odstránenie vád
+- Právo na zľavu z ceny
+- Právo na výmenu veci
+
+Neuskutočnenie plnenia:
+- Dlžník vôbec nesplnil
+- Právo na náhradu škody
+- Právo odstúpiť od zmluvy
+
+9. ZÁNIK ZMLUVY
+
+Zmluva zaniká:
+- Splnením záväzku
+- Dohodou zmluvných strán
+- Odstúpením od zmluvy
+- Výpoveďou (ak je dohodnutá)
+- Márnym uplynutím času
+- Nemožnosťou plnenia
+
+10. PRAKTICKÉ RADY
+
+Pri uzatváraní zmluvy:
+✓ Dôkladne si prečítajte celú zmluvu
+✓ Uistite sa, že rozumiete všetkým podmienkam
+✓ Overte si totožnosť druhej strany
+✓ Skontrolujte všetky údaje
+✓ Podpisujte len ak súhlasíte so všetkým
+✓ Uchovajte si kópiu zmluvy
+
+Pri pochybnostiach:
+✓ Poraďte sa s právnikom
+✓ Nevyvíjajte sa na nátlak
+✓ Požadujte čas na rozmyslenie
+✓ Konzultujte s odborníkom
+
+DÔLEŽITÉ UPOZORNENIE:
+Tento dokument slúži len na informatívne účely.
+Pre konkrétne právne otázky konzultujte advokáta.

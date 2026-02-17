@@ -1,0 +1,67 @@
+fastapi
+uvicorn
+sqlalchemy
+alembic
+psycopg2-binary
+psycopg[binary]
+pgvector
+python-multipart
+python-jose[cryptography]
+passlib[bcrypt]
+pydantic
+pydantic-settings
+email-validator
+openai
+langchain
+langchain-openai
+langchain-community
+python-dotenv
+minio
+tiktoken
+redis==5.0.1
+celery==5.3.4
+flower==2.0.1
+structlog==24.1.0
+
+# Email service (for verification and password reset)
+aiosmtplib
+jinja2
+
+# Document processing
+PyPDF2
+python-docx
+pdfplumber>=0.10.0
+
+# Testing
+pytest
+pytest-asyncio
+httpx
+
+# OCR/IDP dependencies
+pytesseract>=0.3.10
+# paddleocr>=2.7.0  # DISABLED: Heavy ML dependency (~200MB)
+# opencv-python>=4.8.0  # DISABLED: Heavy ML dependency (~60MB)
+Pillow>=10.0.0
+pdf2image>=1.16.3
+requests
+mindee
+
+# Web Scraping for RAG
+beautifulsoup4==4.12.2
+lxml==4.9.3
+langdetect==1.0.9
+
+
+# Document Classification - DISABLED for lightweight version
+# transformers>=4.35.0  # DISABLED: ~500MB + dependencies
+# scikit-learn>=1.3.0  # DISABLED: Heavy ML dependency
+# torch>=2.1.0  # DISABLED: ~900MB + CUDA libraries
+# sentencepiece>=0.1.99  # DISABLED: Dependency of transformers
+
+# Additional utilities
+# numpy>=1.24.0  # DISABLED: Will be installed by other dependencies if needed
+# pandas>=2.0.0  # DISABLED: Heavy dependency
+slowapi==0.1.9
+langchain==0.1.0
+langchain-openai==0.0.2
+langdetect==1.0.9

@@ -1,0 +1,75 @@
+PRACOVNÁ ZMLUVA č. ZML-001/2024
+
+uzavretá podľa § 42 a nasl. zákona č. 311/2001 Z.z. Zákonníka práce
+v znení neskorších predpisov
+
+Dátum: 15.12.2024
+
+Zmluvné strany:
+
+1. Zamestnávateľ:
+   ABC s.r.o.
+   IČO: 12345678
+   DIČ: SK2020123456
+   Sídlo: Bratislava, Hlavná 1, 811 01
+   
+   zastúpená: Ing. Peter Novák, konateľ
+   
+   (ďalej len "zamestnávateľ")
+
+2. Zamestnanec:
+   Ján Novák
+   Rodné číslo: 901234/5678
+   Trvalý pobyt: Bratislava, Mladá 10, 821 05
+   
+   (ďalej len "zamestnanec")
+
+uzatvárajú túto pracovnú zmluvu:
+
+Článok I - Druh práce
+
+Zamestnanec sa zaväzuje vykonávať pre zamestnávateľa prácu v pracovnej 
+pozícii: Programátor
+
+Pracovná náplň:
+- Vývoj aplikácií v Python
+- Návrh databáz
+- Code review
+
+Článok II - Miesto výkonu práce
+
+Miesto výkonu práce: Bratislava
+
+Článok III - Pracovný čas
+
+Týždenný pracovný čas: 40 hodín
+
+Článok IV - Mzda
+
+Základná mzda: 2000 EUR mesačne
+
+Mzda je splatná do 15. dňa nasledujúceho mesiaca.
+
+Článok V - Nástup do práce
+
+Dátum nástupu: 01.01.2025
+
+Článok VI - Skúšobná doba
+
+Skúšobná doba je dohodnutá v trvaní: 3 mesiace
+
+Článok VII - Typ zmluvy
+
+Typ pracovného pomeru: neurčitý čas
+
+Článok VIII - Záverečné ustanovenia
+
+Táto zmluva nadobúda platnosť dňom jej podpísania oboma zmluvnými 
+stranami a účinnosť dňom nástupu zamestnanca do práce.
+
+V Bratislave dňa 15.12.2024
+
+
+_____________________          _____________________
+Zamestnávateľ                  Zamestnanec
+Ing. Peter Novák               Ján Novák

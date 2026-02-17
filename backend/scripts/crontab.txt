@@ -1,0 +1,9 @@
+# Add to crontab for weekly scraping
+# Runs every Sunday at 2:00 AM
+
+# 0 2 * * 0 /app/backend/scripts/cron_scraper.sh
+
+# Manual commands:
+# Run scraper manually: docker-compose exec backend python backend/scripts/scrape_universities.py --all
+# View logs: docker-compose exec backend cat /var/log/university_scraper.log
+# Test cron: docker-compose exec backend /app/backend/scripts/cron_scraper.sh

@@ -1,0 +1,34 @@
+{
+    "marketplace": {
+        "lawyer": {
+            "registration": {
+                "success": "Registrácia úspešná. Vaša žiadosť bude overená do 48 hodín.",
+                "error_exists": "Advokát s týmto číslom licencie už existuje",
+                "error_invalid_json": "Neplatný formát JSON pre špecializácie, jurisdikcie alebo jazyky",
+                "error_invalid_jurisdiction": "Neplatná jurisdikcia",
+                "error_registration": "Chyba pri registrácii"
+            },
+            "search": {
+                "error_invalid_jurisdiction": "Neplatná alebo neaktívna jurisdikcia",
+                "error_search": "Chyba pri vyhľadávaní"
+            },
+            "profile": {
+                "not_found": "Advokát nenájdený",
+                "lawyer_profile_not_found": "Profil advokáta nenájdený",
+                "updated": "Profil úspešne aktualizovaný",
+                "error_update": "Chyba pri aktualizácii"
+            },
+            "stats": {
+                "error_loading": "Chyba pri načítaní štatistík"
+            },
+            "availability": {
+                "updated": "Dostupnosť úspešne aktualizovaná"
+            },
+            "admin": {
+                "access_denied": "Prístup zamietnutý",
+                "verified": "Advokát úspešne overený",
+                "rejected": "Žiadosť zamietnutá"
+            }
+        }
+    }
+}
