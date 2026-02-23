@@ -5,6 +5,7 @@
       "subtitle": "Odkryj uniwersytety, uzyskaj wsparcie AI i zaplanuj swoją akademicką przyszłość",
       "getStarted": "Rozpocznij",
       "findHousing": "Znajdź Zakwaterowanie",
+      "studentJobs": "Praca dla Studentów",
       "exploreUniversities": "Przeglądaj Uniwersytety"
     },
     "features": {
@@ -775,10 +776,28 @@
     }
   },
   "auth": {
+    "loginButton": "Zaloguj się",
+    "registerButton": "Zarejestruj się",
     "login": {
       "title": "Logowanie",
       "subtitle": "Zaloguj się do swojego konta",
       "submit": "Zaloguj się"
     }
+  },
+  "footer": {
+    "about": "O nas",
+    "aboutUs": "O nas",
+    "contact": "Kontakt",
+    "resources": "Zasoby",
+    "universities": "Uniwersytety",
+    "languageSchools": "Szkoły językowe",
+    "vocationalSchools": "Szkoły zawodowe",
+    "support": "Wsparcie",
+    "helpCenter": "Centrum pomocy",
+    "faq": "FAQ",
+    "legal": "Informacje prawne",
+    "privacyPolicy": "Polityka prywatności",
+    "termsOfService": "Regulamin",
+    "copyright": "© 2026 Student Platform. Wszelkie prawa zastrzeżone."
   }
 }

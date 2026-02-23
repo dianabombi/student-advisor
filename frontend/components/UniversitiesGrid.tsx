@@ -55,6 +55,8 @@ export default function UniversitiesGrid() {
         );
     }
 
+    if (universities.length === 0) return null;
+
     const colors = [
         'from-blue-500 to-blue-600',
         'from-green-500 to-green-600',

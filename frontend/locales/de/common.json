@@ -5,6 +5,7 @@
       "subtitle": "Entdecken Sie Universitäten, erhalten Sie KI-gestützte Beratung und planen Sie Ihre akademische Zukunft",
       "getStarted": "Loslegen",
       "findHousing": "Unterkunft Finden",
+      "studentJobs": "Studentenjobs",
       "exploreUniversities": "Universitäten Erkunden"
     },
     "features": {
@@ -775,10 +776,28 @@
     }
   },
   "auth": {
+    "loginButton": "Anmelden",
+    "registerButton": "Registrieren",
     "login": {
       "title": "Anmelden",
       "subtitle": "Melden Sie sich bei Ihrem Konto an",
       "submit": "Anmelden"
     }
+  },
+  "footer": {
+    "about": "Über uns",
+    "aboutUs": "Über uns",
+    "contact": "Kontakt",
+    "resources": "Ressourcen",
+    "universities": "Universitäten",
+    "languageSchools": "Sprachschulen",
+    "vocationalSchools": "Berufsschulen",
+    "support": "Unterstützung",
+    "helpCenter": "Hilfecenter",
+    "faq": "FAQ",
+    "legal": "Rechtliches",
+    "privacyPolicy": "Datenschutzrichtlinie",
+    "termsOfService": "Nutzungsbedingungen",
+    "copyright": "© 2026 Student Platform. Alle Rechte vorbehalten."
   }
 }

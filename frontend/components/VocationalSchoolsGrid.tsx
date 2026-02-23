@@ -62,6 +62,8 @@ export default function VocationalSchoolsGrid() {
         );
     }
 
+    if (schools.length === 0) return null;
+
     const colors = [
         'from-amber-500 to-amber-600',
         'from-yellow-500 to-yellow-600',

@@ -5,6 +5,7 @@
       "subtitle": "Відкрийте університети, отримайте AI-консультації та сплануйте своє академічне майбутнє",
       "getStarted": "Почати",
       "findHousing": "Знайти Житло",
+      "studentJobs": "Робота для Студентів",
       "exploreUniversities": "Досліджувати Університети"
     },
     "features": {
@@ -830,6 +831,8 @@
     }
   },
   "auth": {
+    "loginButton": "Увійти",
+    "registerButton": "Зареєструватися",
     "login": {
       "welcome": "Ласкаво просимо",
       "subtitle": "Увійдіть до свого облікового запису",
@@ -847,5 +850,21 @@
       "title": "Вхід",
       "submit": "Увійти"
     }
+  },
+  "footer": {
+    "about": "Про нас",
+    "aboutUs": "Про нас",
+    "contact": "Контакти",
+    "resources": "Ресурси",
+    "universities": "Університети",
+    "languageSchools": "Мовні школи",
+    "vocationalSchools": "Професійні школи",
+    "support": "Підтримка",
+    "helpCenter": "Центр допомоги",
+    "faq": "Часті запитання",
+    "legal": "Правова інформація",
+    "privacyPolicy": "Політика конфіденційності",
+    "termsOfService": "Умови використання",
+    "copyright": "© 2026 Student Platform. Усі права захищені."
   }
 }

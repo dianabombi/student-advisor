@@ -5,6 +5,7 @@
       "subtitle": "Découvrez des universités, obtenez des conseils alimentés par l'IA et planifiez votre avenir académique",
       "getStarted": "Commencer",
       "findHousing": "Trouver un Logement",
+      "studentJobs": "Jobs Étudiants",
       "exploreUniversities": "Explorer les Universités"
     },
     "features": {
@@ -775,10 +776,28 @@
     }
   },
   "auth": {
+    "loginButton": "Se connecter",
+    "registerButton": "S'inscrire",
     "login": {
       "title": "Connexion",
       "subtitle": "Connectez-vous à votre compte",
       "submit": "Se connecter"
     }
+  },
+  "footer": {
+    "about": "À propos",
+    "aboutUs": "À propos de nous",
+    "contact": "Contact",
+    "resources": "Ressources",
+    "universities": "Universités",
+    "languageSchools": "Écoles de langues",
+    "vocationalSchools": "Écoles professionnelles",
+    "support": "Assistance",
+    "helpCenter": "Centre d'aide",
+    "faq": "FAQ",
+    "legal": "Mentions légales",
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation",
+    "copyright": "© 2026 Student Platform. Tous droits réservés."
   }
 }

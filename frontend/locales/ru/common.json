@@ -5,6 +5,7 @@
       "subtitle": "Откройте университеты, получите AI-консультации и спланируйте свое академическое будущее",
       "getStarted": "Начать",
       "findHousing": "Найти Жилье",
+      "studentJobs": "Работа для Студентов",
       "exploreUniversities": "Исследовать Университеты"
     },
     "features": {
@@ -830,6 +831,8 @@
     }
   },
   "auth": {
+    "loginButton": "Войти",
+    "registerButton": "Зарегистрироваться",
     "login": {
       "welcome": "Добро пожаловать",
       "subtitle": "Войдите в свой аккаунт",
@@ -847,5 +850,21 @@
       "title": "Вход",
       "submit": "Войти"
     }
+  },
+  "footer": {
+    "about": "О нас",
+    "aboutUs": "О нас",
+    "contact": "Контакты",
+    "resources": "Ресурсы",
+    "universities": "Университеты",
+    "languageSchools": "Языковые школы",
+    "vocationalSchools": "Профессиональные школы",
+    "support": "Поддержка",
+    "helpCenter": "Центр помощи",
+    "faq": "Часто задаваемые вопросы",
+    "legal": "Правовая информация",
+    "privacyPolicy": "Политика конфиденциальности",
+    "termsOfService": "Условия использования",
+    "copyright": "© 2026 Student Platform. Все права защищены."
   }
 }

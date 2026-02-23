@@ -62,6 +62,8 @@ export default function FoundationProgramsGrid() {
         );
     }
 
+    if (programs.length === 0) return null;
+
     const colors = [
         'from-indigo-500 to-indigo-600',
         'from-violet-500 to-violet-600',

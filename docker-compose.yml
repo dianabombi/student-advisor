@@ -108,6 +108,7 @@ services:
     environment:
       - WATCHPACK_POLLING=true
       - CHOKIDAR_USEPOLLING=true
+      - NEXT_PUBLIC_API_URL=http://nginx:80
     command: npm run dev -- -H 0.0.0.0
     depends_on:
       - backend-1

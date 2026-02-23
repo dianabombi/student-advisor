@@ -5,6 +5,7 @@
       "subtitle": "Objavte univerzity, získajte AI poradenstvo a naplánujte svoju akademickú budúcnosť",
       "getStarted": "Začať",
       "findHousing": "Nájsť Ubytovanie",
+      "studentJobs": "Študentské Práce",
       "exploreUniversities": "Preskúmať Univerzity"
     },
     "features": {
@@ -831,6 +832,8 @@
     }
   },
   "auth": {
+    "loginButton": "Prihlásiť sa",
+    "registerButton": "Registrovať sa",
     "login": {
       "welcome": "Vitajte",
       "subtitle": "Prihláste sa do svojho účtu",
@@ -848,5 +851,21 @@
       "title": "Prihlásenie",
       "submit": "Prihlásiť sa"
     }
+  },
+  "footer": {
+    "about": "O nás",
+    "aboutUs": "O nás",
+    "contact": "Kontakt",
+    "resources": "Zdroje",
+    "universities": "Univerzity",
+    "languageSchools": "Jazykové školy",
+    "vocationalSchools": "Odborné školy",
+    "support": "Podpora",
+    "helpCenter": "Centrum pomoci",
+    "faq": "Často kladené otázky",
+    "legal": "Právne informácie",
+    "privacyPolicy": "Ochrana osobných údajov",
+    "termsOfService": "Podmienky používania",
+    "copyright": "© 2026 Student Platform. Všetky práva vyhradené."
   }
 }

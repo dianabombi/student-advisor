@@ -5,6 +5,7 @@
       "subtitle": "Descubre universidades, obtén orientación impulsada por IA y planifica tu futuro académico",
       "getStarted": "Comenzar",
       "findHousing": "Encontrar Alojamiento",
+      "studentJobs": "Trabajos para Estudiantes",
       "exploreUniversities": "Explorar Universidades"
     },
     "features": {
@@ -775,10 +776,28 @@
     }
   },
   "auth": {
+    "loginButton": "Iniciar sesión",
+    "registerButton": "Registrarse",
     "login": {
       "title": "Iniciar sesión",
       "subtitle": "Inicie sesión en su cuenta",
       "submit": "Iniciar sesión"
     }
+  },
+  "footer": {
+    "about": "Acerca de",
+    "aboutUs": "Sobre nosotros",
+    "contact": "Contacto",
+    "resources": "Recursos",
+    "universities": "Universidades",
+    "languageSchools": "Escuelas de idiomas",
+    "vocationalSchools": "Escuelas vocacionales",
+    "support": "Soporte",
+    "helpCenter": "Centro de ayuda",
+    "faq": "Preguntas frecuentes",
+    "legal": "Legal",
+    "privacyPolicy": "Política de privacidad",
+    "termsOfService": "Términos de servicio",
+    "copyright": "© 2026 Student Platform. Todos los derechos reservados."
   }
 }

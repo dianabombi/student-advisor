@@ -74,7 +74,6 @@ export default function LandingPage() {
                                 <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                             </Link>
                             <div className="flex items-center space-x-4">
-                                <JurisdictionSelector />
                                 <LanguageSwitcher />
                                 {/* Show user name instead of register button */}
                                 <div className="flex items-center space-x-3">
@@ -97,7 +96,7 @@ export default function LandingPage() {
 
                 {/* Rest of authenticated content - same as guest but with full access */}
                 {/* Hero Section */}
-                <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+                <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-32">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center">
                             <h1 className="text-5xl font-bold mb-6">
@@ -433,40 +432,11 @@ export default function LandingPage() {
                     </div>
                 </section>
 
-                {/* Universities Grid */}
-                <section className="py-16 bg-blue-50">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <UniversitiesGrid />
-                    </div>
-                </section>
-
-                {/* Language Schools Grid */}
-                <section className="py-16 bg-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <LanguageSchoolsGrid />
-                    </div>
-                </section>
-
-                {/* Vocational Schools Grid */}
-                <section className="py-16 bg-blue-50">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <VocationalSchoolsGrid />
-                    </div>
-                </section>
-
-                {/* Conservatories Grid */}
-                <section className="py-16 bg-white">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <ConservatoriesGrid />
-                    </div>
-                </section>
-
-                {/* Foundation Programs Grid */}
-                <section className="py-16 bg-blue-50">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <FoundationProgramsGrid />
-                    </div>
-                </section>
+                <UniversitiesGrid />
+                <LanguageSchoolsGrid />
+                <VocationalSchoolsGrid />
+                <ConservatoriesGrid />
+                <FoundationProgramsGrid />
 
                 {/* CTA Section */}
                 <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
@@ -491,37 +461,37 @@ export default function LandingPage() {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="grid md:grid-cols-4 gap-8">
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">About</h3>
+                                <h3 className="text-lg font-semibold mb-4">{t('footer.about')}</h3>
                                 <ul className="space-y-2">
-                                    <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-                                    <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+                                    <li><Link href="/about" className="text-gray-400 hover:text-white">{t('footer.aboutUs')}</Link></li>
+                                    <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                                <h3 className="text-lg font-semibold mb-4">{t('footer.resources')}</h3>
                                 <ul className="space-y-2">
-                                    <li><Link href="/universities" className="text-gray-400 hover:text-white">Universities</Link></li>
-                                    <li><Link href="/language-schools" className="text-gray-400 hover:text-white">Language Schools</Link></li>
-                                    <li><Link href="/vocational-schools" className="text-gray-400 hover:text-white">Vocational Schools</Link></li>
+                                    <li><Link href="/universities" className="text-gray-400 hover:text-white">{t('footer.universities')}</Link></li>
+                                    <li><Link href="/language-schools" className="text-gray-400 hover:text-white">{t('footer.languageSchools')}</Link></li>
+                                    <li><Link href="/vocational-schools" className="text-gray-400 hover:text-white">{t('footer.vocationalSchools')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">Support</h3>
+                                <h3 className="text-lg font-semibold mb-4">{t('footer.support')}</h3>
                                 <ul className="space-y-2">
-                                    <li><Link href="/help" className="text-gray-400 hover:text-white">Help Center</Link></li>
-                                    <li><Link href="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
+                                    <li><Link href="/help" className="text-gray-400 hover:text-white">{t('footer.helpCenter')}</Link></li>
+                                    <li><Link href="/faq" className="text-gray-400 hover:text-white">{t('footer.faq')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">Legal</h3>
+                                <h3 className="text-lg font-semibold mb-4">{t('footer.legal')}</h3>
                                 <ul className="space-y-2">
-                                    <li><Link href="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
-                                    <li><Link href="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
+                                    <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t('footer.privacyPolicy')}</Link></li>
+                                    <li><Link href="/terms" className="text-gray-400 hover:text-white">{t('footer.termsOfService')}</Link></li>
                                 </ul>
                             </div>
                         </div>
                         <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                            <p>&copy; 2026 Student Platform. All rights reserved.</p>
+                            <p>{t('footer.copyright')}</p>
                         </div>
                     </div>
                 </footer>
@@ -544,7 +514,6 @@ export default function LandingPage() {
                             <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                         </Link>
                         <div className="flex items-center space-x-4">
-                            <JurisdictionSelector />
                             <LanguageSwitcher />
                             <Link
                                 href="/login"
@@ -564,7 +533,7 @@ export default function LandingPage() {
             </nav>
 
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
+            <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-32">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center">
                         <h1 className="text-5xl font-bold mb-6">
@@ -876,40 +845,11 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            {/* Universities Grid */}
-            <section className="py-16 bg-blue-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <UniversitiesGrid />
-                </div>
-            </section>
-
-            {/* Language Schools Grid */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <LanguageSchoolsGrid />
-                </div>
-            </section>
-
-            {/* Vocational Schools Grid */}
-            <section className="py-16 bg-blue-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <VocationalSchoolsGrid />
-                </div>
-            </section>
-
-            {/* Conservatories Grid */}
-            <section className="py-16 bg-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <ConservatoriesGrid />
-                </div>
-            </section>
-
-            {/* Foundation Programs Grid */}
-            <section className="py-16 bg-blue-50">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <FoundationProgramsGrid />
-                </div>
-            </section>
+            <UniversitiesGrid />
+            <LanguageSchoolsGrid />
+            <VocationalSchoolsGrid />
+            <ConservatoriesGrid />
+            <FoundationProgramsGrid />
 
             {/* CTA Section */}
             <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
@@ -934,37 +874,37 @@ export default function LandingPage() {
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid md:grid-cols-4 gap-8">
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">About</h3>
+                            <h3 className="text-lg font-semibold mb-4">{t('footer.about')}</h3>
                             <ul className="space-y-2">
-                                <li><Link href="/about" className="text-gray-400 hover:text-white">About Us</Link></li>
-                                <li><Link href="/contact" className="text-gray-400 hover:text-white">Contact</Link></li>
+                                <li><Link href="/about" className="text-gray-400 hover:text-white">{t('footer.aboutUs')}</Link></li>
+                                <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">Resources</h3>
+                            <h3 className="text-lg font-semibold mb-4">{t('footer.resources')}</h3>
                             <ul className="space-y-2">
-                                <li><Link href="/universities" className="text-gray-400 hover:text-white">Universities</Link></li>
-                                <li><Link href="/language-schools" className="text-gray-400 hover:text-white">Language Schools</Link></li>
-                                <li><Link href="/vocational-schools" className="text-gray-400 hover:text-white">Vocational Schools</Link></li>
+                                <li><Link href="/universities" className="text-gray-400 hover:text-white">{t('footer.universities')}</Link></li>
+                                <li><Link href="/language-schools" className="text-gray-400 hover:text-white">{t('footer.languageSchools')}</Link></li>
+                                <li><Link href="/vocational-schools" className="text-gray-400 hover:text-white">{t('footer.vocationalSchools')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">Support</h3>
+                            <h3 className="text-lg font-semibold mb-4">{t('footer.support')}</h3>
                             <ul className="space-y-2">
-                                <li><Link href="/help" className="text-gray-400 hover:text-white">Help Center</Link></li>
-                                <li><Link href="/faq" className="text-gray-400 hover:text-white">FAQ</Link></li>
+                                <li><Link href="/help" className="text-gray-400 hover:text-white">{t('footer.helpCenter')}</Link></li>
+                                <li><Link href="/faq" className="text-gray-400 hover:text-white">{t('footer.faq')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">Legal</h3>
+                            <h3 className="text-lg font-semibold mb-4">{t('footer.legal')}</h3>
                             <ul className="space-y-2">
-                                <li><Link href="/privacy" className="text-gray-400 hover:text-white">Privacy Policy</Link></li>
-                                <li><Link href="/terms" className="text-gray-400 hover:text-white">Terms of Service</Link></li>
+                                <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t('footer.privacyPolicy')}</Link></li>
+                                <li><Link href="/terms" className="text-gray-400 hover:text-white">{t('footer.termsOfService')}</Link></li>
                             </ul>
                         </div>
                     </div>
                     <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                        <p>&copy; 2026 Student Platform. All rights reserved.</p>
+                        <p>{t('footer.copyright')}</p>
                     </div>
                 </div>
             </footer>

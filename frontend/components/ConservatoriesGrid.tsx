@@ -62,6 +62,8 @@ export default function ConservatoriesGrid() {
         );
     }
 
+    if (conservatories.length === 0) return null;
+
     const colors = [
         'from-pink-500 to-pink-600',
         'from-rose-500 to-rose-600',

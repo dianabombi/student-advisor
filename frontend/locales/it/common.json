@@ -5,6 +5,7 @@
       "subtitle": "Scopri università, ottieni orientamento basato sull'IA e pianifica il tuo futuro accademico",
       "getStarted": "Inizia",
       "findHousing": "Trova Alloggio",
+      "studentJobs": "Lavori per Studenti",
       "exploreUniversities": "Esplora Università"
     },
     "features": {
@@ -775,10 +776,28 @@
     }
   },
   "auth": {
+    "loginButton": "Accedi",
+    "registerButton": "Registrati",
     "login": {
       "title": "Accedi",
       "subtitle": "Accedi al tuo account",
       "submit": "Accedi"
     }
+  },
+  "footer": {
+    "about": "Chi siamo",
+    "aboutUs": "Chi siamo",
+    "contact": "Contatti",
+    "resources": "Risorse",
+    "universities": "Università",
+    "languageSchools": "Scuole di lingue",
+    "vocationalSchools": "Scuole professionali",
+    "support": "Supporto",
+    "helpCenter": "Centro assistenza",
+    "faq": "FAQ",
+    "legal": "Note legali",
+    "privacyPolicy": "Informativa sulla privacy",
+    "termsOfService": "Termini di servizio",
+    "copyright": "© 2026 Student Platform. Tutti i diritti riservati."
   }
 }

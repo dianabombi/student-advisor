@@ -5,6 +5,7 @@
       "subtitle": "Discover universities, get AI-powered guidance, and plan your academic future",
       "getStarted": "Get Started",
       "findHousing": "Find Housing",
+      "studentJobs": "Student Jobs",
       "exploreUniversities": "Explore Universities"
     },
     "features": {
@@ -830,6 +831,8 @@
     }
   },
   "auth": {
+    "loginButton": "Log In",
+    "registerButton": "Register",
     "login": {
       "welcome": "Welcome",
       "subtitle": "Sign in to your account",
@@ -847,5 +850,21 @@
       "title": "Login",
       "submit": "Sign In"
     }
+  },
+  "footer": {
+    "about": "About",
+    "aboutUs": "About Us",
+    "contact": "Contact",
+    "resources": "Resources",
+    "universities": "Universities",
+    "languageSchools": "Language Schools",
+    "vocationalSchools": "Vocational Schools",
+    "support": "Support",
+    "helpCenter": "Help Center",
+    "faq": "FAQ",
+    "legal": "Legal",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "copyright": "© 2026 Student Platform. All rights reserved."
   }
 }

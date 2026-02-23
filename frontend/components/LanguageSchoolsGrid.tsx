@@ -62,6 +62,8 @@ export default function LanguageSchoolsGrid() {
         );
     }
 
+    if (schools.length === 0) return null;
+
     const colors = [
         'from-teal-500 to-teal-600',
         'from-cyan-500 to-cyan-600',
