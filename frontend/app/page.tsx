@@ -64,16 +64,16 @@ export default function LandingPage() {
     // Show dashboard for authenticated users - SAME as guest view but with user name
     if (isUserLoggedIn) {
         return (
-            <div className="min-h-screen bg-blue-50">
+            <div className="min-h-screen pt-3 glass-bg" style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #f0f4ff 30%, #faf5ff 60%, #e0f2fe 100%)' }}>
                 {/* Navigation */}
-                <nav className="bg-white border-b border-gray-200">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                <nav className="glass-strong sticky top-0 z-50 shadow-lg shadow-black/5 mx-3 sm:mx-5 lg:mx-8 rounded-2xl">
+                    <div className="w-full px-4 sm:px-6 lg:px-8 py-3 relative z-10">
                         <div className="flex items-center justify-between">
                             <Link href="/" className="flex items-center space-x-2">
                                 <Sparkles className="w-8 h-8 text-blue-600" />
                                 <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                             </Link>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-3">
                                 <LanguageSwitcher />
                                 {/* Show user name instead of register button */}
                                 <div className="flex items-center space-x-3">
@@ -84,7 +84,7 @@ export default function LandingPage() {
                                             localStorage.removeItem('user');
                                             window.location.href = '/';
                                         }}
-                                        className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900"
+                                        className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-gray-900 rounded-xl bg-gray-200/60 hover:bg-gray-200 transition-colors"
                                     >
                                         Logout
                                     </button>
@@ -96,32 +96,26 @@ export default function LandingPage() {
 
                 {/* Rest of authenticated content - same as guest but with full access */}
                 {/* Hero Section */}
-                <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-32">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <section className="relative overflow-hidden text-white pt-44 pb-16 mx-4 sm:mx-8 lg:mx-16 mt-6 rounded-3xl" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(99,102,241,0.85) 50%, rgba(139,92,246,0.8) 100%)' }}>
+                    <div className="absolute inset-0 rounded-3xl" style={{ background: 'radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)' }} />
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                         <div className="text-center">
-                            <h1 className="text-5xl font-bold mb-6">
+                            <h1 className="text-5xl font-bold mb-6 drop-shadow-lg">
                                 {t('student.hero.title')}
                             </h1>
-                            <p className="text-xl mb-8 text-blue-100">
+                            <p className="text-xl mb-8 text-white/80">
                                 {t('student.hero.subtitle')}
                             </p>
                             <div className="flex justify-center space-x-4">
                                 <Link
-                                    href="/chat"
-                                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center"
-                                >
-                                    {t('student.hero.getStarted')}
-                                    <ArrowRight className="ml-2 w-5 h-5" />
-                                </Link>
-                                <Link
                                     href="/housing"
-                                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors border-2 border-blue-600"
+                                    className="bg-white text-blue-700 px-8 py-3 rounded-2xl font-semibold hover:bg-white/90 transition-all shadow-md"
                                 >
                                     {t('student.hero.findHousing')}
                                 </Link>
                                 <Link
                                     href="/jobs"
-                                    className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors border-2 border-blue-600"
+                                    className="bg-white text-blue-700 px-8 py-3 rounded-2xl font-semibold hover:bg-white/90 transition-all shadow-md"
                                 >
                                     {t('student.hero.studentJobs')}
                                 </Link>
@@ -131,7 +125,7 @@ export default function LandingPage() {
                 </section>
 
                 {/* Pricing Section */}
-                <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+                <section className="py-20 relative z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="text-center mb-16">
                             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -142,9 +136,9 @@ export default function LandingPage() {
                             </p>
                         </div>
 
-                        <div className="grid md:grid-cols-4 gap-8">
+                        <div className="grid md:grid-cols-4 gap-6">
                             {/* FREE Plan */}
-                            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200 hover:border-blue-300 transition-all hover:shadow-xl">
+                            <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02]">
                                 <div className="text-center mb-6">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('student.pricing.free.name')}</h3>
                                     <div className="mb-4">
@@ -181,17 +175,17 @@ export default function LandingPage() {
                                     </li>
                                 </ul>
 
-                                <button
-                                    disabled
-                                    className="block w-full text-center bg-gray-100 text-gray-400 px-6 py-3 rounded-lg font-semibold cursor-not-allowed"
+                                <Link
+                                    href="/register"
+                                    className="glass-btn block w-full text-center bg-gray-500/10 text-gray-700 px-6 py-3 rounded-2xl font-semibold hover:bg-gray-500/20 transition-all"
                                 >
-                                    {t('student.pricing.free.currentPlan')}
-                                </button>
+                                    {t('student.pricing.free.button')}
+                                </Link>
                             </div>
 
                             {/* BASIC Plan */}
-                            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-500 hover:border-blue-600 transition-all hover:shadow-2xl relative">
-                                <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                            <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02] relative" style={{ borderColor: 'rgba(59,130,246,0.3)' }}>
+                                <div className="absolute top-0 right-0 px-4 py-1 rounded-bl-xl rounded-tr-3xl text-sm font-semibold text-white" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.8), rgba(99,102,241,0.8))' }}>
                                     {t('student.pricing.basic.badge')}
                                 </div>
                                 <div className="text-center mb-6">
@@ -237,15 +231,15 @@ export default function LandingPage() {
                                 </ul>
 
                                 <Link
-                                    href="/subscription"
-                                    className="block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md"
+                                    href="/subscription?plan=basic"
+                                    className="glass-btn block w-full text-center text-white px-6 py-3 rounded-2xl font-semibold transition-all shadow-lg shadow-blue-500/20" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.85), rgba(99,102,241,0.85))' }}
                                 >
-                                    Vybrať BASIC
+                                    {t('student.pricing.basic.button')}
                                 </Link>
                             </div>
 
                             {/* STANDARD Plan */}
-                            <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-purple-500 hover:border-purple-600 transition-all hover:shadow-2xl">
+                            <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02]" style={{ borderColor: 'rgba(168,85,247,0.3)' }}>
                                 <div className="text-center mb-6">
                                     <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('student.pricing.standard.name')}</h3>
                                     <div className="mb-4">
@@ -289,16 +283,16 @@ export default function LandingPage() {
                                 </ul>
 
                                 <Link
-                                    href="/subscription"
-                                    className="block w-full text-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors shadow-md"
+                                    href="/subscription?plan=standard"
+                                    className="glass-btn block w-full text-center text-white px-6 py-3 rounded-2xl font-semibold transition-all shadow-lg shadow-purple-500/20" style={{ background: 'linear-gradient(135deg, rgba(168,85,247,0.85), rgba(139,92,246,0.85))' }}
                                 >
-                                    Vybrať STANDARD
+                                    {t('student.pricing.standard.button')}
                                 </Link>
                             </div>
 
                             {/* PREMIUM Plan */}
-                            <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 border-2 border-yellow-400 hover:border-yellow-500 transition-all hover:shadow-2xl relative">
-                                <div className="absolute top-0 right-0 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                            <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02] relative" style={{ borderColor: 'rgba(245,158,11,0.3)', background: 'rgba(255,251,235,0.5)' }}>
+                                <div className="absolute top-0 right-0 px-4 py-1 rounded-bl-xl rounded-tr-3xl text-sm font-semibold text-white" style={{ background: 'linear-gradient(135deg, rgba(245,158,11,0.9), rgba(249,115,22,0.9))' }}>
                                     {t('student.pricing.premium.badge')}
                                 </div>
                                 <div className="text-center mb-6">
@@ -344,10 +338,10 @@ export default function LandingPage() {
                                 </ul>
 
                                 <Link
-                                    href="/subscription"
-                                    className="block w-full text-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all shadow-md"
+                                    href="/subscription?plan=premium"
+                                    className="glass-btn block w-full text-center text-white px-6 py-3 rounded-2xl font-semibold transition-all shadow-lg shadow-orange-500/20" style={{ background: 'linear-gradient(135deg, rgba(245,158,11,0.9), rgba(249,115,22,0.9))' }}
                                 >
-                                    Vybrať PREMIUM
+                                    {t('student.pricing.premium.button')}
                                 </Link>
                             </div>
                         </div>
@@ -362,15 +356,15 @@ export default function LandingPage() {
                 </section>
 
                 {/* Features Section */}
-                <section className="py-16 bg-white">
+                <section className="py-16 relative z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <h2 className="text-3xl font-bold text-center mb-12">
+                        <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
                             {t('student.features.title')}
                         </h2>
 
                         <div className="grid md:grid-cols-5 gap-6">
-                            <div className="text-center p-6">
-                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="glass-card rounded-2xl text-center p-6 transition-all duration-300 hover:scale-[1.02]">
+                                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(99,102,241,0.2))' }}>
                                     <GraduationCap className="w-8 h-8 text-blue-600" />
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">
@@ -381,8 +375,8 @@ export default function LandingPage() {
                                 </p>
                             </div>
 
-                            <div className="text-center p-6">
-                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="glass-card rounded-2xl text-center p-6 transition-all duration-300 hover:scale-[1.02]">
+                                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(99,102,241,0.2))' }}>
                                     <Users className="w-8 h-8 text-blue-600" />
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">
@@ -393,8 +387,8 @@ export default function LandingPage() {
                                 </p>
                             </div>
 
-                            <div className="text-center p-6">
-                                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="glass-card rounded-2xl text-center p-6 transition-all duration-300 hover:scale-[1.02]">
+                                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(99,102,241,0.2))' }}>
                                     <Globe className="w-8 h-8 text-blue-600" />
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">
@@ -405,8 +399,8 @@ export default function LandingPage() {
                                 </p>
                             </div>
 
-                            <div className="text-center p-6">
-                                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="glass-card rounded-2xl text-center p-6 transition-all duration-300 hover:scale-[1.02]">
+                                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(16,185,129,0.2), rgba(52,211,153,0.2))' }}>
                                     <Home className="w-8 h-8 text-green-600" />
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">
@@ -417,8 +411,8 @@ export default function LandingPage() {
                                 </p>
                             </div>
 
-                            <div className="text-center p-6">
-                                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="glass-card rounded-2xl text-center p-6 transition-all duration-300 hover:scale-[1.02]">
+                                <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(168,85,247,0.2), rgba(139,92,246,0.2))' }}>
                                     <Briefcase className="w-8 h-8 text-purple-600" />
                                 </div>
                                 <h3 className="text-xl font-semibold mb-2">
@@ -439,17 +433,18 @@ export default function LandingPage() {
                 <FoundationProgramsGrid />
 
                 {/* CTA Section */}
-                <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                        <h2 className="text-3xl font-bold mb-4">
+                <section className="relative overflow-hidden text-white py-16 mx-4 sm:mx-8 lg:mx-16 mb-6 rounded-3xl" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(99,102,241,0.85) 50%, rgba(139,92,246,0.8) 100%)' }}>
+                    <div className="absolute inset-0 rounded-3xl" style={{ background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 50%)' }} />
+                    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                        <h2 className="text-3xl font-bold mb-4 drop-shadow-lg">
                             {t('student.cta.title')}
                         </h2>
-                        <p className="text-xl mb-8 text-blue-100">
+                        <p className="text-xl mb-8 text-white/80">
                             {t('student.cta.subtitle')}
                         </p>
                         <Link
                             href="/chat"
-                            className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block"
+                            className="glass-btn bg-white/90 text-blue-700 px-8 py-3 rounded-2xl font-semibold hover:bg-white transition-all inline-block"
                         >
                             {t('student.cta.button')}
                         </Link>
@@ -457,41 +452,42 @@ export default function LandingPage() {
                 </section>
 
                 {/* Footer */}
-                <footer className="bg-gray-900 text-white py-12">
+                <footer className="glass-dark text-white py-6 relative z-10">
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                        <div className="grid md:grid-cols-4 gap-8">
+                        <div className="grid md:grid-cols-4 gap-6 text-sm">
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">{t('footer.about')}</h3>
-                                <ul className="space-y-2">
-                                    <li><Link href="/about" className="text-gray-400 hover:text-white">{t('footer.aboutUs')}</Link></li>
-                                    <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
+                                <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.about')}</h3>
+                                <ul className="space-y-1">
+                                    <li><Link href="/about" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.aboutUs')}</Link></li>
+                                    <li><Link href="/contact" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.contact')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">{t('footer.resources')}</h3>
-                                <ul className="space-y-2">
-                                    <li><Link href="/universities" className="text-gray-400 hover:text-white">{t('footer.universities')}</Link></li>
-                                    <li><Link href="/language-schools" className="text-gray-400 hover:text-white">{t('footer.languageSchools')}</Link></li>
-                                    <li><Link href="/vocational-schools" className="text-gray-400 hover:text-white">{t('footer.vocationalSchools')}</Link></li>
+                                <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.resources')}</h3>
+                                <ul className="space-y-1">
+                                    <li><Link href="/universities" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.universities')}</Link></li>
+                                    <li><Link href="/language-schools" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.languageSchools')}</Link></li>
+                                    <li><Link href="/vocational-schools" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.vocationalSchools')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">{t('footer.support')}</h3>
-                                <ul className="space-y-2">
-                                    <li><Link href="/help" className="text-gray-400 hover:text-white">{t('footer.helpCenter')}</Link></li>
-                                    <li><Link href="/faq" className="text-gray-400 hover:text-white">{t('footer.faq')}</Link></li>
+                                <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.support')}</h3>
+                                <ul className="space-y-1">
+                                    <li><Link href="/help" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.helpCenter')}</Link></li>
+                                    <li><Link href="/faq" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.faq')}</Link></li>
                                 </ul>
                             </div>
                             <div>
-                                <h3 className="text-lg font-semibold mb-4">{t('footer.legal')}</h3>
-                                <ul className="space-y-2">
-                                    <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t('footer.privacyPolicy')}</Link></li>
-                                    <li><Link href="/terms" className="text-gray-400 hover:text-white">{t('footer.termsOfService')}</Link></li>
+                                <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.legal')}</h3>
+                                <ul className="space-y-1">
+                                    <li><Link href="/privacy" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.privacyPolicy')}</Link></li>
+                                    <li><Link href="/terms" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.termsOfService')}</Link></li>
                                 </ul>
                             </div>
                         </div>
-                        <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                        <div className="border-t border-white/10 mt-5 pt-4 text-center text-white/40 text-xs space-y-1">
                             <p>{t('footer.copyright')}</p>
+                            <p>Created by <a href="https://wavelynecode.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">Wavelyne</a> — <a href="https://wavelynecode.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">wavelynecode.com</a></p>
                         </div>
                     </div>
                 </footer>
@@ -504,26 +500,26 @@ export default function LandingPage() {
 
     // Guest view - show everything but with auth prompts on protected actions
     return (
-        <div className="min-h-screen bg-blue-50">
+        <div className="min-h-screen pt-3 glass-bg" style={{ background: 'linear-gradient(135deg, #e0f2fe 0%, #f0f4ff 30%, #faf5ff 60%, #e0f2fe 100%)' }}>
             {/* Navigation */}
-            <nav className="bg-white border-b border-gray-200">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <nav className="glass-strong sticky top-0 z-50 shadow-lg shadow-black/5 mx-3 sm:mx-5 lg:mx-8 rounded-2xl">
+                <div className="w-full px-4 sm:px-6 lg:px-8 py-3 relative z-10">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="flex items-center space-x-2">
                             <Sparkles className="w-8 h-8 text-blue-600" />
                             <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                         </Link>
-                        <div className="flex items-center space-x-4">
+                        <div className="flex items-center space-x-3">
                             <LanguageSwitcher />
                             <Link
                                 href="/login"
-                                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                                className="bg-blue-500 text-white px-5 py-2 rounded-xl font-medium hover:bg-blue-600 transition-colors shadow-md"
                             >
                                 {t('auth.loginButton')}
                             </Link>
                             <Link
                                 href="/register"
-                                className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                                className="bg-gray-900 text-white px-5 py-2 rounded-xl font-medium hover:bg-gray-800 transition-colors shadow-md"
                             >
                                 {t('auth.registerButton')}
                             </Link>
@@ -533,32 +529,26 @@ export default function LandingPage() {
             </nav>
 
             {/* Hero Section */}
-            <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-32">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="relative overflow-hidden text-white pt-44 pb-16 mx-4 sm:mx-8 lg:mx-16 mt-6 rounded-3xl" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(99,102,241,0.85) 50%, rgba(139,92,246,0.8) 100%)' }}>
+                <div className="absolute inset-0 rounded-3xl" style={{ background: 'radial-gradient(circle at 30% 20%, rgba(255,255,255,0.15) 0%, transparent 50%), radial-gradient(circle at 70% 80%, rgba(255,255,255,0.1) 0%, transparent 50%)' }} />
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <div className="text-center">
-                        <h1 className="text-5xl font-bold mb-6">
+                        <h1 className="text-5xl font-bold mb-6 drop-shadow-lg">
                             {t('student.hero.title')}
                         </h1>
-                        <p className="text-xl mb-8 text-blue-100">
+                        <p className="text-xl mb-8 text-white/80">
                             {t('student.hero.subtitle')}
                         </p>
                         <div className="flex justify-center space-x-4">
-                            <button
-                                onClick={() => handleProtectedAction(() => window.location.href = '/chat')}
-                                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center cursor-pointer"
-                            >
-                                {t('student.hero.getStarted')}
-                                <ArrowRight className="ml-2 w-5 h-5" />
-                            </button>
                             <Link
                                 href="/housing"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors cursor-pointer border-2 border-blue-600"
+                                className="bg-white text-blue-700 px-8 py-3 rounded-2xl font-semibold hover:bg-white/90 transition-all shadow-md"
                             >
                                 {t('student.hero.findHousing')}
                             </Link>
                             <Link
                                 href="/jobs"
-                                className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors cursor-pointer border-2 border-blue-600"
+                                className="bg-white text-blue-700 px-8 py-3 rounded-2xl font-semibold hover:bg-white/90 transition-all shadow-md"
                             >
                                 {t('student.hero.studentJobs')}
                             </Link>
@@ -568,7 +558,7 @@ export default function LandingPage() {
             </section>
 
             {/* Pricing Section */}
-            <section className="py-20 bg-gradient-to-b from-blue-50 to-white">
+            <section className="py-20 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center mb-16">
                         <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -579,9 +569,9 @@ export default function LandingPage() {
                         </p>
                     </div>
 
-                    <div className="grid md:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-4 gap-6">
                         {/* FREE Plan */}
-                        <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200 hover:border-blue-300 transition-all hover:shadow-xl">
+                        <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02]">
                             <div className="text-center mb-6">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('student.pricing.free.name')}</h3>
                                 <div className="mb-4">
@@ -620,15 +610,15 @@ export default function LandingPage() {
 
                             <Link
                                 href="/register"
-                                className="block w-full text-center bg-gray-100 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-200 transition-colors"
+                                className="block w-full text-center bg-gray-200/60 text-gray-700 px-6 py-3 rounded-2xl font-semibold hover:bg-gray-200 transition-colors shadow-sm"
                             >
-                                Začať zadarmo
+                                {t('student.pricing.free.button')}
                             </Link>
                         </div>
 
                         {/* BASIC Plan */}
-                        <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-blue-500 hover:border-blue-600 transition-all hover:shadow-2xl relative">
-                            <div className="absolute top-0 right-0 bg-blue-500 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                        <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02] relative" style={{ borderColor: 'rgba(59,130,246,0.3)' }}>
+                            <div className="absolute top-0 right-0 px-4 py-1 rounded-bl-xl rounded-tr-3xl text-sm font-semibold text-white" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.8), rgba(99,102,241,0.8))' }}>
                                 {t('student.pricing.basic.badge')}
                             </div>
                             <div className="text-center mb-6">
@@ -674,15 +664,15 @@ export default function LandingPage() {
                             </ul>
 
                             <Link
-                                href="/register"
-                                className="block w-full text-center bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors shadow-md"
+                                href="/register?plan=basic"
+                                className="block w-full text-center text-white px-6 py-3 rounded-2xl font-semibold transition-colors shadow-lg shadow-blue-500/20 bg-blue-500 hover:bg-blue-600"
                             >
-                                Vybrať BASIC
+                                {t('student.pricing.basic.button')}
                             </Link>
                         </div>
 
                         {/* STANDARD Plan */}
-                        <div className="bg-white rounded-2xl shadow-lg p-8 border-2 border-purple-500 hover:border-purple-600 transition-all hover:shadow-2xl">
+                        <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02]" style={{ borderColor: 'rgba(168,85,247,0.3)' }}>
                             <div className="text-center mb-6">
                                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{t('student.pricing.standard.name')}</h3>
                                 <div className="mb-4">
@@ -726,16 +716,16 @@ export default function LandingPage() {
                             </ul>
 
                             <Link
-                                href="/register"
-                                className="block w-full text-center bg-purple-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-purple-700 transition-colors shadow-md"
+                                href="/register?plan=standard"
+                                className="block w-full text-center text-white px-6 py-3 rounded-2xl font-semibold transition-colors shadow-lg shadow-purple-500/20 bg-purple-500 hover:bg-purple-600"
                             >
-                                Vybrať STANDARD
+                                {t('student.pricing.standard.button')}
                             </Link>
                         </div>
 
                         {/* PREMIUM Plan */}
-                        <div className="bg-gradient-to-br from-yellow-50 to-orange-50 rounded-2xl shadow-lg p-8 border-2 border-yellow-400 hover:border-yellow-500 transition-all hover:shadow-2xl relative">
-                            <div className="absolute top-0 right-0 bg-gradient-to-r from-yellow-400 to-orange-400 text-white px-4 py-1 rounded-bl-lg rounded-tr-lg text-sm font-semibold">
+                        <div className="glass-card rounded-3xl p-8 transition-all duration-300 hover:scale-[1.02] relative" style={{ borderColor: 'rgba(245,158,11,0.3)', background: 'rgba(255,251,235,0.5)' }}>
+                            <div className="absolute top-0 right-0 px-4 py-1 rounded-bl-xl rounded-tr-3xl text-sm font-semibold text-white" style={{ background: 'linear-gradient(135deg, rgba(245,158,11,0.9), rgba(249,115,22,0.9))' }}>
                                 {t('student.pricing.premium.badge')}
                             </div>
                             <div className="text-center mb-6">
@@ -781,10 +771,10 @@ export default function LandingPage() {
                             </ul>
 
                             <Link
-                                href="/register"
-                                className="block w-full text-center bg-gradient-to-r from-yellow-500 to-orange-500 text-white px-6 py-3 rounded-lg font-semibold hover:from-yellow-600 hover:to-orange-600 transition-all shadow-md"
+                                href="/register?plan=premium"
+                                className="block w-full text-center text-white px-6 py-3 rounded-2xl font-semibold transition-colors shadow-lg shadow-orange-500/20 bg-orange-500 hover:bg-orange-600"
                             >
-                                Vybrať PREMIUM
+                                {t('student.pricing.premium.button')}
                             </Link>
                         </div>
                     </div>
@@ -799,15 +789,15 @@ export default function LandingPage() {
             </section>
 
             {/* Features Section */}
-            <section className="py-16 bg-white">
+            <section className="py-16 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <h2 className="text-3xl font-bold text-center mb-12">
+                    <h2 className="text-3xl font-bold text-center mb-12 text-gray-900">
                         {t('student.features.title')}
                     </h2>
 
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="text-center p-6">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="glass-card rounded-2xl text-center p-8 transition-all duration-300 hover:scale-[1.02]">
+                            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(99,102,241,0.2))' }}>
                                 <GraduationCap className="w-8 h-8 text-blue-600" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">
@@ -818,8 +808,8 @@ export default function LandingPage() {
                             </p>
                         </div>
 
-                        <div className="text-center p-6">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="glass-card rounded-2xl text-center p-8 transition-all duration-300 hover:scale-[1.02]">
+                            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(99,102,241,0.2))' }}>
                                 <Users className="w-8 h-8 text-blue-600" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">
@@ -830,8 +820,8 @@ export default function LandingPage() {
                             </p>
                         </div>
 
-                        <div className="text-center p-6">
-                            <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <div className="glass-card rounded-2xl text-center p-8 transition-all duration-300 hover:scale-[1.02]">
+                            <div className="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.2), rgba(99,102,241,0.2))' }}>
                                 <Globe className="w-8 h-8 text-blue-600" />
                             </div>
                             <h3 className="text-xl font-semibold mb-2">
@@ -852,17 +842,18 @@ export default function LandingPage() {
             <FoundationProgramsGrid />
 
             {/* CTA Section */}
-            <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-16">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                    <h2 className="text-3xl font-bold mb-4">
+            <section className="relative overflow-hidden text-white py-16 mx-4 sm:mx-8 lg:mx-16 mb-6 rounded-3xl" style={{ background: 'linear-gradient(135deg, rgba(59,130,246,0.85) 0%, rgba(99,102,241,0.85) 50%, rgba(139,92,246,0.8) 100%)' }}>
+                <div className="absolute inset-0 rounded-3xl" style={{ background: 'radial-gradient(circle at 20% 50%, rgba(255,255,255,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 30%, rgba(255,255,255,0.08) 0%, transparent 50%)' }} />
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+                    <h2 className="text-3xl font-bold mb-4 drop-shadow-lg">
                         {t('student.cta.title')}
                     </h2>
-                    <p className="text-xl mb-8 text-blue-100">
+                    <p className="text-xl mb-8 text-white/80">
                         {t('student.cta.subtitle')}
                     </p>
                     <button
                         onClick={() => handleProtectedAction(() => window.location.href = '/register')}
-                        className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-block cursor-pointer"
+                        className="glass-btn bg-white/90 text-blue-700 px-8 py-3 rounded-2xl font-semibold hover:bg-white transition-all inline-block cursor-pointer"
                     >
                         {t('student.cta.button')}
                     </button>
@@ -870,41 +861,42 @@ export default function LandingPage() {
             </section>
 
             {/* Footer */}
-            <footer className="bg-gray-900 text-white py-12">
+            <footer className="glass-dark text-white py-6 relative z-10">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="grid md:grid-cols-4 gap-8">
+                    <div className="grid md:grid-cols-4 gap-6 text-sm">
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">{t('footer.about')}</h3>
-                            <ul className="space-y-2">
-                                <li><Link href="/about" className="text-gray-400 hover:text-white">{t('footer.aboutUs')}</Link></li>
-                                <li><Link href="/contact" className="text-gray-400 hover:text-white">{t('footer.contact')}</Link></li>
+                            <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.about')}</h3>
+                            <ul className="space-y-1">
+                                <li><Link href="/about" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.aboutUs')}</Link></li>
+                                <li><Link href="/contact" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.contact')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">{t('footer.resources')}</h3>
-                            <ul className="space-y-2">
-                                <li><Link href="/universities" className="text-gray-400 hover:text-white">{t('footer.universities')}</Link></li>
-                                <li><Link href="/language-schools" className="text-gray-400 hover:text-white">{t('footer.languageSchools')}</Link></li>
-                                <li><Link href="/vocational-schools" className="text-gray-400 hover:text-white">{t('footer.vocationalSchools')}</Link></li>
+                            <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.resources')}</h3>
+                            <ul className="space-y-1">
+                                <li><Link href="/universities" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.universities')}</Link></li>
+                                <li><Link href="/language-schools" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.languageSchools')}</Link></li>
+                                <li><Link href="/vocational-schools" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.vocationalSchools')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">{t('footer.support')}</h3>
-                            <ul className="space-y-2">
-                                <li><Link href="/help" className="text-gray-400 hover:text-white">{t('footer.helpCenter')}</Link></li>
-                                <li><Link href="/faq" className="text-gray-400 hover:text-white">{t('footer.faq')}</Link></li>
+                            <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.support')}</h3>
+                            <ul className="space-y-1">
+                                <li><Link href="/help" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.helpCenter')}</Link></li>
+                                <li><Link href="/faq" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.faq')}</Link></li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold mb-4">{t('footer.legal')}</h3>
-                            <ul className="space-y-2">
-                                <li><Link href="/privacy" className="text-gray-400 hover:text-white">{t('footer.privacyPolicy')}</Link></li>
-                                <li><Link href="/terms" className="text-gray-400 hover:text-white">{t('footer.termsOfService')}</Link></li>
+                            <h3 className="text-sm font-semibold mb-2 text-white/90">{t('footer.legal')}</h3>
+                            <ul className="space-y-1">
+                                <li><Link href="/privacy" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.privacyPolicy')}</Link></li>
+                                <li><Link href="/terms" className="text-white/50 hover:text-white text-xs transition-colors">{t('footer.termsOfService')}</Link></li>
                             </ul>
                         </div>
                     </div>
-                    <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                    <div className="border-t border-white/10 mt-5 pt-4 text-center text-white/40 text-xs space-y-1">
                         <p>{t('footer.copyright')}</p>
+                        <p>Created by <a href="https://wavelynecode.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">Wavelyne</a> — <a href="https://wavelynecode.com" target="_blank" rel="noopener noreferrer" className="text-white/50 hover:text-white transition-colors">wavelynecode.com</a></p>
                     </div>
                 </div>
             </footer>

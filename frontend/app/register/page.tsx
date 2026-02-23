@@ -119,143 +119,143 @@ export default function RegisterPage() {
     };
 
     return (
-        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 flex items-center justify-center px-6">
-            <div className="max-w-md w-full">
-                {/* Logo */}
-                <div className="flex items-center justify-between mb-8">
-                    <Link href="/" className="flex items-center space-x-2">
-                        <Sparkles className="w-10 h-10 text-blue-600" />
-                        <span className="text-3xl font-bold text-gray-900">Student Advisor</span>
+        <div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-blue-100 flex items-center justify-center px-4 py-8">
+            <div className="max-w-lg w-full">
+                {/* Header with logo and back */}
+                <div className="flex items-center justify-between mb-6">
+                    <Link href="/" className="flex items-center space-x-2 group">
+                        <Sparkles className="w-8 h-8 text-blue-600" />
+                        <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
+                    </Link>
+                    <Link
+                        href="/"
+                        className="flex items-center gap-1.5 text-sm text-gray-500 hover:text-blue-600 transition-colors"
+                    >
+                        <ArrowLeft className="w-4 h-4" />
+                        <span>{t('common.back')}</span>
                     </Link>
                 </div>
 
-                {/* Back Button */}
-                <Link
-                    href="/"
-                    className="mb-6 inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold text-lg rounded-xl hover:shadow-lg hover:shadow-green-500/50 transform hover:scale-105 transition-all duration-200"
-                >
-                    <ArrowLeft className="w-8 h-8" />
-                    <span>{t('common.back')}</span>
-                </Link>
-
                 {/* Card */}
-                <div className="bg-white rounded-2xl p-8 border border-gray-200 shadow-xl">
-                    <h2 className="text-3xl font-bold text-gray-900 mb-2">{t('auth.register.create_account')}</h2>
-                    <p className="text-gray-600 mb-8">{t('auth.register.subtitle')}</p>
+                <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div className="text-center mb-6">
+                        <h2 className="text-2xl font-bold text-gray-900 mb-1">{t('auth.register.create_account')}</h2>
+                        <p className="text-gray-500 text-sm">{t('auth.register.subtitle')}</p>
+                    </div>
 
                     {error && (
-                        <div className="bg-red-50 border border-red-300 text-red-800 px-4 py-3 rounded-lg mb-6">
+                        <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-xl mb-5 text-sm">
                             {error}
                         </div>
                     )}
 
-                    <form onSubmit={handleSubmit} className="space-y-6">
-                        {/* First Name */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                {t('auth.register.firstName')}
-                            </label>
-                            <div className="relative">
-                                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                                <input
-                                    type="text"
-                                    required
-                                    value={formData.firstName}
-                                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
-                                    className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    placeholder={t('auth.register.placeholder_firstName')}
-                                />
+                    <form onSubmit={handleSubmit} className="space-y-4">
+                        {/* Name fields side by side */}
+                        <div className="grid grid-cols-2 gap-3">
+                            <div>
+                                <label className="block text-xs font-medium text-gray-500 mb-1.5">
+                                    {t('auth.register.firstName')}
+                                </label>
+                                <div className="relative">
+                                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="text"
+                                        required
+                                        value={formData.firstName}
+                                        onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                                        className="w-full pl-10 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all text-sm"
+                                        placeholder={t('auth.register.placeholder_firstName')}
+                                    />
+                                </div>
                             </div>
-                        </div>
-
-                        {/* Last Name */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                {t('auth.register.lastName')}
-                            </label>
-                            <div className="relative">
-                                <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                                <input
-                                    type="text"
-                                    required
-                                    value={formData.lastName}
-                                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
-                                    className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    placeholder={t('auth.register.placeholder_lastName')}
-                                />
+                            <div>
+                                <label className="block text-xs font-medium text-gray-500 mb-1.5">
+                                    {t('auth.register.lastName')}
+                                </label>
+                                <div className="relative">
+                                    <User className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="text"
+                                        required
+                                        value={formData.lastName}
+                                        onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                                        className="w-full pl-10 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all text-sm"
+                                        placeholder={t('auth.register.placeholder_lastName')}
+                                    />
+                                </div>
                             </div>
                         </div>
 
                         {/* Email */}
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
+                            <label className="block text-xs font-medium text-gray-500 mb-1.5">
                                 {t('auth.register.email')}
                             </label>
                             <div className="relative">
-                                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
+                                <Mail className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
                                 <input
                                     type="email"
                                     required
                                     value={formData.email}
                                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                                    className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                    className="w-full pl-10 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all text-sm"
                                     placeholder={t('auth.register.placeholder_email')}
                                 />
                             </div>
                         </div>
 
-                        {/* Password */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                {t('auth.register.password')}
-                            </label>
-                            <div className="relative">
-                                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                                <input
-                                    type="password"
-                                    required
-                                    value={formData.password}
-                                    onChange={(e) => setFormData({ ...formData, password: e.target.value })}
-                                    className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    placeholder={t('auth.register.placeholder_password')}
-                                />
+                        {/* Password fields side by side */}
+                        <div className="grid grid-cols-2 gap-3">
+                            <div>
+                                <label className="block text-xs font-medium text-gray-500 mb-1.5">
+                                    {t('auth.register.password')}
+                                </label>
+                                <div className="relative">
+                                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="password"
+                                        required
+                                        value={formData.password}
+                                        onChange={(e) => setFormData({ ...formData, password: e.target.value })}
+                                        className="w-full pl-10 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all text-sm"
+                                        placeholder={t('auth.register.placeholder_password')}
+                                    />
+                                </div>
                             </div>
-                        </div>
-
-                        {/* Confirm Password */}
-                        <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">
-                                {t('auth.register.confirm_password')}
-                            </label>
-                            <div className="relative">
-                                <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-400" />
-                                <input
-                                    type="password"
-                                    required
-                                    value={formData.confirmPassword}
-                                    onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
-                                    className="w-full pl-12 pr-4 py-3 bg-white border border-gray-300 rounded-lg text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                    placeholder={t('auth.register.placeholder_confirm_password')}
-                                />
+                            <div>
+                                <label className="block text-xs font-medium text-gray-500 mb-1.5">
+                                    {t('auth.register.confirm_password')}
+                                </label>
+                                <div className="relative">
+                                    <Lock className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-gray-400" />
+                                    <input
+                                        type="password"
+                                        required
+                                        value={formData.confirmPassword}
+                                        onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value })}
+                                        className="w-full pl-10 pr-3 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:bg-white focus:border-transparent transition-all text-sm"
+                                        placeholder={t('auth.register.placeholder_confirm_password')}
+                                    />
+                                </div>
                             </div>
                         </div>
 
                         {/* Terms of Service Checkbox */}
-                        <label className="flex items-start space-x-3 cursor-pointer group p-3 rounded-lg hover:bg-white/5 transition-colors">
+                        <label className="flex items-start space-x-2.5 cursor-pointer group py-1">
                             <input
                                 type="checkbox"
                                 checked={termsAccepted}
                                 onChange={(e) => setTermsAccepted(e.target.checked)}
-                                className="mt-1 w-5 h-5 rounded border-gray-400 text-purple-500 focus:ring-purple-500 focus:ring-offset-0 cursor-pointer"
+                                className="mt-0.5 w-4 h-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500 cursor-pointer"
                             />
-                            <span className="text-sm text-gray-700 group-hover:text-gray-900 transition-colors">
-                                {t('auth.register.terms_agreement') || 'I have read and agree to the'}{' '}
-                                <Link href="/terms" target="_blank" className="text-blue-600 hover:text-blue-700 underline">
-                                    {t('auth.register.terms_link') || 'Terms of Service'}
+                            <span className="text-xs text-gray-500 leading-relaxed">
+                                {t('auth.register.terms_agreement')}{' '}
+                                <Link href="/terms" target="_blank" className="text-blue-600 hover:underline">
+                                    {t('auth.register.terms_link')}
                                 </Link>
-                                {' '}{t('auth.register.and') || 'and'}{' '}
-                                <Link href="/privacy" target="_blank" className="text-purple-400 hover:text-purple-300 underline">
-                                    {t('auth.register.privacy_link') || 'Privacy Policy'}
+                                {' '}{t('auth.register.and')}{' '}
+                                <Link href="/privacy" target="_blank" className="text-blue-600 hover:underline">
+                                    {t('auth.register.privacy_link')}
                                 </Link>
                             </span>
                         </label>
@@ -264,11 +264,19 @@ export default function RegisterPage() {
                         <button
                             type="submit"
                             disabled={loading || !termsAccepted}
-                            className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg hover:from-blue-700 hover:to-purple-700 transition-all transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                            className="w-full py-3 bg-blue-600 text-white rounded-xl font-semibold hover:bg-blue-700 transition-all disabled:opacity-40 disabled:cursor-not-allowed flex items-center justify-center gap-2 shadow-sm hover:shadow-md"
                         >
                             <span>{loading ? t('auth.register.button_loading') : t('auth.register.button')}</span>
-                            {!loading && <ArrowRight className="w-5 h-5" />}
+                            {!loading && <ArrowRight className="w-4 h-4" />}
                         </button>
+
+                        {/* Login link */}
+                        <p className="text-center text-sm text-gray-500 pt-2">
+                            {t('auth.register.have_account')}{' '}
+                            <Link href="/login" className="text-blue-600 font-medium hover:underline">
+                                {t('auth.register.login_link')}
+                            </Link>
+                        </p>
                     </form>
                 </div>
             </div>

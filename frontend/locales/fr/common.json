@@ -775,9 +775,20 @@
       "description": "Foundation year program for international students."
     }
   },
+  "common": { "back": "Retour" },
   "auth": {
     "loginButton": "Se connecter",
     "registerButton": "S'inscrire",
+    "register": {
+      "create_account": "Créer un compte",
+      "subtitle": "Rejoignez Student Advisor et commencez votre parcours",
+      "firstName": "Prénom", "lastName": "Nom", "email": "E-mail", "password": "Mot de passe", "confirm_password": "Confirmer le mot de passe",
+      "placeholder_firstName": "Jean", "placeholder_lastName": "Dupont", "placeholder_email": "votre@email.com", "placeholder_password": "Min. 8 caractères", "placeholder_confirm_password": "Répétez le mot de passe",
+      "terms_agreement": "J'ai lu et j'accepte les", "terms_link": "Conditions d'utilisation", "and": "et", "privacy_link": "Politique de confidentialité", "button": "Créer un compte", "button_loading": "Création du compte...",
+      "error_firstName_required": "Veuillez entrer votre prénom", "error_lastName_required": "Veuillez entrer votre nom", "error_email_required": "Veuillez entrer votre e-mail", "error_password_required": "Veuillez entrer un mot de passe",
+      "error_terms": "Vous devez accepter les conditions d'utilisation", "error_password_mismatch": "Les mots de passe ne correspondent pas", "error_registration": "L'inscription a échoué. Veuillez réessayer.", "error_connection": "Erreur de connexion. Veuillez réessayer plus tard.",
+      "have_account": "Déjà un compte ?", "login_link": "Se connecter"
+    },
     "login": {
       "title": "Connexion",
       "subtitle": "Connectez-vous à votre compte",

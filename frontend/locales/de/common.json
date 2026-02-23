@@ -775,9 +775,20 @@
       "description": "Foundation year program for international students."
     }
   },
+  "common": { "back": "Zurück" },
   "auth": {
     "loginButton": "Anmelden",
     "registerButton": "Registrieren",
+    "register": {
+      "create_account": "Konto erstellen",
+      "subtitle": "Treten Sie Student Advisor bei und starten Sie Ihre Reise",
+      "firstName": "Vorname", "lastName": "Nachname", "email": "E-Mail", "password": "Passwort", "confirm_password": "Passwort bestätigen",
+      "placeholder_firstName": "Max", "placeholder_lastName": "Mustermann", "placeholder_email": "ihre@email.com", "placeholder_password": "Min. 8 Zeichen", "placeholder_confirm_password": "Passwort wiederholen",
+      "terms_agreement": "Ich habe die", "terms_link": "Nutzungsbedingungen", "and": "und", "privacy_link": "Datenschutzrichtlinie", "button": "Konto erstellen", "button_loading": "Konto wird erstellt...",
+      "error_firstName_required": "Bitte geben Sie Ihren Vornamen ein", "error_lastName_required": "Bitte geben Sie Ihren Nachnamen ein", "error_email_required": "Bitte geben Sie Ihre E-Mail ein", "error_password_required": "Bitte geben Sie ein Passwort ein",
+      "error_terms": "Sie müssen den Nutzungsbedingungen zustimmen", "error_password_mismatch": "Passwörter stimmen nicht überein", "error_registration": "Registrierung fehlgeschlagen. Bitte versuchen Sie es erneut.", "error_connection": "Verbindungsfehler. Bitte versuchen Sie es später.",
+      "have_account": "Bereits ein Konto?", "login_link": "Anmelden"
+    },
     "login": {
       "title": "Anmelden",
       "subtitle": "Melden Sie sich bei Ihrem Konto an",

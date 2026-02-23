@@ -775,9 +775,20 @@
       "description": "Foundation year program for international students."
     }
   },
+  "common": { "back": "Voltar" },
   "auth": {
     "loginButton": "Entrar",
     "registerButton": "Registrar-se",
+    "register": {
+      "create_account": "Criar conta",
+      "subtitle": "Junte-se ao Student Advisor e comece a sua jornada",
+      "firstName": "Nome", "lastName": "Apelido", "email": "E-mail", "password": "Palavra-passe", "confirm_password": "Confirmar palavra-passe",
+      "placeholder_firstName": "João", "placeholder_lastName": "Silva", "placeholder_email": "seu@email.com", "placeholder_password": "Mín. 8 caracteres", "placeholder_confirm_password": "Repetir palavra-passe",
+      "terms_agreement": "Li e aceito os", "terms_link": "Termos de serviço", "and": "e", "privacy_link": "Política de privacidade", "button": "Criar conta", "button_loading": "A criar conta...",
+      "error_firstName_required": "Insira o seu nome", "error_lastName_required": "Insira o seu apelido", "error_email_required": "Insira o seu e-mail", "error_password_required": "Insira uma palavra-passe",
+      "error_terms": "Deve aceitar os termos de serviço", "error_password_mismatch": "As palavras-passe não coincidem", "error_registration": "Registo falhado. Tente novamente.", "error_connection": "Erro de ligação. Tente mais tarde.",
+      "have_account": "Já tem conta?", "login_link": "Entrar"
+    },
     "login": {
       "title": "Entrar",
       "subtitle": "Entre na sua conta",

@@ -826,19 +826,52 @@
         },
         "settings": {
           "title": "Systémové nastavenia",
-          "description": "Konfigurácia systémových nastavení"
+          "description": "Konfigurovať systémové nastavenia"
         }
       }
     }
   },
+  "common": {
+    "back": "Späť"
+  },
   "auth": {
     "loginButton": "Prihlásiť sa",
-    "registerButton": "Registrovať sa",
+    "registerButton": "Zaregistrovať sa",
+    "register": {
+      "create_account": "Vytvoriť účet",
+      "subtitle": "Pridajte sa k Student Advisor a začnite svoju cestu",
+      "firstName": "Meno",
+      "lastName": "Priezvisko",
+      "email": "Email",
+      "password": "Heslo",
+      "confirm_password": "Potvrdiť heslo",
+      "placeholder_firstName": "Ján",
+      "placeholder_lastName": "Novák",
+      "placeholder_email": "vas@email.com",
+      "placeholder_password": "Min. 8 znakov",
+      "placeholder_confirm_password": "Zopakujte heslo",
+      "terms_agreement": "Prečítal/a som si a súhlasím s",
+      "terms_link": "Podmienkami používania",
+      "and": "a",
+      "privacy_link": "Ochranou osobných údajov",
+      "button": "Vytvoriť účet",
+      "button_loading": "Vytvára sa účet...",
+      "error_firstName_required": "Zadajte prosím vaše meno",
+      "error_lastName_required": "Zadajte prosím vaše priezvisko",
+      "error_email_required": "Zadajte prosím váš email",
+      "error_password_required": "Zadajte prosím heslo",
+      "error_terms": "Musíte súhlasiť s podmienkami používania",
+      "error_password_mismatch": "Heslá sa nezhodujú",
+      "error_registration": "Registrácia zlyhala. Skúste to znova.",
+      "error_connection": "Chyba pripojenia. Skúste to neskôr.",
+      "have_account": "Už máte účet?",
+      "login_link": "Prihlásiť sa"
+    },
     "login": {
       "welcome": "Vitajte",
       "subtitle": "Prihláste sa do svojho účtu",
       "success_registered": "Registrácia úspešná! Teraz sa môžete prihlásiť.",
-      "error_invalid": "Neplatný email alebo heslo",
+      "error_invalid": "Nesprávny email alebo heslo",
       "error_connection": "Chyba pripojenia. Skontrolujte, či server beží.",
       "email": "Email",
       "placeholder_email": "your@email.com",

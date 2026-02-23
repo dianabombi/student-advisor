@@ -45,11 +45,10 @@ export default function LanguageSwitcher() {
         <div className="relative" ref={dropdownRef}>
             <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="flex items-center space-x-2 px-3 py-2 rounded-lg bg-blue-600 hover:bg-blue-700 transition-colors text-white border border-blue-700"
+                className="flex items-center space-x-1.5 px-2.5 py-1.5 rounded-xl bg-blue-600 hover:bg-blue-700 transition-colors text-white border border-blue-700 text-sm"
             >
                 <span className="text-sm">{currentJurisdiction.flag}</span>
-                <Globe className="w-4 h-4" />
-                <span className="hidden sm:inline text-sm">{currentLanguage.label}</span>
+                <Globe className="w-3.5 h-3.5" />
                 <ChevronDown className="w-3 h-3" />
             </button>
 

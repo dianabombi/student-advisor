@@ -830,9 +830,20 @@
       }
     }
   },
+  "common": { "back": "Назад" },
   "auth": {
     "loginButton": "Увійти",
     "registerButton": "Зареєструватися",
+    "register": {
+      "create_account": "Створити акаунт",
+      "subtitle": "Приєднуйтесь до Student Advisor та розпочніть свій шлях",
+      "firstName": "Ім'я", "lastName": "Прізвище", "email": "Ел. пошта", "password": "Пароль", "confirm_password": "Підтвердити пароль",
+      "placeholder_firstName": "Іван", "placeholder_lastName": "Іваненко", "placeholder_email": "ваш@email.com", "placeholder_password": "Мін. 8 символів", "placeholder_confirm_password": "Повторіть пароль",
+      "terms_agreement": "Я прочитав/ла та приймаю", "terms_link": "Умови використання", "and": "та", "privacy_link": "Політику конфіденційності", "button": "Створити акаунт", "button_loading": "Створення акаунту...",
+      "error_firstName_required": "Введіть ваше ім'я", "error_lastName_required": "Введіть ваше прізвище", "error_email_required": "Введіть ваш email", "error_password_required": "Введіть пароль",
+      "error_terms": "Необхідно прийняти умови використання", "error_password_mismatch": "Паролі не збігаються", "error_registration": "Реєстрація не вдалася. Спробуйте ще раз.", "error_connection": "Помилка з'єднання. Спробуйте пізніше.",
+      "have_account": "Вже є акаунт?", "login_link": "Увійти"
+    },
     "login": {
       "welcome": "Ласкаво просимо",
       "subtitle": "Увійдіть до свого облікового запису",

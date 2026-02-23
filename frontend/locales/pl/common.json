@@ -775,9 +775,20 @@
       "description": "Foundation year program for international students."
     }
   },
+  "common": { "back": "Wstecz" },
   "auth": {
     "loginButton": "Zaloguj się",
     "registerButton": "Zarejestruj się",
+    "register": {
+      "create_account": "Utwórz konto",
+      "subtitle": "Dołącz do Student Advisor i rozpocznij swoją drogę",
+      "firstName": "Imię", "lastName": "Nazwisko", "email": "E-mail", "password": "Hasło", "confirm_password": "Potwierdź hasło",
+      "placeholder_firstName": "Jan", "placeholder_lastName": "Kowalski", "placeholder_email": "twoj@email.com", "placeholder_password": "Min. 8 znaków", "placeholder_confirm_password": "Powtórz hasło",
+      "terms_agreement": "Przeczytałem/am i akceptuję", "terms_link": "Regulamin", "and": "i", "privacy_link": "Politykę prywatności", "button": "Utwórz konto", "button_loading": "Tworzenie konta...",
+      "error_firstName_required": "Podaj swoje imię", "error_lastName_required": "Podaj swoje nazwisko", "error_email_required": "Podaj swój e-mail", "error_password_required": "Podaj hasło",
+      "error_terms": "Musisz zaakceptować regulamin", "error_password_mismatch": "Hasła nie pasują", "error_registration": "Rejestracja nie powiodła się. Spróbuj ponownie.", "error_connection": "Błąd połączenia. Spróbuj później.",
+      "have_account": "Masz już konto?", "login_link": "Zaloguj się"
+    },
     "login": {
       "title": "Logowanie",
       "subtitle": "Zaloguj się do swojego konta",

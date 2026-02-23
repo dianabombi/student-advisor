@@ -830,9 +830,42 @@
       }
     }
   },
+  "common": {
+    "back": "Back"
+  },
   "auth": {
     "loginButton": "Log In",
     "registerButton": "Register",
+    "register": {
+      "create_account": "Create Account",
+      "subtitle": "Join Student Advisor and start your journey",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "password": "Password",
+      "confirm_password": "Confirm Password",
+      "placeholder_firstName": "John",
+      "placeholder_lastName": "Smith",
+      "placeholder_email": "your@email.com",
+      "placeholder_password": "Min. 8 characters",
+      "placeholder_confirm_password": "Repeat password",
+      "terms_agreement": "I have read and agree to the",
+      "terms_link": "Terms of Service",
+      "and": "and",
+      "privacy_link": "Privacy Policy",
+      "button": "Create Account",
+      "button_loading": "Creating account...",
+      "error_firstName_required": "Please enter your first name",
+      "error_lastName_required": "Please enter your last name",
+      "error_email_required": "Please enter your email",
+      "error_password_required": "Please enter a password",
+      "error_terms": "You must accept Terms of Service",
+      "error_password_mismatch": "Passwords do not match",
+      "error_registration": "Registration failed. Please try again.",
+      "error_connection": "Connection error. Please try again later.",
+      "have_account": "Already have an account?",
+      "login_link": "Log In"
+    },
     "login": {
       "welcome": "Welcome",
       "subtitle": "Sign in to your account",

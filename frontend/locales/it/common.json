@@ -775,9 +775,20 @@
       "description": "Foundation year program for international students."
     }
   },
+  "common": { "back": "Indietro" },
   "auth": {
     "loginButton": "Accedi",
     "registerButton": "Registrati",
+    "register": {
+      "create_account": "Crea account",
+      "subtitle": "Unisciti a Student Advisor e inizia il tuo percorso",
+      "firstName": "Nome", "lastName": "Cognome", "email": "E-mail", "password": "Password", "confirm_password": "Conferma password",
+      "placeholder_firstName": "Marco", "placeholder_lastName": "Rossi", "placeholder_email": "tua@email.com", "placeholder_password": "Min. 8 caratteri", "placeholder_confirm_password": "Ripeti password",
+      "terms_agreement": "Ho letto e accetto i", "terms_link": "Termini di servizio", "and": "e", "privacy_link": "Informativa sulla privacy", "button": "Crea account", "button_loading": "Creazione account...",
+      "error_firstName_required": "Inserisci il tuo nome", "error_lastName_required": "Inserisci il tuo cognome", "error_email_required": "Inserisci la tua e-mail", "error_password_required": "Inserisci una password",
+      "error_terms": "Devi accettare i termini di servizio", "error_password_mismatch": "Le password non corrispondono", "error_registration": "Registrazione fallita. Riprova.", "error_connection": "Errore di connessione. Riprova più tardi.",
+      "have_account": "Hai già un account?", "login_link": "Accedi"
+    },
     "login": {
       "title": "Accedi",
       "subtitle": "Accedi al tuo account",

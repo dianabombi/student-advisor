@@ -830,9 +830,20 @@
       }
     }
   },
+  "common": { "back": "Назад" },
   "auth": {
     "loginButton": "Войти",
     "registerButton": "Зарегистрироваться",
+    "register": {
+      "create_account": "Создать аккаунт",
+      "subtitle": "Присоединяйтесь к Student Advisor и начните свой путь",
+      "firstName": "Имя", "lastName": "Фамилия", "email": "Эл. почта", "password": "Пароль", "confirm_password": "Подтвердить пароль",
+      "placeholder_firstName": "Иван", "placeholder_lastName": "Иванов", "placeholder_email": "ваш@email.com", "placeholder_password": "Мин. 8 символов", "placeholder_confirm_password": "Повторите пароль",
+      "terms_agreement": "Я прочитал/а и принимаю", "terms_link": "Условия использования", "and": "и", "privacy_link": "Политику конфиденциальности", "button": "Создать аккаунт", "button_loading": "Создание аккаунта...",
+      "error_firstName_required": "Введите ваше имя", "error_lastName_required": "Введите вашу фамилию", "error_email_required": "Введите ваш email", "error_password_required": "Введите пароль",
+      "error_terms": "Необходимо принять условия использования", "error_password_mismatch": "Пароли не совпадают", "error_registration": "Регистрация не удалась. Попробуйте снова.", "error_connection": "Ошибка соединения. Попробуйте позже.",
+      "have_account": "Уже есть аккаунт?", "login_link": "Войти"
+    },
     "login": {
       "welcome": "Добро пожаловать",
       "subtitle": "Войдите в свой аккаунт",

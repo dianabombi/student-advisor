@@ -775,9 +775,20 @@
       "description": "Foundation year program for international students."
     }
   },
+  "common": { "back": "Volver" },
   "auth": {
     "loginButton": "Iniciar sesión",
     "registerButton": "Registrarse",
+    "register": {
+      "create_account": "Crear cuenta",
+      "subtitle": "Únete a Student Advisor y comienza tu camino",
+      "firstName": "Nombre", "lastName": "Apellido", "email": "Correo electrónico", "password": "Contraseña", "confirm_password": "Confirmar contraseña",
+      "placeholder_firstName": "Juan", "placeholder_lastName": "García", "placeholder_email": "tu@email.com", "placeholder_password": "Mín. 8 caracteres", "placeholder_confirm_password": "Repetir contraseña",
+      "terms_agreement": "He leído y acepto los", "terms_link": "Términos de servicio", "and": "y", "privacy_link": "Política de privacidad", "button": "Crear cuenta", "button_loading": "Creando cuenta...",
+      "error_firstName_required": "Ingrese su nombre", "error_lastName_required": "Ingrese su apellido", "error_email_required": "Ingrese su correo", "error_password_required": "Ingrese una contraseña",
+      "error_terms": "Debe aceptar los términos de servicio", "error_password_mismatch": "Las contraseñas no coinciden", "error_registration": "Registro fallido. Inténtelo de nuevo.", "error_connection": "Error de conexión. Inténtelo más tarde.",
+      "have_account": "¿Ya tiene cuenta?", "login_link": "Iniciar sesión"
+    },
     "login": {
       "title": "Iniciar sesión",
       "subtitle": "Inicie sesión en su cuenta",
