@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { ArrowRight, BookOpen, GraduationCap, Users, Globe, Sparkles, Home, Briefcase } from 'lucide-react';
+import { ArrowRight, BookOpen, GraduationCap, Users, Globe, Sparkles, Home, Briefcase, Menu, X } from 'lucide-react';
 import { useLanguage } from '@/lib/LanguageContext';
 import UniversitiesGrid from '@/components/UniversitiesGrid';
 import LanguageSchoolsGrid from '@/components/LanguageSchoolsGrid';
@@ -21,6 +21,7 @@ export default function LandingPage() {
     const { jurisdiction } = useJurisdiction();
     const [localUser, setLocalUser] = useState<any>(null);
     const [showAuthModal, setShowAuthModal] = useState(false);
+    const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
     // Check localStorage directly as fallback
     useEffect(() => {
@@ -73,9 +74,9 @@ export default function LandingPage() {
                                 <Sparkles className="w-8 h-8 text-blue-600" />
                                 <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                             </Link>
-                            <div className="flex items-center space-x-3">
+                            {/* Desktop menu */}
+                            <div className="hidden md:flex items-center space-x-3">
                                 <LanguageSwitcher />
-                                {/* Show user name instead of register button */}
                                 <div className="flex items-center space-x-3">
                                     <span className="text-gray-700 font-medium">👤 {currentUser?.name}</span>
                                     <button
@@ -90,7 +91,41 @@ export default function LandingPage() {
                                     </button>
                                 </div>
                             </div>
+                            {/* Mobile hamburger */}
+                            <button
+                                className="md:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
+                                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                            >
+                                {mobileMenuOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+                            </button>
                         </div>
+                        {/* Mobile dropdown */}
+                        {mobileMenuOpen && (
+                            <div className="md:hidden mt-3 pt-3 border-t border-gray-200/50 pb-2 space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <span className="text-gray-700 font-medium">👤 {currentUser?.name}</span>
+                                    <LanguageSwitcher />
+                                </div>
+                                <div className="flex flex-col gap-2">
+                                    <Link href="/housing" className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                        {t('student.hero.findHousing')}
+                                    </Link>
+                                    <Link href="/jobs" className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                        {t('student.hero.studentJobs')}
+                                    </Link>
+                                    <button
+                                        onClick={() => {
+                                            localStorage.removeItem('token');
+                                            localStorage.removeItem('user');
+                                            window.location.href = '/';
+                                        }}
+                                        className="px-4 py-2 text-sm font-medium text-red-600 hover:bg-red-50 rounded-xl transition-colors text-left"
+                                    >
+                                        Logout
+                                    </button>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 </nav>
 
@@ -509,7 +544,8 @@ export default function LandingPage() {
                             <Sparkles className="w-8 h-8 text-blue-600" />
                             <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                         </Link>
-                        <div className="flex items-center space-x-3">
+                        {/* Desktop menu */}
+                        <div className="hidden md:flex items-center space-x-3">
                             <LanguageSwitcher />
                             <Link
                                 href="/login"
@@ -524,7 +560,46 @@ export default function LandingPage() {
                                 {t('auth.registerButton')}
                             </Link>
                         </div>
+                        {/* Mobile hamburger */}
+                        <button
+                            className="md:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
+                            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                        >
+                            {mobileMenuOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
+                        </button>
                     </div>
+                    {/* Mobile dropdown */}
+                    {mobileMenuOpen && (
+                        <div className="md:hidden mt-3 pt-3 border-t border-gray-200/50 pb-2 space-y-3">
+                            <div className="flex items-center justify-center">
+                                <LanguageSwitcher />
+                            </div>
+                            <div className="flex flex-col gap-2">
+                                <Link href="/housing" className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                    {t('student.hero.findHousing')}
+                                </Link>
+                                <Link href="/jobs" className="px-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-100 rounded-xl transition-colors" onClick={() => setMobileMenuOpen(false)}>
+                                    {t('student.hero.studentJobs')}
+                                </Link>
+                                <div className="flex flex-col gap-2 pt-2 border-t border-gray-200/50">
+                                    <Link
+                                        href="/login"
+                                        className="px-4 py-2.5 text-center text-sm font-medium bg-blue-500 text-white rounded-xl hover:bg-blue-600 transition-colors shadow-md"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {t('auth.loginButton')}
+                                    </Link>
+                                    <Link
+                                        href="/register"
+                                        className="px-4 py-2.5 text-center text-sm font-medium bg-gray-900 text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md"
+                                        onClick={() => setMobileMenuOpen(false)}
+                                    >
+                                        {t('auth.registerButton')}
+                                    </Link>
+                                </div>
+                            </div>
+                        </div>
+                    )}
                 </div>
             </nav>
 
