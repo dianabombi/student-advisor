@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { useLanguage } from '@/lib/LanguageContext';
@@ -220,7 +220,7 @@ export default function RegisterPage() {
                                     {t('auth.register.button_loading')}
                                 </span>
                             ) : (
-                                { t('auth.register.button') }
+                                t('auth.register.button')
                             )}
                         </button>
                     </div>
