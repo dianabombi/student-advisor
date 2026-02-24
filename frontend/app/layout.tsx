@@ -5,6 +5,7 @@ import { AuthProvider } from "@/contexts/AuthContext";
 import { LanguageProvider } from "@/lib/LanguageContext";
 import { JurisdictionProvider } from "@/contexts/JurisdictionContext";
 import AISupportButton from "@/components/AISupportButton";
+import CookieConsent from "@/components/CookieConsent";
 import { ClientErrorBoundary } from "@/components/ClientErrorBoundary";
 
 const inter = Inter({ subsets: ["latin", "latin-ext", "cyrillic"] });
@@ -32,6 +33,7 @@ export default function RootLayout({
                             <AuthProvider>
                                 {children}
                                 <AISupportButton />
+                                <CookieConsent />
                             </AuthProvider>
                         </JurisdictionProvider>
                     </LanguageProvider>
