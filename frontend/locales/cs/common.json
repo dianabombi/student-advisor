@@ -830,5 +830,37 @@
     "privacyPolicy": "Ochrana osobních údajů",
     "termsOfService": "Podmínky používání",
     "copyright": "© 2026 Student Platform. Všechna práva vyhrazena."
+  },
+  "cookies": {
+    "title": "Používáme cookies",
+    "description": "Používáme cookies ke zlepšení vašeho zážitku, analýze návštěvnosti a personalizaci obsahu. Můžete si vybrat, které cookies povolíte.",
+    "acceptAll": "Přijmout všechny",
+    "rejectAll": "Odmítnout všechny",
+    "manageCookies": "Spravovat cookies",
+    "conditions": "Podmínky",
+    "savePreferences": "Uložit předvolby",
+    "back": "Zpět",
+    "alwaysOn": "Vždy zapnuto",
+    "conditionsTitle": "Zásady cookies a podmínky",
+    "conditionsText1": "Tato webová stránka používá cookies a podobné technologie k zajištění správného fungování stránek, zlepšení uživatelského zážitku a analýze návštěvnosti.",
+    "conditionsText2": "Nezbytné cookies jsou nutné pro fungování webové stránky a nelze je vypnout. Obvykle se nastavují v reakci na vaše akce, jako je nastavení předvoleb ochrany soukromí, přihlášení nebo vyplnění formulářů.",
+    "conditionsText3": "Analytické a marketingové cookies nám pomáhají pochopit, jak návštěvníci interagují s webovou stránkou. Tyto informace se používají ke zlepšení našich služeb a zobrazení relevantního obsahu a reklam.",
+    "conditionsText4": "Kliknutím na 'Přijmout všechny' souhlasíte s používáním všech cookies. Své předvolby můžete kdykoliv změnit kliknutím na 'Spravovat cookies'. Více informací naleznete v našich Zásadách ochrany osobních údajů.",
+    "necessary": {
+      "title": "Nezbytné cookies",
+      "description": "Nutné pro správné fungování webové stránky. Nelze je vypnout."
+    },
+    "analytics": {
+      "title": "Analytické cookies",
+      "description": "Pomáhají nám pochopit, jak návštěvníci interagují s webovou stránkou."
+    },
+    "marketing": {
+      "title": "Marketingové cookies",
+      "description": "Používají se k zobrazení relevantních reklam a sledování kampaní."
+    },
+    "functional": {
+      "title": "Funkční cookies",
+      "description": "Umožňují rozšířenou funkcionalitu a personalizaci."
+    }
   }
 }

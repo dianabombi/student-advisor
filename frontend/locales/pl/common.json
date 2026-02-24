@@ -810,5 +810,37 @@
     "privacyPolicy": "Polityka prywatności",
     "termsOfService": "Regulamin",
     "copyright": "© 2026 Student Platform. Wszelkie prawa zastrzeżone."
+  },
+  "cookies": {
+    "title": "Używamy plików cookie",
+    "description": "Używamy plików cookie, aby poprawić Twoje doświadczenia, analizować ruch i personalizować treści. Możesz wybrać, które pliki cookie zezwalasz.",
+    "acceptAll": "Zaakceptuj wszystkie",
+    "rejectAll": "Odrzuć wszystkie",
+    "manageCookies": "Zarządzaj plikami cookie",
+    "conditions": "Warunki",
+    "savePreferences": "Zapisz preferencje",
+    "back": "Wstecz",
+    "alwaysOn": "Zawsze włączone",
+    "conditionsTitle": "Polityka plików cookie i warunki",
+    "conditionsText1": "Ta strona internetowa używa plików cookie i podobnych technologii w celu zapewnienia prawidłowego funkcjonowania strony, poprawy doświadczeń użytkownika i analizy ruchu na stronie.",
+    "conditionsText2": "Niezbędne pliki cookie są kluczowe dla funkcjonowania strony internetowej i nie mogą zostać wyłączone. Są zwykle ustawiane w odpowiedzi na Twoje działania, takie jak ustawianie preferencji prywatności, logowanie lub wypełnianie formularzy.",
+    "conditionsText3": "Analityczne i marketingowe pliki cookie pomagają nam zrozumieć, jak odwiedzający wchodzą w interakcję ze stroną internetową. Informacje te służą do ulepszania naszych usług i wyświetlania odpowiednich treści i reklam.",
+    "conditionsText4": "Klikając 'Zaakceptuj wszystkie', wyrażasz zgodę na używanie wszystkich plików cookie. Możesz zmienić swoje preferencje w dowolnym momencie, klikając 'Zarządzaj plikami cookie'. Więcej informacji znajdziesz w naszej Polityce Prywatności.",
+    "necessary": {
+      "title": "Niezbędne pliki cookie",
+      "description": "Kluczowe dla prawidłowego funkcjonowania strony internetowej. Nie mogą zostać wyłączone."
+    },
+    "analytics": {
+      "title": "Analityczne pliki cookie",
+      "description": "Pomagają nam zrozumieć, jak odwiedzający wchodzą w interakcję ze stroną internetową."
+    },
+    "marketing": {
+      "title": "Marketingowe pliki cookie",
+      "description": "Używane do wyświetlania odpowiednich reklam i śledzenia kampanii."
+    },
+    "functional": {
+      "title": "Funkcjonalne pliki cookie",
+      "description": "Umożliwiają rozszerzoną funkcjonalność i personalizację."
+    }
   }
 }

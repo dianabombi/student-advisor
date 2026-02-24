@@ -899,5 +899,37 @@
     "privacyPolicy": "Privacy Policy",
     "termsOfService": "Terms of Service",
     "copyright": "© 2026 Student Platform. All rights reserved."
+  },
+  "cookies": {
+    "title": "We use cookies",
+    "description": "We use cookies to improve your experience, analyze traffic, and personalize content. You can choose which cookies you allow.",
+    "acceptAll": "Accept All",
+    "rejectAll": "Reject All",
+    "manageCookies": "Manage Cookies",
+    "conditions": "Conditions",
+    "savePreferences": "Save Preferences",
+    "back": "Back",
+    "alwaysOn": "Always on",
+    "conditionsTitle": "Cookie Policy & Conditions",
+    "conditionsText1": "This website uses cookies and similar technologies to ensure the proper functioning of the site, improve user experience, and analyze website traffic.",
+    "conditionsText2": "Necessary cookies are essential for the website to function and cannot be disabled. They are usually set in response to your actions, such as setting privacy preferences, logging in, or filling out forms.",
+    "conditionsText3": "Analytics and marketing cookies help us understand how visitors interact with the website. This information is used to improve our services and display relevant content and advertisements.",
+    "conditionsText4": "By clicking 'Accept All', you consent to the use of all cookies. You can change your preferences at any time by clicking 'Manage Cookies'. For more information, please see our Privacy Policy.",
+    "necessary": {
+      "title": "Necessary Cookies",
+      "description": "Essential for the website to function properly. Cannot be disabled."
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us understand how visitors interact with the website."
+    },
+    "marketing": {
+      "title": "Marketing Cookies",
+      "description": "Used to display relevant advertisements and track campaigns."
+    },
+    "functional": {
+      "title": "Functional Cookies",
+      "description": "Enable enhanced functionality and personalization."
+    }
   }
 }

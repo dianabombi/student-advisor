@@ -900,5 +900,37 @@
     "privacyPolicy": "Ochrana osobných údajov",
     "termsOfService": "Podmienky používania",
     "copyright": "© 2026 Student Platform. Všetky práva vyhradené."
+  },
+  "cookies": {
+    "title": "Používame cookies",
+    "description": "Používame cookies na zlepšenie vášho zážitku, analýzu návštevnosti a personalizáciu obsahu. Môžete si vybrať, ktoré cookies povolíte.",
+    "acceptAll": "Prijať všetky",
+    "rejectAll": "Odmietnuť všetky",
+    "manageCookies": "Spravovať cookies",
+    "conditions": "Podmienky",
+    "savePreferences": "Uložiť preferencie",
+    "back": "Späť",
+    "alwaysOn": "Vždy zapnuté",
+    "conditionsTitle": "Zásady cookies a podmienky",
+    "conditionsText1": "Táto webová stránka používa cookies a podobné technológie na zabezpečenie správneho fungovania stránky, zlepšenie používateľského zážitku a analýzu návštevnosti.",
+    "conditionsText2": "Nevyhnutné cookies sú potrebné na fungovanie webovej stránky a nemožno ich vypnúť. Zvyčajne sa nastavujú v reakcii na vaše akcie, ako je nastavenie preferencií ochrany súkromia, prihlásenie alebo vyplnenie formulárov.",
+    "conditionsText3": "Analytické a marketingové cookies nám pomáhajú pochopiť, ako návštevníci interagujú s webovou stránkou. Tieto informácie sa používajú na zlepšenie našich služieb a zobrazenie relevantného obsahu a reklám.",
+    "conditionsText4": "Kliknutím na 'Prijať všetky' súhlasíte s používaním všetkých cookies. Svoje preferencie môžete kedykoľvek zmeniť kliknutím na 'Spravovať cookies'. Viac informácií nájdete v našich Zásadách ochrany osobných údajov.",
+    "necessary": {
+      "title": "Nevyhnutné cookies",
+      "description": "Potrebné na správne fungovanie webovej stránky. Nemožno ich vypnúť."
+    },
+    "analytics": {
+      "title": "Analytické cookies",
+      "description": "Pomáhajú nám pochopiť, ako návštevníci interagujú s webovou stránkou."
+    },
+    "marketing": {
+      "title": "Marketingové cookies",
+      "description": "Používajú sa na zobrazenie relevantných reklám a sledovanie kampaní."
+    },
+    "functional": {
+      "title": "Funkčné cookies",
+      "description": "Umožňujú rozšírenú funkcionalitu a personalizáciu."
+    }
   }
 }

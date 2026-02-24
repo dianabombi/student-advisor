@@ -810,5 +810,37 @@
     "privacyPolicy": "Política de privacidad",
     "termsOfService": "Términos de servicio",
     "copyright": "© 2026 Student Platform. Todos los derechos reservados."
+  },
+  "cookies": {
+    "title": "Usamos cookies",
+    "description": "Usamos cookies para mejorar su experiencia, analizar el tráfico y personalizar el contenido. Puede elegir qué cookies permite.",
+    "acceptAll": "Aceptar todas",
+    "rejectAll": "Rechazar todas",
+    "manageCookies": "Gestionar cookies",
+    "conditions": "Condiciones",
+    "savePreferences": "Guardar preferencias",
+    "back": "Volver",
+    "alwaysOn": "Siempre activas",
+    "conditionsTitle": "Política de cookies y condiciones",
+    "conditionsText1": "Este sitio web utiliza cookies y tecnologías similares para garantizar el correcto funcionamiento del sitio, mejorar la experiencia del usuario y analizar el tráfico del sitio web.",
+    "conditionsText2": "Las cookies necesarias son esenciales para que el sitio web funcione y no se pueden desactivar. Generalmente se establecen en respuesta a sus acciones, como configurar preferencias de privacidad, iniciar sesión o completar formularios.",
+    "conditionsText3": "Las cookies analíticas y de marketing nos ayudan a comprender cómo los visitantes interactúan con el sitio web. Esta información se utiliza para mejorar nuestros servicios y mostrar contenido y anuncios relevantes.",
+    "conditionsText4": "Al hacer clic en 'Aceptar todas', usted consiente el uso de todas las cookies. Puede cambiar sus preferencias en cualquier momento haciendo clic en 'Gestionar cookies'. Para más información, consulte nuestra Política de Privacidad.",
+    "necessary": {
+      "title": "Cookies necesarias",
+      "description": "Esenciales para el correcto funcionamiento del sitio web. No se pueden desactivar."
+    },
+    "analytics": {
+      "title": "Cookies analíticas",
+      "description": "Nos ayudan a comprender cómo los visitantes interactúan con el sitio web."
+    },
+    "marketing": {
+      "title": "Cookies de marketing",
+      "description": "Se utilizan para mostrar anuncios relevantes y rastrear campañas."
+    },
+    "functional": {
+      "title": "Cookies funcionales",
+      "description": "Permiten funcionalidad mejorada y personalización."
+    }
   }
 }
