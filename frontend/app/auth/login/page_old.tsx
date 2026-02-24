@@ -165,7 +165,7 @@ export default function LoginPage() {
                                         {t('auth.login.button_loading')}
                                     </span>
                                 ) : (
-                                    { t('auth.login.button') }
+                                    t('auth.login.button')
                                 )}
                             </button>
                         </div>
