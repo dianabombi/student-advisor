@@ -1,7 +1,8 @@
 const API_BASE = '/api';
 
-export async function getPendingLawyers() {
-    const response = await fetch(`${API_BASE}/admin/marketplace/pending`);
+export async function getPendingLawyers(status?: string) {
+    const url = status ? `${API_BASE}/admin/marketplace/pending?status=${status}` : `${API_BASE}/admin/marketplace/pending`;
+    const response = await fetch(url);
     if (!response.ok) throw new Error('Failed to fetch pending lawyers');
     return response.json();
 }
