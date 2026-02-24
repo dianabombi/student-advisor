@@ -75,7 +75,7 @@ export default function LandingPage() {
                                 <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                             </Link>
                             {/* Desktop menu */}
-                            <div className="hidden md:flex items-center space-x-3">
+                            <div className="hidden lg:flex items-center space-x-3">
                                 <LanguageSwitcher />
                                 <div className="flex items-center space-x-3">
                                     <span className="text-gray-700 font-medium">👤 {currentUser?.name}</span>
@@ -93,15 +93,15 @@ export default function LandingPage() {
                             </div>
                             {/* Mobile hamburger */}
                             <button
-                                className="md:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
+                                className="lg:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
                                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             >
                                 {mobileMenuOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
                             </button>
                         </div>
-                        {/* Mobile dropdown */}
+                        {/* Mobile/Tablet dropdown */}
                         {mobileMenuOpen && (
-                            <div className="md:hidden mt-3 pt-3 border-t border-gray-200/50 pb-2 space-y-3">
+                            <div className="lg:hidden mt-3 pt-3 border-t border-gray-200/50 pb-2 space-y-3">
                                 <div className="flex items-center justify-between">
                                     <span className="text-gray-700 font-medium">👤 {currentUser?.name}</span>
                                     <LanguageSwitcher />
@@ -545,7 +545,7 @@ export default function LandingPage() {
                             <span className="text-2xl font-bold text-blue-600">Student Advisor</span>
                         </Link>
                         {/* Desktop menu */}
-                        <div className="hidden md:flex items-center space-x-3">
+                        <div className="hidden lg:flex items-center space-x-3">
                             <LanguageSwitcher />
                             <Link
                                 href="/login"
@@ -562,15 +562,15 @@ export default function LandingPage() {
                         </div>
                         {/* Mobile hamburger */}
                         <button
-                            className="md:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
+                            className="lg:hidden p-2 rounded-xl hover:bg-gray-100 transition-colors"
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                         >
                             {mobileMenuOpen ? <X className="w-6 h-6 text-gray-700" /> : <Menu className="w-6 h-6 text-gray-700" />}
                         </button>
                     </div>
-                    {/* Mobile dropdown */}
+                    {/* Mobile/Tablet dropdown */}
                     {mobileMenuOpen && (
-                        <div className="md:hidden mt-3 pt-3 border-t border-gray-200/50 pb-2 space-y-3">
+                        <div className="lg:hidden mt-3 pt-3 border-t border-gray-200/50 pb-2 space-y-3">
                             <div className="flex items-center justify-center">
                                 <LanguageSwitcher />
                             </div>
