@@ -113,7 +113,7 @@ export default function CaseFormPage() {
 
             // Upload files if any
             if (files.length > 0 && createdCaseId) {
-                await uploadFiles(createdCaseId, token);
+                await uploadFiles(createdCaseId, token!);
             }
 
             // Change status if submitting
