@@ -817,7 +817,7 @@ export default function PrivacyPolicyPage() {
                         'Données d\'identification: nom, prénom, email',
                         'Identifiants de connexion: mot de passe (crypté)',
                         'Données d\'utilisation: adresse IP, User Agent, date et heure de visite',
-                        'Contenu: informations sur les établissements d'enseignement, recherche de logement',
+                        'Contenu: informations sur les établissements d\'enseignement, recherche de logement',
                         'Données de paiement: informations sur l\'abonnement et les paiements'
                     ]
                 },

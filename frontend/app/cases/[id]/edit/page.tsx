@@ -1,2 +1,2 @@
 // Re-export the same component for edit mode
-export { default } from '../new/page';
+export { default } from '../../new/page';
