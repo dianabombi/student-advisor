@@ -15,6 +15,8 @@ interface Administrator {
     name: string;
     email: string;
     role: 'super_admin' | 'admin';
+    is_active: boolean;
+    created_at: string;
     permissions?: Permission[];
 }
 
